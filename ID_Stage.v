@@ -8,9 +8,9 @@ module ID_Stage
 	input 								  reg_file_enable,
 	input  [3:0]                          status_register,
 	input  [`REG_FILE_DEPTH-1:0]	      reg_file_wb_address,
-	input  [`WORD_WIDTH-1]    			  pc_in,
-	input  [`WORD_WIDTH-1]    			  instruction_in,
-	input  [`WORD_WIDTH-1]   			  reg_file_wb_data,
+	input  [`WORD_WIDTH-1:0]    			  pc_in,
+	input  [`WORD_WIDTH-1:0]    			  instruction_in,
+	input  [`WORD_WIDTH-1:0]   			  reg_file_wb_data,
 	output                                mem_read_out, mem_write_out,
 	output                                WB_en_out,
 	output                                Imm_out,
@@ -24,9 +24,9 @@ module ID_Stage
 	output [`REG_FILE_DEPTH-1:0] 		  reg_file_dst,
 	output [`SIGNED_IMM_WIDTH-1:0]        signed_immediate,
 	output [`SHIFTER_OPERAND_WIDTH-1:0]   shifter_operand,
-	output [`WORD_WIDTH-1]   			  pc,
-	output [`WORD_WIDTH-1]				  instruction,
-	output [`WORD_WIDTH-1]				  val_Rn, val_Rm
+	output [`WORD_WIDTH-1:0]   			  pc,
+	output [`WORD_WIDTH-1:0]				  instruction,
+	output [`WORD_WIDTH-1:0]				  val_Rn, val_Rm
 );
 
 	wire [3:0] EX_command;

@@ -5,8 +5,8 @@ module ALU
     input                           carry,
     input       [3:0]               EX_command,
     input       [`WORD_WIDTH-1:0]   val1, val2,
-    output      [3:0]               SR
-    output      [`WORD_WIDTH-1:0]   res,
+    output      [3:0]               SR,
+    output      [`WORD_WIDTH-1:0]   res
 );
 
     reg V1, C1;
