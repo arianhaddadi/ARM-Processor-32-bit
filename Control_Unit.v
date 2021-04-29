@@ -6,12 +6,12 @@ module Control_Unit
     input      [1:0] mode,
     input      [3:0] op_code,
     output           SR_update,
-    output           has_src1
+    output           has_src1,
     output reg       mem_read,
     output reg       mem_write,
     output reg       WB_en,
     output reg       B,
-    output reg [3:0] EX_command,
+    output reg [3:0] EX_command
 );
 
     always @(*) begin

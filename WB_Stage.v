@@ -9,7 +9,7 @@ module WB_Stage
     input [`WORD_WIDTH-1:0]      ALU_res,
     input [`WORD_WIDTH-1:0]      mem,
 
-    output WB_en_out,
+    output                       WB_en_out,
     output [`REG_FILE_DEPTH-1:0] WB_Dest,
     output [`WORD_WIDTH-1:0]     WB_Value
 );
