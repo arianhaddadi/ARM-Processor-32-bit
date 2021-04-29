@@ -1,4 +1,4 @@
-`include "settings.h"  
+`include "constants.h"
 
 module Adder (
     input  [`WORD_WIDTH-1:0]  a,

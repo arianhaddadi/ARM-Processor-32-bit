@@ -1,24 +1,24 @@
-`include "settings.h"
+`include "constants.h"
 
 module EXE_Stage
 (
-  input                    clk,
-  input                    rst,
-  input  [`WORD_WIDTH-1:0] pc_in,
-  input  [`WORD_WIDTH-1:0] instruction_in,
-  input  [`SIGNED_IMM_WIDTH-1:0] signed_immediate,
-  input  [3:0] EX_command,
-  input  [3:0] SR_in,
+  input                               clk,
+  input                               rst,
+  input                               mem_read_in, mem_write_in, imm, WB_en_in, B_in,
+  input  [3:0]                        EX_command,
+  input  [3:0]                        SR_in,
+  input  [`SIGNED_IMM_WIDTH-1:0]      signed_immediate,
   input  [`SHIFTER_OPERAND_WIDTH-1:0] shifter_operand,
-  input  [`REG_FILE_DEPTH-1:0] dst_in,
-  input  mem_read_in, mem_write_in, imm, WB_en_in, B_in,
-  input  [`WORD_WIDTH-1:0] val_Rn_in, val_Rm_in,
-  output [`REG_FILE_DEPTH-1:0] dst_out,
-  output [3:0] SR_out,
-  output [`WORD_WIDTH-1:0] ALU_res,
-  output [`WORD_WIDTH-1:0] val_Rm_out,
-  output [`WORD_WIDTH-1:0] branch_address,
-  output mem_read_out, mem_write_out, WB_en_out, B_out
+  input  [`REG_FILE_DEPTH-1:0]        dst_in,
+  input  [`WORD_WIDTH-1:0]            pc_in,
+  input  [`WORD_WIDTH-1:0]            instruction_in,
+  input  [`WORD_WIDTH-1:0]            val_Rn_in, val_Rm_in,
+  output                              mem_read_out, mem_write_out, WB_en_out, B_out,
+  output [3:0]                        SR_out,
+  output [`REG_FILE_DEPTH-1:0]        dst_out,
+  output [`WORD_WIDTH-1:0]            ALU_res,
+  output [`WORD_WIDTH-1:0]            val_Rm_out,
+  output [`WORD_WIDTH-1:0]            branch_address
 );
 
   wire [`WORD_WIDTH-1:0] val2;

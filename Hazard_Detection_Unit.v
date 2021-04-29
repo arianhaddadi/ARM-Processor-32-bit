@@ -1,15 +1,15 @@
-`include "settings.h"
+`include "constants.h"
 
 module Hazard_Detection_Unit (
+    input                        EXE_WB_en,
+    input                        MEM_WB_en,
+    input                        has_src1,
+    input                        has_src2,
     input  [`REG_FILE_DEPTH-1:0] src1,
     input  [`REG_FILE_DEPTH-1:0] src2,
     input  [`REG_FILE_DEPTH-1:0] EXE_dest,
     input  [`REG_FILE_DEPTH-1:0] MEM_dest,
-    input        EXE_WB_en,
-    input        MEM_WB_en,
-    input        has_src1,
-    input        has_src2,
-    output reg   hazard_detected
+    output reg                   hazard_detected
 );
 
   always @(*) begin

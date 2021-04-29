@@ -1,16 +1,11 @@
-`include "settings.h"
+`include "constants.h"
 
 module MUX_2_to_1
 (
-  sel,
-  in1,
-  in2,
-  out
+  input                        sel,
+  input      [`WORD_WIDTH-1:0] in1, in2,
+  output reg [`WORD_WIDTH-1:0] out
 );
-  parameter WORD_WIDTH = `WORD_WIDTH;
-  input       sel;
-  input       [WORD_WIDTH-1:0] in1, in2;
-  output reg  [WORD_WIDTH-1:0] out;
 
   always@(sel or in1 or in2) begin
     out = 0;

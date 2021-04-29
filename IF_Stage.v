@@ -1,4 +1,4 @@
-`include "settings.h"  
+`include "constants.h"
 
 module IF_Stage
 (
@@ -6,8 +6,8 @@ module IF_Stage
     input                    rst,
     input                    freeze,
     input                    branch_taken,
-    input  [`WORD_WIDTH-1:0] branch_addr,
     output [`WORD_WIDTH-1:0] pc,
+    input  [`WORD_WIDTH-1:0] branch_addr,
     output [`WORD_WIDTH-1:0] instruction
 );
 

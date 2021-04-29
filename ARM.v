@@ -1,4 +1,4 @@
-`include "settings.h"
+`include "constants.h"
 
 module ARM
 (

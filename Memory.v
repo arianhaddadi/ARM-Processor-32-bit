@@ -1,13 +1,13 @@
-`include "settings.h"
+`include "constants.h"
 
 module Memory
 (
     input                    clk,
     input                    rst,
-    input  [`WORD_WIDTH-1:0] alu_res,
-    input  [`WORD_WIDTH-1:0] Val_Rm,
     input                    mem_w_en,
     input                    mem_r_en,
+    input  [`WORD_WIDTH-1:0] alu_res,
+    input  [`WORD_WIDTH-1:0] Val_Rm,
     output [`WORD_WIDTH-1:0] res_data
 );
 

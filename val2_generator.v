@@ -1,11 +1,11 @@
-`include "settings.h"
+`include "constants.h"
 
 module Val2_Generator
 (
-    input       [`SHIFTER_OPERAND_WIDTH-1:0]    shifter_operand,
-    input                           imm, is_for_memory,
-    input   [`WORD_WIDTH-1:0]       val_Rm,
-    output reg [`WORD_WIDTH-1:0]   val2_out
+    input      [`SHIFTER_OPERAND_WIDTH-1:0]  shifter_operand,
+    input                                    imm, is_for_memory,
+    input      [`WORD_WIDTH-1:0]             val_Rm,
+    output reg [`WORD_WIDTH-1:0]             val2_out
 );
 
     reg [`WORD_WIDTH-1:0]  _32bit_immd_temp;

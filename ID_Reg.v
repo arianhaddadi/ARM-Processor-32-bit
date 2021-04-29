@@ -1,36 +1,28 @@
-`include "settings.h"
+`include "constants.h"
 
 module ID_Reg
 (
-  input                               clk,
-  input                               rst,
-  input                               flush,
-  input [`WORD_WIDTH-1:0]             pc_in,
-  input [`WORD_WIDTH-1:0]             instruction_in,
-  input [`REG_FILE_DEPTH-1:0] 				reg_file_dst_in,
-  input [`WORD_WIDTH-1:0] 						val_Rn_in, val_Rm_in,
-  input [`SIGNED_IMM_WIDTH-1:0] 			signed_immediate_in,
-  input [`SHIFTER_OPERAND_WIDTH-1:0]  shifter_operand_in,
-  input [3:0] 												EX_command_in,
-  input [3:0]             status_register_in,
-  input mem_read_in, mem_write_in,
-    WB_en_in,
-    Imm_in,
-    B_in,
-    SR_update_in,
-  output reg [`WORD_WIDTH-1:0]            pc,
-  output reg [`WORD_WIDTH-1:0]            instruction,
-  output reg [`REG_FILE_DEPTH-1:0] 				reg_file_dst_out,
-  output reg [`WORD_WIDTH-1:0] 						val_Rn_out, val_Rm_out,
+  input                                   clk,
+  input                                   rst,
+  input                                   flush,
+  input                                   mem_read_in, mem_write_in, WB_en_in, Imm_in, B_in, SR_update_in,
+  input [3:0] 												    EX_command_in,
+  input [3:0]                             status_register_in,
+  input [`REG_FILE_DEPTH-1:0] 				    reg_file_dst_in,
+  input [`SIGNED_IMM_WIDTH-1:0] 			    signed_immediate_in,
+  input [`SHIFTER_OPERAND_WIDTH-1:0]      shifter_operand_in,
+  input [`WORD_WIDTH-1:0]                 pc_in,
+  input [`WORD_WIDTH-1:0]                 instruction_in,
+  input [`WORD_WIDTH-1:0] 						    val_Rn_in, val_Rm_in,
+  output reg                              mem_read_out, mem_write_out, WB_en_out, Imm_out, B_out, SR_update_out,
+  output reg [3:0] 												EX_command_out,
+  output reg [3:0]                        status_register_out,
   output reg [`SIGNED_IMM_WIDTH-1:0] 			signed_immediate_out,
   output reg [`SHIFTER_OPERAND_WIDTH-1:0] shifter_operand_out,
-  output reg [3:0] 												EX_command_out,
-  output reg [3:0]             status_register_out,
-  output reg mem_read_out, mem_write_out,
-    WB_en_out,
-    Imm_out,
-    B_out,
-    SR_update_out
+  output reg [`REG_FILE_DEPTH-1:0] 				reg_file_dst_out,
+  output reg [`WORD_WIDTH-1:0]            pc,
+  output reg [`WORD_WIDTH-1:0]            instruction,
+  output reg [`WORD_WIDTH-1:0] 						val_Rn_out, val_Rm_out
 );
 
   always @(posedge clk, posedge rst) begin

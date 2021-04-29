@@ -1,18 +1,18 @@
-`include "settings.h"
+`include "constants.h"
 
 module MEM_Reg
 (
-    input                       clk,
-    input                       rst,
-    input [`REG_FILE_DEPTH-1:0] dst,
-    input [`WORD_WIDTH-1:0] ALU_res,
-    input [`WORD_WIDTH-1:0] mem,
-    input mem_read, WB_en,
+    input                            clk,
+    input                            rst,
+    input                            mem_read, WB_en,
+    input [`REG_FILE_DEPTH-1:0]      dst,
+    input [`WORD_WIDTH-1:0]          ALU_res,
+    input [`WORD_WIDTH-1:0]          mem,
 
+    output reg                       mem_read_out, WB_en_out,
     output reg [`REG_FILE_DEPTH-1:0] dst_out,
-    output reg [`WORD_WIDTH-1:0] ALU_res_out,
-    output reg [`WORD_WIDTH-1:0] mem_out,
-    output reg mem_read_out, WB_en_out
+    output reg [`WORD_WIDTH-1:0]     ALU_res_out,
+    output reg [`WORD_WIDTH-1:0]     mem_out
 );
 
 always @(posedge clk, posedge rst) begin

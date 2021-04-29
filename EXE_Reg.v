@@ -1,17 +1,17 @@
-`include "settings.h"
+`include "constants.h"
 
 module EXE_Reg
 (
-  input                    clk,
-  input                    rst,
-  input  [`REG_FILE_DEPTH-1:0] dst_in,
-  input  mem_read_in, mem_write_in, WB_en_in,
-  input  [`WORD_WIDTH-1:0] val_Rm_in,
-  input [`WORD_WIDTH-1:0] ALU_res_in,
-  output reg [`REG_FILE_DEPTH-1:0] dst_out,
-  output reg [`WORD_WIDTH-1:0] ALU_res_out,
-  output reg [`WORD_WIDTH-1:0] val_Rm_out,
-  output reg mem_read_out, mem_write_out, WB_en_out
+  input                             clk,
+  input                             rst,
+  input                             mem_read_in, mem_write_in, WB_en_in,
+  input      [`REG_FILE_DEPTH-1:0]  dst_in,
+  input      [`WORD_WIDTH-1:0]      val_Rm_in,
+  input      [`WORD_WIDTH-1:0]      ALU_res_in,
+  output reg                        mem_read_out, mem_write_out, WB_en_out
+  output reg [`REG_FILE_DEPTH-1:0]  dst_out,
+  output reg [`WORD_WIDTH-1:0]      ALU_res_out,
+  output reg [`WORD_WIDTH-1:0]      val_Rm_out,
 );
 
 always @(posedge clk, posedge rst) begin

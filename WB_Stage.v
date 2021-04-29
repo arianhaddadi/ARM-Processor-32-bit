@@ -1,17 +1,17 @@
-`include "settings.h"
+`include "constants.h"
 
 module WB_Stage
 (
-    input                    clk,
-    input                    rst,
-    input [`REG_FILE_DEPTH-1:0] dst,
-    input [`WORD_WIDTH-1:0] ALU_res,
-    input [`WORD_WIDTH-1:0] mem,
-    input mem_read, WB_en,
+    input                        clk,
+    input                        rst,
+    input                        mem_read, WB_en,
+    input [`REG_FILE_DEPTH-1:0]  dst,
+    input [`WORD_WIDTH-1:0]      ALU_res,
+    input [`WORD_WIDTH-1:0]      mem,
 
-    output [`REG_FILE_DEPTH-1:0] WB_Dest,
     output WB_en_out,
-    output [`WORD_WIDTH-1:0] WB_Value
+    output [`REG_FILE_DEPTH-1:0] WB_Dest,
+    output [`WORD_WIDTH-1:0]     WB_Value
 );
 
 assign WB_Dest = dst;

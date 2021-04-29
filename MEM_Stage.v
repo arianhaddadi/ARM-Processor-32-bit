@@ -1,17 +1,17 @@
-`include "settings.h"
+`include "constants.h"
 
 module Mem_Stage
 (
-    input clk, rst,
-    input [`REG_FILE_DEPTH-1:0] dst,
-    input [`WORD_WIDTH-1:0] ALU_res,
-    input [`WORD_WIDTH-1:0] val_Rm,
-    input mem_read, mem_write, WB_en,
+    input                        clk, rst,
+    input                        mem_read, mem_write, WB_en,
+    input [`REG_FILE_DEPTH-1:0]  dst,
+    input [`WORD_WIDTH-1:0]      ALU_res,
+    input [`WORD_WIDTH-1:0]      val_Rm,
 
+    output                       mem_read_out, WB_en_out,
     output [`REG_FILE_DEPTH-1:0] dst_out,
-    output [`WORD_WIDTH-1:0] ALU_res_out,
-    output [`WORD_WIDTH-1:0] mem_out,
-    output mem_read_out, WB_en_out
+    output [`WORD_WIDTH-1:0]     ALU_res_out,
+    output [`WORD_WIDTH-1:0]     mem_out
 );
 
     assign dst_out = dst;
