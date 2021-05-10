@@ -1,35 +1,36 @@
 `include "constants.h"
 
-module Mem_Stage
+module MEM_Stage
 (
-    input                        clk, rst,
-    input                        mem_read,
-    input                        mem_write,
-    input                        WB_en,
-    input [`REG_FILE_DEPTH-1:0]  dst,
+    input                        clk, 
+    input                        rst,
+    input                        MEM_R_EN_in,
+    input                        MEM_W_EN_in,
+    input                        WB_EN,
+    input [`REG_FILE_DEPTH-1:0]  Dest_in,
+    input [`WORD_WIDTH-1:0]      Val_Rm,
     input [`WORD_WIDTH-1:0]      ALU_res,
-    input [`WORD_WIDTH-1:0]      val_Rm,
 
-    output                       mem_read_out,
-    output                       WB_en_out,
-    output [`REG_FILE_DEPTH-1:0] dst_out,
+    output                       MEM_R_EN_out,
+    output                       WB_EN_out,
+    output [`REG_FILE_DEPTH-1:0] Dest_out,
     output [`WORD_WIDTH-1:0]     ALU_res_out,
-    output [`WORD_WIDTH-1:0]     mem_out
+    output [`WORD_WIDTH-1:0]     MEM_out
 );
 
-    assign dst_out = dst;
-    assign mem_read_out = mem_read;
-    assign WB_en_out = WB_en;
+    assign MEM_R_EN_out = MEM_R_EN_in;
+    assign WB_EN_out = WB_EN;
+    assign Dest_out = Dest_in;
     assign ALU_res_out = ALU_res;
 
     Memory M1(
         .clk(clk),
         .rst(rst),
-        .alu_res(ALU_res),
-        .Val_Rm(val_Rm),
-        .mem_w_en(mem_write),
-        .mem_r_en(mem_read),
-        .res_data(mem_out)
+        .MEM_W_EN(MEM_W_EN_in),
+        .MEM_R_EN(MEM_R_EN_in),
+        .ALU_res(ALU_res),
+        .Val_Rm(Val_Rm),
+        .MEM_out(MEM_out)
     );
 
 endmodule

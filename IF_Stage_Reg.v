@@ -13,7 +13,7 @@ module IF_Stage_Reg
     output reg [`WORD_WIDTH-1:0] instruction_out
 );
 
-always @(posedge clk or posedge rst) begin
+always @(posedge clk, posedge rst) begin
 
   if(rst) begin
     instruction_out <= 0;

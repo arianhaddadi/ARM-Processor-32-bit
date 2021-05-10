@@ -10,7 +10,7 @@ module PC
     output reg [`WORD_WIDTH-1:0] PC_out
 );
 
-always @(posedge clk or posedge rst) begin
+always @(posedge clk, posedge rst) begin
   if(rst) PC_out <= 0;
   else if(~Freeze) PC_out <= PC_in;
   else PC_out <= PC_out;

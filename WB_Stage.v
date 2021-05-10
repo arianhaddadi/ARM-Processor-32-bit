@@ -4,25 +4,25 @@ module WB_Stage
 (
     input                        clk,
     input                        rst,
-    input                        mem_read,
-    input                        WB_en,
-    input [`REG_FILE_DEPTH-1:0]  dst,
+    input                        MEM_R_EN,
+    input                        WB_EN,
+    input [`REG_FILE_DEPTH-1:0]  Dest,
     input [`WORD_WIDTH-1:0]      ALU_res,
     input [`WORD_WIDTH-1:0]      mem,
 
-    output                       WB_en_out,
+    output                       WB_EN_out,
     output [`REG_FILE_DEPTH-1:0] WB_Dest,
     output [`WORD_WIDTH-1:0]     WB_Value
 );
 
-assign WB_Dest = dst;
-assign WB_en_out = WB_en;
+assign WB_EN_out = WB_EN;
+assign WB_Dest = Dest;
 
-MUX_2_to_1 #(.WORD_WIDTH(`WORD_WIDTH)) MUX_2_to_1_Reg_File (
-		.in1(ALU_res), .in2(mem),
-		.sel(mem_read),
-		.out(WB_Value)
-	);
+MUX_2_to_1 #(.WORD_WIDTH(`WORD_WIDTH)) mux_2_to_1_regfile (
+    .in1(ALU_res), .in2(mem),
+    .sel(MEM_R_EN),
+    .out(WB_Value)
+);
 
 endmodule
 

@@ -1,4 +1,53 @@
-{E:/University Stuff/CAL/Project/Instruction_Memory.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Instruction_Memory.v}
+{E:/University Stuff/CAL/Project/ID_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ID_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ID_Stage
+
+Top level modules:
+	ID_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/Control_Unit.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Control_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
+} {} {}} {E:/University Stuff/CAL/Project/Adder.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Adder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Adder
+
+Top level modules:
+	Adder
+
+} {} {}} {E:/University Stuff/CAL/Project/Status_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Status_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Status_Reg
+
+Top level modules:
+	Status_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/Memory.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Memory.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Memory
+
+Top level modules:
+	Memory
+
+} {} {}} {E:/University Stuff/CAL/Project/MEM_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Stage
+
+Top level modules:
+	MEM_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/IF_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/IF_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage
+
+Top level modules:
+	IF_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/Instruction_Memory.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Instruction_Memory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Instruction_Memory
 
@@ -12,11 +61,93 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	MUX_2_to_1
 
+} {} {}} {E:/University Stuff/CAL/Project/Val2_Generate.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Val2_Generate.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Val2_Generate
+
+Top level modules:
+	Val2_Generate
+
+} {} {}} {E:/University Stuff/CAL/Project/ARM.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ARM.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM
+** Error: E:/University Stuff/CAL/Project/ARM.v(194): near ".": syntax error, unexpected '.', expecting ')'
+
+} {4.0 5.0} {}} {E:/University Stuff/CAL/Project/ALU.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ALU.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {E:/University Stuff/CAL/Project/EXE_Stage_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage_Reg
+
+Top level modules:
+	EXE_Stage_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/PC.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/PC.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {E:/University Stuff/CAL/Project/WB_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/WB_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WB_Stage
+
+Top level modules:
+	WB_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/Register_File.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Register_File.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register_File
+
+Top level modules:
+	Register_File
+
+} {} {}} {E:/University Stuff/CAL/Project/Condition_Check.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Condition_Check.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Condition_Check
+
+Top level modules:
+	Condition_Check
+
+} {} {}} {E:/University Stuff/CAL/Project/EXE_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage
+
+Top level modules:
+	EXE_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/ID_Stage_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ID_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ID_Stage_Reg
+
+Top level modules:
+	ID_Stage_Reg
+
 } {} {}} {E:/University Stuff/CAL/Project/ARM_TB.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ARM_TB.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ARM_TB
 
 Top level modules:
 	ARM_TB
+
+} {} {}} {E:/University Stuff/CAL/Project/IF_Stage_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/IF_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage_Reg
+
+Top level modules:
+	IF_Stage_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/MEM_Stage_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Stage_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Stage_Reg
+
+Top level modules:
+	MEM_Stage_Reg
 
 } {} {}}
