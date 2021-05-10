@@ -7,6 +7,7 @@ module IF_Stage
     input                    Freeze,
     input                    Branch_Taken,
     input  [`WORD_WIDTH-1:0] Branch_Address,
+    
     output [`WORD_WIDTH-1:0] PC_Stage_out,
     output [`WORD_WIDTH-1:0] instruction
 );

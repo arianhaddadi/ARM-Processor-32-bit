@@ -4,7 +4,8 @@ module WB_Stage
 (
     input                        clk,
     input                        rst,
-    input                        mem_read, WB_en,
+    input                        mem_read,
+    input                        WB_en,
     input [`REG_FILE_DEPTH-1:0]  dst,
     input [`WORD_WIDTH-1:0]      ALU_res,
     input [`WORD_WIDTH-1:0]      mem,

@@ -2,9 +2,11 @@
 
 module Val2_Generate
 (
-    input                                    imm, is_for_memory,
+    input                                    imm,
+    input                                    is_for_memory,
     input      [`SHIFTER_OPERAND_WIDTH-1:0]  shifter_operand,
     input      [`WORD_WIDTH-1:0]             val_Rm,
+    
     output reg [`WORD_WIDTH-1:0]             val2_out
 );
 

@@ -8,6 +8,7 @@ module IF_Stage_Reg
     input                        Flush,
     input      [`WORD_WIDTH-1:0] PC_in,
     input      [`WORD_WIDTH-1:0] instruction_in,
+    
     output reg [`WORD_WIDTH-1:0] PC_out,
     output reg [`WORD_WIDTH-1:0] instruction_out
 );

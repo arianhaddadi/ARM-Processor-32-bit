@@ -6,8 +6,8 @@ entity IF_Stage is
         rst             : in     vl_logic;
         Freeze          : in     vl_logic;
         Branch_Taken    : in     vl_logic;
+        Branch_Address  : in     vl_logic_vector(31 downto 0);
         PC_Stage_out    : out    vl_logic_vector(31 downto 0);
-        branch_addr     : in     vl_logic_vector(31 downto 0);
         instruction     : out    vl_logic_vector(31 downto 0)
     );
 end IF_Stage;

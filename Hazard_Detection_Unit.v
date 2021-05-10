@@ -9,6 +9,7 @@ module Hazard_Detection_Unit (
     input  [`REG_FILE_DEPTH-1:0] src2,
     input  [`REG_FILE_DEPTH-1:0] EXE_dest,
     input  [`REG_FILE_DEPTH-1:0] MEM_dest,
+    
     output reg                   hazard_detected
 );
 

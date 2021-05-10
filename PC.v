@@ -6,6 +6,7 @@ module PC
     input                        rst,
     input                        Freeze,
     input      [`WORD_WIDTH-1:0] PC_in,
+    
     output reg [`WORD_WIDTH-1:0] PC_out
 );
 

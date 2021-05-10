@@ -20,7 +20,7 @@ entity Condition_Check is
     );
     port(
         condition       : in     vl_logic_vector(3 downto 0);
-        status_register : in     vl_logic_vector(3 downto 0);
+        Status_Register : in     vl_logic_vector(3 downto 0);
         condition_state : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;

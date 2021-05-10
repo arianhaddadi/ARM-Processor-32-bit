@@ -6,6 +6,7 @@ module Status_Reg
     input            rst,
     input            load,
     input      [3:0] status_in,
+    
     output reg [3:0] status
 );
 

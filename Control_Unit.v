@@ -5,6 +5,7 @@ module Control_Unit
     input            S,
     input      [1:0] mode,
     input      [3:0] op_code,
+    
     output           SR_update,
     output           has_src1,
     output reg       mem_read,
