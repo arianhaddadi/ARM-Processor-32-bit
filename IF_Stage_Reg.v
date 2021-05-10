@@ -1,6 +1,6 @@
 `include "constants.h"
 
-module IF_Reg
+module IF_Stage_Reg
 (
     input                        clk,
     input                        rst,

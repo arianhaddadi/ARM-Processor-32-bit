@@ -25,7 +25,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] IF_reg_pc_out;
   wire [`WORD_WIDTH-1:0] IF_reg_instruction_out;
 
-  IF_Reg  IF_Reg_Inst (
+  IF_Stage_Reg  IF_Stage_Reg_Inst (
    .clk(clk),
    .rst(rst),
    .Freeze(hazard_detected),
@@ -90,7 +90,7 @@ module ARM
   wire [`SIGNED_IMM_WIDTH-1:0] ID_reg_signed_immediate_out;
   wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_reg_shifter_operand_out;
 
-  ID_Reg ID_Reg_Inst(
+  ID_Stage_Reg ID_Stage_Reg_Inst(
     .clk(clk),
     .rst(rst),
     .flush(EXE_stage_B_out),
@@ -128,8 +128,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] EXE_stage_val_Rm_out;
   wire [3:0] EXE_stage_SR_out;
   wire [`WORD_WIDTH-1:0] ALU_res;
-  wire EXE_stage_mem_read_out, EXE_stage_mem_write_out,
-    EXE_stage_WB_en_out;
+  wire EXE_stage_mem_read_out, EXE_stage_mem_write_out, EXE_stage_WB_en_out;
 
   EXE_Stage EXE_Stage_Inst(
     .clk(clk),
@@ -140,17 +139,20 @@ module ARM
     .SR_in(ID_reg_SR_out),
     .shifter_operand(ID_reg_shifter_operand_out),
     .dst_in(ID_reg_reg_file_dst_out),
-    .mem_read_in(ID_reg_mem_read_out), .mem_write_in(ID_reg_mem_write_out),
+    .mem_read_in(ID_reg_mem_read_out), 
+    .mem_write_in(ID_reg_mem_write_out),
     .imm(ID_reg_Imm_out),
     .WB_en_in(ID_reg_WB_en_out),
     .B_in(ID_reg_B_out),
-    .val_Rn_in(ID_reg_val_Rn_out), .val_Rm_in(ID_reg_val_Rm_out),
+    .val_Rn_in(ID_reg_val_Rn_out), 
+    .val_Rm_in(ID_reg_val_Rm_out),
     .dst_out(EXE_stage_reg_file_dst_out),
     .SR_out(EXE_stage_SR_out),
     .ALU_res(ALU_res),
     .val_Rm_out(EXE_stage_val_Rm_out),
     .branch_address(branch_address),
-    .mem_read_out(EXE_stage_mem_read_out), .mem_write_out(EXE_stage_mem_write_out),
+    .mem_read_out(EXE_stage_mem_read_out), 
+    .mem_write_out(EXE_stage_mem_write_out),
     .WB_en_out(EXE_stage_WB_en_out),
     .B_out(EXE_stage_B_out)
   );
@@ -160,19 +162,21 @@ module ARM
   wire [`WORD_WIDTH-1:0] EXE_reg_val_Rm_out;
   wire EXE_reg_mem_read_out, EXE_reg_mem_write_out, EXE_reg_WB_en_out;
 
-  EXE_Reg EXE_Reg_Inst(
+  EXE_Stage_Reg EXE_Stage_Reg_Inst(
     .clk(clk),
     .rst(rst),
-    .dst_in(EXE_stage_reg_file_dst_out),
-    .mem_read_in(EXE_stage_mem_read_out), .mem_write_in(EXE_stage_mem_write_out),
-    .WB_en_in(EXE_stage_WB_en_out),
-    .val_Rm_in(EXE_stage_val_Rm_out),
-    .ALU_res_in(ALU_res),
-    .dst_out(EXE_reg_dst_out),
-    .ALU_res_out(EXE_reg_ALU_res_out),
-    .val_Rm_out(EXE_reg_val_Rm_out),
-    .mem_read_out(EXE_reg_mem_read_out), .mem_write_out(EXE_reg_mem_write_out),
-    .WB_en_out(EXE_reg_WB_en_out)
+    .Dest_in(EXE_stage_reg_file_dst_out),
+    .MEM_R_EN_in(EXE_stage_mem_read_out), 
+    .MEM_W_EN_in(EXE_stage_mem_write_out),
+    .WB_EN_in(EXE_stage_WB_en_out),
+    .Val_Rm_in(EXE_stage_val_Rm_out),
+    .ALU_Res_in(ALU_res),
+    .Dest_out(EXE_reg_dst_out),
+    .ALU_Res_out(EXE_reg_ALU_res_out),
+    .Val_Rm_out(EXE_reg_val_Rm_out),
+    .MEM_R_EN_out(EXE_reg_mem_read_out), 
+    .MEM_W_EN_out(EXE_reg_mem_write_out),
+    .WB_EN_out(EXE_reg_WB_en_out)
   );
 
   wire [`REG_FILE_DEPTH-1:0] Mem_Stage_dst_out;
@@ -180,7 +184,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] Mem_Stage_mem_out;
   wire Mem_Stage_read_out, Mem_Stage_WB_en_out;
 
-  Mem_Stage Mem_Stage_Inst(
+  MEM_Stage_Reg MEM_Stage_Reg_Inst(
     .clk(clk),
     .rst(rst),
     .dst(EXE_reg_dst_out),
@@ -204,17 +208,17 @@ module ARM
   MEM_Reg Mem_Reg_Inst(
     .clk(clk),
     .rst(rst),
-    .dst(Mem_Stage_dst_out),
-    .ALU_res(Mem_Stage_ALU_res_out),
-    .mem(Mem_Stage_mem_out),
-    .mem_read(Mem_Stage_read_out),
-    .WB_en(Mem_Stage_WB_en_out),
+    .Dest_in(Mem_Stage_dst_out),
+    .ALU_Res_in(Mem_Stage_ALU_res_out),
+    .MEM_in(Mem_Stage_mem_out),
+    .MEM_R_EN_in(Mem_Stage_read_out),
+    .WB_EN_in(Mem_Stage_WB_en_out),
 
-    .dst_out(Mem_Reg_dst_out),
-    .ALU_res_out(Mem_Reg_ALU_res_out),
-    .mem_out(Mem_Reg_mem_out),
-    .mem_read_out(Mem_Reg_read_out),
-    .WB_en_out(Mem_Reg_WB_en_out)
+    .Dest_out(Mem_Reg_dst_out),
+    .ALU_Res_out(Mem_Reg_ALU_res_out),
+    .MEM_out(Mem_Reg_mem_out),
+    .MEM_R_EN_out(Mem_Reg_read_out),
+    .WB_EN_out(Mem_Reg_WB_en_out)
   );
 
   WB_Stage WB_Stage_Inst(
