@@ -1,164 +1,148 @@
-C:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Mem_Stage
-
-Top level modules:
-	Mem_Stage
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Stage
-
-Top level modules:
-	IF_Stage
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MUX_2_to_1
-
-Top level modules:
-	MUX_2_to_1
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Reg
-
-Top level modules:
-	EXE_Reg
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Instruction_Mem
-
-Top level modules:
-	Instruction_Mem
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/ARM.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/ARM.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM
-
-Top level modules:
-	ARM
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/ALU.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/ALU.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU
-
-Top level modules:
-	ALU
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ID_Reg
-
-Top level modules:
-	ID_Reg
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/val2_generator.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/val2_generator.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Val2_Generator
-
-Top level modules:
-	Val2_Generator
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/PC.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/PC.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module PC
-
-Top level modules:
-	PC
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module WB_Stage
-
-Top level modules:
-	WB_Stage
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Register_File.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Register_File.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Register_File
-
-Top level modules:
-	Register_File
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MEM_Reg
-
-Top level modules:
-	MEM_Reg
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Reg
-
-Top level modules:
-	IF_Reg
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Condition_Check
-
-Top level modules:
-	Condition_Check
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM_TB
-
-Top level modules:
-	ARM_TB
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Stage
-
-Top level modules:
-	EXE_Stage
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/constants.h {1 {sccom -work work C:/Users/amirp/Desktop/ARM-Processor/constants.h
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Hazard_Detection_Unit
-
-Top level modules:
-	Hazard_Detection_Unit
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Adder.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Adder.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Adder
-
-Top level modules:
-	Adder
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Control_Unit
-
-Top level modules:
-	Control_Unit
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v
+{E:/University Stuff/CAL/Project/ID_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ID_Stage
 
 Top level modules:
 	ID_Stage
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v
+} {} {}} {E:/University Stuff/CAL/Project/Control_Unit.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Control_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
+} {} {}} {E:/University Stuff/CAL/Project/Adder.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Adder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Adder
+
+Top level modules:
+	Adder
+
+} {} {}} {E:/University Stuff/CAL/Project/Status_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Status_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Status_Reg
 
 Top level modules:
 	Status_Reg
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor/Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor/Memory.v
+} {} {}} {E:/University Stuff/CAL/Project/Memory.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Memory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Memory
 
 Top level modules:
 	Memory
+
+} {} {}} {E:/University Stuff/CAL/Project/MEM_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mem_Stage
+
+Top level modules:
+	Mem_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/IF_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/IF_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Stage
+
+Top level modules:
+	IF_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/MUX_2_to_1.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/MUX_2_to_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX_2_to_1
+
+Top level modules:
+	MUX_2_to_1
+
+} {} {}} {E:/University Stuff/CAL/Project/EXE_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Reg
+
+Top level modules:
+	EXE_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/Instruction_Mem.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Instruction_Mem.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Instruction_Mem
+
+Top level modules:
+	Instruction_Mem
+
+} {} {}} {E:/University Stuff/CAL/Project/ALU.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ALU.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {E:/University Stuff/CAL/Project/val2_generator.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/val2_generator.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Val2_Generator
+
+Top level modules:
+	Val2_Generator
+
+} {} {}} {E:/University Stuff/CAL/Project/PC.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/PC.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {E:/University Stuff/CAL/Project/IF_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/IF_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module IF_Reg
+
+Top level modules:
+	IF_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/WB_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/WB_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WB_Stage
+
+Top level modules:
+	WB_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/Register_File.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Register_File.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Register_File
+
+Top level modules:
+	Register_File
+
+} {} {}} {E:/University Stuff/CAL/Project/MEM_Reg.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Reg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MEM_Reg
+
+Top level modules:
+	MEM_Reg
+
+} {} {}} {E:/University Stuff/CAL/Project/Condition_Check.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Condition_Check.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Condition_Check
+
+Top level modules:
+	Condition_Check
+
+} {} {}} {E:/University Stuff/CAL/Project/EXE_Stage.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Stage.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module EXE_Stage
+
+Top level modules:
+	EXE_Stage
+
+} {} {}} {E:/University Stuff/CAL/Project/ARM_TB.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/ARM_TB.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_TB
+
+Top level modules:
+	ARM_TB
+
+} {} {}} {E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v} {1 {vlog -work work {E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
 
 } {} {}}

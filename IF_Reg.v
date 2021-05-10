@@ -4,31 +4,34 @@ module IF_Reg
 (
     input                        clk,
     input                        rst,
-    input                        freeze,
-    input                        flush,
-    input      [`WORD_WIDTH-1:0] pc_in,
+    input                        Freeze,
+    input                        Flush,
+    input      [`WORD_WIDTH-1:0] PC_in,
     input      [`WORD_WIDTH-1:0] instruction_in,
-    output reg [`WORD_WIDTH-1:0] pc,
-    output reg [`WORD_WIDTH-1:0] instruction
+    output reg [`WORD_WIDTH-1:0] PC_out,
+    output reg [`WORD_WIDTH-1:0] instruction_out
 );
 
 always @(posedge clk or posedge rst) begin
+
   if(rst) begin
-    pc <= 0;
-    instruction <= 0;
-  end  
-  else if(flush) begin
-    pc <= 0;
-    instruction <= 0;
+    instruction_out <= 0;
+    PC_out <= 0;
   end
-  else if(~freeze) begin
-    pc <= pc_in;
-    instruction <= instruction_in;
-  end 
+  else if(Flush) begin
+    instruction_out <= 0;
+    PC_out <= 0;
+  end
+  else if(~Freeze) begin
+    instruction_out <= instruction_in;
+    PC_out <= PC_in;
+  end
   else begin
-    pc <= pc;
-    instruction <= instruction;
-  end    
- end
+    instruction_out <= instruction_in;
+    PC_out <= PC_out;
+  end  
+
+end
  
+
 endmodule

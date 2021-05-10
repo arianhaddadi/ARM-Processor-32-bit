@@ -4,462 +4,462 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1\modelsim_ase\win32aloem
 vAdder
-Z1 IkIG5WUzginc_XzmAjRTYV3
-Z2 VAM9z7>k_Ucnc?V4BMKFMD3
-Z3 dC:\Users\amirp\Desktop\ARM-Processor
-Z4 w1619718652
-Z5 8C:/Users/amirp/Desktop/ARM-Processor/Adder.v
-Z6 FC:/Users/amirp/Desktop/ARM-Processor/Adder.v
+Z1 !s100 cL68UeBCH73Jj9CgcE<o21
+Z2 IgM@nNaS?8h1dVmzH>3nBJ1
+Z3 VAM9z7>k_Ucnc?V4BMKFMD3
+Z4 dE:\University Stuff\CAL\Project
+Z5 w1619729794
+Z6 8E:/University Stuff/CAL/Project/Adder.v
+Z7 FE:/University Stuff/CAL/Project/Adder.v
 L0 3
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 o-work work -O0
-Z9 n@adder
-Z10 !s100 Xi>SK`[Wg3PWQjCdNfc>T0
-Z11 !s108 1619721045.572000
-Z12 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Adder.v|
-Z13 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Adder.v|
+Z9 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Adder.v|
+Z10 o-work work -O0
+Z11 n@adder
+Z12 !s108 1620651131.730000
+Z13 !s107 constants.h|E:/University Stuff/CAL/Project/Adder.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU
-Z14 IW6d4YE_0l_>Q2[7PF1n6G2
-Z15 VX6<HHlGm3_k3INDo]O9c43
-R3
-Z16 w1619719076
-Z17 8C:/Users/amirp/Desktop/ARM-Processor/ALU.v
-Z18 FC:/Users/amirp/Desktop/ARM-Processor/ALU.v
+Z14 !s100 Pj`5HHRZ<SF8ji^nX3E?[0
+Z15 Ine<@8gIBlCWj>_fCiCi583
+Z16 VX6<HHlGm3_k3INDo]O9c43
+R4
+R5
+Z17 8E:/University Stuff/CAL/Project/ALU.v
+Z18 FE:/University Stuff/CAL/Project/ALU.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z19 n@a@l@u
-Z20 !s100 YFd]100jLe9PWJ:OM9c_R3
-Z21 !s108 1619721045.719000
-Z22 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/ALU.v|
-Z23 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/ALU.v|
+Z19 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ALU.v|
+R10
+Z20 n@a@l@u
+Z21 !s108 1620651131.783000
+Z22 !s107 constants.h|E:/University Stuff/CAL/Project/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM
-Z24 IjFFH?l4A4QTS3HN;RPJCW1
-Z25 V?2[cB>lk90YLKN3jbUCQl1
-R3
+Z23 I6gB@Ez;0cmAVaY42VF@zh3
+Z24 V?2[cB>lk90YLKN3jbUCQl1
 R4
-Z26 8C:/Users/amirp/Desktop/ARM-Processor/ARM.v
-Z27 FC:/Users/amirp/Desktop/ARM-Processor/ARM.v
+Z25 w1620651081
+Z26 8E:/University Stuff/CAL/Project/ARM.v
+Z27 FE:/University Stuff/CAL/Project/ARM.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z28 n@a@r@m
-Z29 !s100 ?zU2U7ih8?6TUUM5iLnb;1
-Z30 !s108 1619721045.834000
-Z31 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/ARM.v|
-Z32 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/ARM.v|
+Z28 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM.v|
+R10
+Z29 n@a@r@m
+Z30 !s100 l:S:_?=9GlY4cNoRS3W:d2
+Z31 !s108 1620651131.833000
+Z32 !s107 constants.h|E:/University Stuff/CAL/Project/ARM.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM_TB
-Z33 Ii?<jDB8_aaz5_2DASNEHI1
-Z34 VRP]Y8^SU39TjHSD:MM2ao2
-R3
+Z33 !s100 2VYkZj29^j5Bnk8nhfAhK1
+Z34 Ibfg53nP@QDMPUiFiealKM1
+Z35 VRP]Y8^SU39TjHSD:MM2ao2
 R4
-Z35 8C:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v
-Z36 FC:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v
+R5
+Z36 8E:/University Stuff/CAL/Project/ARM_TB.v
+Z37 FE:/University Stuff/CAL/Project/ARM_TB.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z37 n@a@r@m_@t@b
-Z38 !s100 =8o84Cc@]3>[2XM[UNkkR3
-Z39 !s108 1619721045.957000
-Z40 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v|
-Z41 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/ARM_TB.v|
+Z38 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM_TB.v|
+R10
+Z39 n@a@r@m_@t@b
+Z40 !s108 1620651131.890000
+Z41 !s107 constants.h|E:/University Stuff/CAL/Project/ARM_TB.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCondition_Check
-Z42 IFk<I2j6?E0XmojEC1eaA^0
-Z43 V=H6?afJ:To6;^N[zaCbi=1
-R3
+Z42 !s100 2Mj;L2Zo@nm<Jc9AMk5kl3
+Z43 IzV;fc90;dFdj58o=Ce@Ii1
+Z44 V=H6?afJ:To6;^N[zaCbi=1
 R4
-Z44 8C:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v
-Z45 FC:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v
+R5
+Z45 8E:/University Stuff/CAL/Project/Condition_Check.v
+Z46 FE:/University Stuff/CAL/Project/Condition_Check.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z46 n@condition_@check
-Z47 !s100 LI;zIJgXVgg1hhKKENPOd3
-Z48 !s108 1619721046.099000
-Z49 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v|
-Z50 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Condition_Check.v|
+Z47 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Condition_Check.v|
+R10
+Z48 n@condition_@check
+Z49 !s108 1620651131.946000
+Z50 !s107 constants.h|E:/University Stuff/CAL/Project/Condition_Check.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vControl_Unit
-Z51 I[fXiW`H9zPHbYf5Fz:>?42
-Z52 VVzE1kYY7:9176PI7Td6LU3
-R3
+Z51 !s100 fCfaQQlY?JLJAO=D`hkJE0
+Z52 IR:Sncf^Qokmo]C4Zc0I`g1
+Z53 VVzE1kYY7:9176PI7Td6LU3
 R4
-Z53 8C:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v
-Z54 FC:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v
+R5
+Z54 8E:/University Stuff/CAL/Project/Control_Unit.v
+Z55 FE:/University Stuff/CAL/Project/Control_Unit.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z55 n@control_@unit
-Z56 !s100 ShU26Q_G>ilW95jjj?IlM3
-Z57 !s108 1619721046.223000
-Z58 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v|
-Z59 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Control_Unit.v|
+Z56 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Control_Unit.v|
+R10
+Z57 n@control_@unit
+Z58 !s108 1620651131.990000
+Z59 !s107 constants.h|E:/University Stuff/CAL/Project/Control_Unit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Reg
-Z60 I9I]zSzAckA2K:6K[M7Om63
-Z61 Vm94]mDd4CmlMzB[5UDAQk1
-R3
-Z62 w1619719027
-Z63 8C:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v
-Z64 FC:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v
+Z60 !s100 cz<cEPDOQWRYI4C2_PiZ62
+Z61 IiYGnN?=Qoj4LMg2X;jfTJ2
+Z62 Vm94]mDd4CmlMzB[5UDAQk1
+R4
+R5
+Z63 8E:/University Stuff/CAL/Project/EXE_Reg.v
+Z64 FE:/University Stuff/CAL/Project/EXE_Reg.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z65 n@e@x@e_@reg
-Z66 !s100 SB?>HCIm9:5Mf3c__F8R61
-Z67 !s108 1619721046.344000
-Z68 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v|
-Z69 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/EXE_Reg.v|
+Z65 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Reg.v|
+R10
+Z66 n@e@x@e_@reg
+Z67 !s108 1620651132.047000
+Z68 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Stage
-Z70 I20f[DNi7dLbAdYEE^2TOh3
-Z71 VU[B>=kg5KTm03BVMQhL:?2
-R3
+Z69 !s100 DJPU7cIa3FhY;VSD06dm=0
+Z70 I`nJA_:]k]<VeS3aajS^@W1
+Z71 VoMzCK9C63aDo:37PHc0;I0
 R4
-Z72 8C:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v
-Z73 FC:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v
+Z72 w1620648992
+Z73 8E:/University Stuff/CAL/Project/EXE_Stage.v
+Z74 FE:/University Stuff/CAL/Project/EXE_Stage.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z74 n@e@x@e_@stage
-Z75 !s100 70eaD=AJ;M@19Nna1=1f80
-Z76 !s108 1619721046.444000
-Z77 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v|
-Z78 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/EXE_Stage.v|
+Z75 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Stage.v|
+R10
+Z76 n@e@x@e_@stage
+Z77 !s108 1620651132.095000
+Z78 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vHazard_Detection_Unit
-Z79 In=YYVc6S6[Q>RLmV5lhPl3
-Z80 VZ<nzS9J?B:E?:UE5IMT`L1
-R3
+Z79 !s100 @JPe_a<]l34QVFWfN9L>72
+Z80 IPNDZACm6NQL=aWTIm0D[F2
+Z81 VZ<nzS9J?B:E?:UE5IMT`L1
 R4
-Z81 8C:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v
-Z82 FC:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v
+R5
+Z82 8E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
+Z83 FE:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z83 n@hazard_@detection_@unit
-Z84 !s100 >H4V>?:o19532SPIUJZ_:2
-Z85 !s108 1619721046.541000
-Z86 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v|
-Z87 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Hazard_Detection_Unit.v|
+Z84 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
+R10
+Z85 n@hazard_@detection_@unit
+Z86 !s108 1620651132.141000
+Z87 !s107 constants.h|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Reg
-Z88 I[UB@_D9g6k`g=m65H4JeO3
-Z89 VZaMWUSlUZSRj8HO==g[?G3
-R3
+Z88 I081gz4ZiL53jlhnGnV0]b3
+Z89 V5a;>n2Y39C@i8HBhn3aih2
 R4
-Z90 8C:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v
-Z91 FC:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v
+Z90 w1620651077
+Z91 8E:/University Stuff/CAL/Project/ID_Reg.v
+Z92 FE:/University Stuff/CAL/Project/ID_Reg.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z92 n@i@d_@reg
-Z93 !s100 AR;gT_MkPTD@4;H6Vl1Ff3
-Z94 !s108 1619721046.659000
-Z95 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v|
-Z96 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/ID_Reg.v|
+Z93 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Reg.v|
+R10
+Z94 n@i@d_@reg
+Z95 !s100 3n5Tj>EKTGPL^VALH^Z<n2
+Z96 !s108 1620651132.186000
+Z97 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Stage
-Z97 I:_ZZ<5X5IOPk:;CaPB2O]0
-Z98 VY<YPC9gDCb<ajHo8eT7@20
-R3
-Z99 w1619719151
-Z100 8C:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v
-Z101 FC:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v
+Z98 !s100 [oNEEgLMRdWAHW1eNDHlJ3
+Z99 I?bAFl7QPHIN0zhfLAFB;O1
+Z100 V2BnMh]RY[]Dhj@TAKR62C0
+R4
+Z101 w1620649123
+Z102 8E:/University Stuff/CAL/Project/ID_Stage.v
+Z103 FE:/University Stuff/CAL/Project/ID_Stage.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z102 n@i@d_@stage
-Z103 !s100 5B@E10>Rce>hVb_O5HjS;1
-Z104 !s108 1619721046.809000
-Z105 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v|
-Z106 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/ID_Stage.v|
+Z104 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Stage.v|
+R10
+Z105 n@i@d_@stage
+Z106 !s108 1620651132.232000
+Z107 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Reg
-Z107 I@<TNe1i^U68?l]lS352L@1
-Z108 V<^E`5f?9l_FS[mYH=6dhd0
-R3
-Z109 w1619718653
-Z110 8C:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v
-Z111 FC:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v
+Z108 !s100 E>dWRQaR3hf<M7m7<;zPo0
+Z109 I3g6?2QL0593_6K1g2o1V93
+Z110 VjPlJhPM1bVhzn3AVCcn871
+R4
+Z111 w1620648828
+Z112 8E:/University Stuff/CAL/Project/IF_Reg.v
+Z113 FE:/University Stuff/CAL/Project/IF_Reg.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z112 n@i@f_@reg
-Z113 !s100 a]Z7]E<ldNfmEV[2za18E2
-Z114 !s108 1619721047.668000
-Z115 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v|
-Z116 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/IF_Reg.v|
+Z114 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Reg.v|
+R10
+Z115 n@i@f_@reg
+Z116 !s108 1620651132.276000
+Z117 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage
-Z117 IVG@DHP6VbSQN`K0hfHSAZ1
-Z118 VZnP`90J^^T^4kI[e8SCVm0
-R3
-R109
-Z119 8C:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v
-Z120 FC:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v
+Z118 !s100 c7aoL]1SWm^g5BDWP_K@91
+Z119 I<`ec`[3SPdVmI:zRdXK7D0
+Z120 VZnP`90J^^T^4kI[e8SCVm0
+R4
+R5
+Z121 8E:/University Stuff/CAL/Project/IF_Stage.v
+Z122 FE:/University Stuff/CAL/Project/IF_Stage.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z121 n@i@f_@stage
-Z122 !s100 >dF2G8EK<WaJ<4LoBV0PM2
-Z123 !s108 1619721047.838000
-Z124 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v|
-Z125 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/IF_Stage.v|
+Z123 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Stage.v|
+R10
+Z124 n@i@f_@stage
+Z125 !s108 1620651132.325000
+Z126 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vInstruction_Mem
-Z126 IKHeV<6JV:PeQl1_dj9PR_2
-Z127 VUJT]BO:<4E=D^z?VD1]2M1
-R3
-R109
-Z128 8C:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v
-Z129 FC:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v
+Z127 !s100 K7D;DKSh[G[g7W5cb@2P=1
+Z128 IF]<k3ERN[CdW=;S<7J8_]1
+Z129 VUJT]BO:<4E=D^z?VD1]2M1
+R4
+R5
+Z130 8E:/University Stuff/CAL/Project/Instruction_Mem.v
+Z131 FE:/University Stuff/CAL/Project/Instruction_Mem.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z130 n@instruction_@mem
-Z131 !s100 dglU>nfjaPoP@b`lE2bDM0
-Z132 !s108 1619721047.996000
-Z133 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v|
-Z134 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Instruction_Mem.v|
+Z132 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Instruction_Mem.v|
+R10
+Z133 n@instruction_@mem
+Z134 !s108 1620651132.369000
+Z135 !s107 constants.h|E:/University Stuff/CAL/Project/Instruction_Mem.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMEM_Reg
-Z135 I2C^kZ1Va?QHMOdHC_9?NZ1
-Z136 VE06jC:I_2gbnNTb5QV5jV0
-R3
-R109
-Z137 8C:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v
-Z138 FC:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v
+Z136 !s100 o@mS@O^ed563l7WWX7PA43
+Z137 Ij55=;Ho@l>E8ee0=zKeMS1
+Z138 VE06jC:I_2gbnNTb5QV5jV0
+R4
+R5
+Z139 8E:/University Stuff/CAL/Project/MEM_Reg.v
+Z140 FE:/University Stuff/CAL/Project/MEM_Reg.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z139 n@m@e@m_@reg
-Z140 !s100 A[lB`Ak^=H`B_GZUmIb?m1
-Z141 !s108 1619721048.117000
-Z142 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v|
-Z143 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/MEM_Reg.v|
+Z141 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Reg.v|
+R10
+Z142 n@m@e@m_@reg
+Z143 !s108 1620651132.414000
+Z144 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMem_Stage
-Z144 I?gbXUlH3=[b``_V@]c5eC0
-Z145 V0jT4`4DFJXSdmcUX1996B3
-R3
-R109
-Z146 8C:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v
-Z147 FC:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v
+Z145 !s100 OULaV_8fH8IY4BMS^JWPZ0
+Z146 IL2PCCkoE8aQ3b8KVlmPGc1
+Z147 V0jT4`4DFJXSdmcUX1996B3
+R4
+R5
+Z148 8E:/University Stuff/CAL/Project/MEM_Stage.v
+Z149 FE:/University Stuff/CAL/Project/MEM_Stage.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z148 n@mem_@stage
-Z149 !s100 U?hlmadm6Xz^iHd;0]30m2
-Z150 !s108 1619721048.246000
-Z151 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v|
-Z152 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/MEM_Stage.v|
+Z150 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Stage.v|
+R10
+Z151 n@mem_@stage
+Z152 !s108 1620651132.462000
+Z153 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMemory
-Z153 I>b9nAZ95Z9N6EK40ADR]C0
-Z154 V@5n3CG:1kYlCzEg8B=9Jc3
-R3
-R109
-Z155 8C:/Users/amirp/Desktop/ARM-Processor/Memory.v
-Z156 FC:/Users/amirp/Desktop/ARM-Processor/Memory.v
+Z154 !s100 b@RYh?Plg3ZI2BeMm_OMl1
+Z155 I>ohcz24GFjcLZn>RhPgID1
+Z156 V@5n3CG:1kYlCzEg8B=9Jc3
+R4
+R5
+Z157 8E:/University Stuff/CAL/Project/Memory.v
+Z158 FE:/University Stuff/CAL/Project/Memory.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z157 n@memory
-Z158 !s100 H2RQM;[J3eO35^Tb@@MdS0
-Z159 !s108 1619721048.366000
-Z160 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Memory.v|
-Z161 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Memory.v|
+Z159 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Memory.v|
+R10
+Z160 n@memory
+Z161 !s108 1620651132.505000
+Z162 !s107 constants.h|E:/University Stuff/CAL/Project/Memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX_2_to_1
-Z162 ImJA0Q^Q:JaE2oc>5[02V80
-Z163 V6TbPM1N1lJ=j7f3BTAcNT3
-R3
-Z164 w1619720583
-Z165 8C:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v
-Z166 FC:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v
+Z163 !s100 e:VZRW_3<5L5MK>RTMdb_2
+Z164 IA>=QD2nZm@O2;dfX`2A;93
+Z165 V6TbPM1N1lJ=j7f3BTAcNT3
+R4
+R5
+Z166 8E:/University Stuff/CAL/Project/MUX_2_to_1.v
+Z167 FE:/University Stuff/CAL/Project/MUX_2_to_1.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z167 n@m@u@x_2_to_1
-Z168 !s100 @E3]KnRG9C@I1>660f;J]3
-Z169 !s108 1619721048.496000
-Z170 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v|
-Z171 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/MUX_2_to_1.v|
+Z168 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
+R10
+Z169 n@m@u@x_2_to_1
+Z170 !s108 1620651132.548000
+Z171 !s107 constants.h|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vPC
-Z172 I7^<GeQUG6BaiFDN:_@o3l1
-Z173 VSI[D6ZmE_1RMO63aeL_L=0
-R3
-R109
-Z174 8C:/Users/amirp/Desktop/ARM-Processor/PC.v
-Z175 FC:/Users/amirp/Desktop/ARM-Processor/PC.v
+Z172 !s100 Ej2oafXeg_8hGlHzVflRh3
+Z173 IIe4;2`XnfLg=i<XkfDUih0
+Z174 VSI[D6ZmE_1RMO63aeL_L=0
+R4
+R5
+Z175 8E:/University Stuff/CAL/Project/PC.v
+Z176 FE:/University Stuff/CAL/Project/PC.v
 L0 3
-R7
+R8
 r1
 31
-R8
+Z177 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/PC.v|
+R10
 n@p@c
-Z176 !s100 Ezj<c>MJ^BAeVWMXcnm7K3
-Z177 !s108 1619721048.615000
-Z178 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/PC.v|
-Z179 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/PC.v|
+Z178 !s108 1620651132.600000
+Z179 !s107 constants.h|E:/University Stuff/CAL/Project/PC.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRegister_File
-Z180 I:^aVjNV=SMZ:Z_A_8njaT3
-Z181 V5h3JkEhh:;onYJVbi4We51
-R3
-R109
-Z182 8C:/Users/amirp/Desktop/ARM-Processor/Register_File.v
-Z183 FC:/Users/amirp/Desktop/ARM-Processor/Register_File.v
+Z180 !s100 >Lz2X@dEG8e9lPbCF@6290
+Z181 IbGUWWLi9S;eKNOka2@V[W3
+Z182 V5h3JkEhh:;onYJVbi4We51
+R4
+R5
+Z183 8E:/University Stuff/CAL/Project/Register_File.v
+Z184 FE:/University Stuff/CAL/Project/Register_File.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z184 n@register_@file
-Z185 !s100 An6Y8j4XP?5_ce5B;VBVg1
-Z186 !s108 1619721048.750000
-Z187 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Register_File.v|
-Z188 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Register_File.v|
+Z185 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Register_File.v|
+R10
+Z186 n@register_@file
+Z187 !s108 1620651132.655000
+Z188 !s107 constants.h|E:/University Stuff/CAL/Project/Register_File.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vStatus_Reg
-Z189 IYE^LRJIkG_5b=On8n4NY]2
-Z190 VdVJOO]JgY@GTlHCQY5FS;0
-R3
-R109
-Z191 8C:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v
-Z192 FC:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v
+Z189 !s100 ;SA;<IE8P?0Y8XK]K`Pc10
+Z190 II]_gHaB<=cJEfM;>@jKn^1
+Z191 VdVJOO]JgY@GTlHCQY5FS;0
+R4
+R5
+Z192 8E:/University Stuff/CAL/Project/Status_Reg.v
+Z193 FE:/University Stuff/CAL/Project/Status_Reg.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z193 n@status_@reg
-Z194 !s100 PET2NF0;A?cAF<^jAe8PU1
-Z195 !s108 1619721048.888000
-Z196 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v|
-Z197 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/Status_Reg.v|
+Z194 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Status_Reg.v|
+R10
+Z195 n@status_@reg
+Z196 !s108 1620651132.698000
+Z197 !s107 constants.h|E:/University Stuff/CAL/Project/Status_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vVal2_Generator
-Z198 I]8=DTWI8BiR>[JhMchX<;1
-Z199 VHRTg3Io8OP@B<4A6]3a5S1
-R3
-R109
-Z200 8C:/Users/amirp/Desktop/ARM-Processor/val2_generator.v
-Z201 FC:/Users/amirp/Desktop/ARM-Processor/val2_generator.v
+Z198 !s100 O5QgK[aB;0g9TfE2JH@IL0
+Z199 I1i<zNe7nPQC`MM9ZC97=U3
+Z200 VHRTg3Io8OP@B<4A6]3a5S1
+R4
+R5
+Z201 8E:/University Stuff/CAL/Project/val2_generator.v
+Z202 FE:/University Stuff/CAL/Project/val2_generator.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z202 n@val2_@generator
+Z203 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/val2_generator.v|
+R10
+Z204 n@val2_@generator
 !i10b 1
-Z203 !s100 K[F9XA5XWzF5NTKC]bBMG1
 !s85 0
-Z204 !s108 1619721049.053000
-Z205 !s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/val2_generator.v|
-Z206 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/val2_generator.v|
+Z205 !s108 1620651132.751000
+Z206 !s107 constants.h|E:/University Stuff/CAL/Project/val2_generator.v|
 !s101 -O0
 vWB_Stage
 !i10b 1
-!s100 j7LI=z<]=B9Ck:d4`]Uj23
-IAB1HWkNO]_06U:H]cg7260
-VL^@OlO?bX@hWkXY[K8[aK1
-R3
-R109
-8C:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v
-FC:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v
+Z207 !s100 SD<<I0XZAT?AA<V0P<C6P1
+Z208 IS>?1j1MM6?11Ch0EhzKe43
+Z209 VL^@OlO?bX@hWkXY[K8[aK1
+R4
+R5
+Z210 8E:/University Stuff/CAL/Project/WB_Stage.v
+Z211 FE:/University Stuff/CAL/Project/WB_Stage.v
 L0 3
-R7
+R8
 r1
 !s85 0
 31
-!s108 1619721049.248000
-!s107 constants.h|C:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v|
-!s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor/WB_Stage.v|
+!s108 1620651132.800000
+!s107 constants.h|E:/University Stuff/CAL/Project/WB_Stage.v|
+Z212 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/WB_Stage.v|
 !s101 -O0
-R8
-n@w@b_@stage
+R10
+Z213 n@w@b_@stage

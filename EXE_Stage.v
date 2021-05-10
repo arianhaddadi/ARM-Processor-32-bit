@@ -11,7 +11,6 @@ module EXE_Stage
   input  [`SHIFTER_OPERAND_WIDTH-1:0] shifter_operand,
   input  [`REG_FILE_DEPTH-1:0]        dst_in,
   input  [`WORD_WIDTH-1:0]            pc_in,
-  input  [`WORD_WIDTH-1:0]            instruction_in,
   input  [`WORD_WIDTH-1:0]            val_Rn_in, val_Rm_in,
   output                              mem_read_out, mem_write_out, WB_en_out, B_out,
   output [3:0]                        SR_out,

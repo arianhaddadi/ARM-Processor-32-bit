@@ -26,7 +26,6 @@ entity ID_Stage is
         signed_immediate: out    vl_logic_vector(23 downto 0);
         shifter_operand : out    vl_logic_vector(11 downto 0);
         pc              : out    vl_logic_vector(31 downto 0);
-        instruction     : out    vl_logic_vector(31 downto 0);
         val_Rn          : out    vl_logic_vector(31 downto 0);
         val_Rm          : out    vl_logic_vector(31 downto 0)
     );

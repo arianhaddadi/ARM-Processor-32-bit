@@ -8,8 +8,8 @@ module ID_Stage
 	input 								  reg_file_enable,
 	input  [3:0]                          status_register,
 	input  [`REG_FILE_DEPTH-1:0]	      reg_file_wb_address,
-	input  [`WORD_WIDTH-1:0]    			  pc_in,
-	input  [`WORD_WIDTH-1:0]    			  instruction_in,
+	input  [`WORD_WIDTH-1:0]    		  pc_in,
+	input  [`WORD_WIDTH-1:0]    		  instruction_in,
 	input  [`WORD_WIDTH-1:0]   			  reg_file_wb_data,
 	output                                mem_read_out, mem_write_out,
 	output                                WB_en_out,
@@ -25,8 +25,7 @@ module ID_Stage
 	output [`SIGNED_IMM_WIDTH-1:0]        signed_immediate,
 	output [`SHIFTER_OPERAND_WIDTH-1:0]   shifter_operand,
 	output [`WORD_WIDTH-1:0]   			  pc,
-	output [`WORD_WIDTH-1:0]				  instruction,
-	output [`WORD_WIDTH-1:0]				  val_Rn, val_Rm
+	output [`WORD_WIDTH-1:0]			  val_Rn, val_Rm
 );
 
 	wire [3:0] EX_command;
@@ -73,7 +72,6 @@ module ID_Stage
 	);
 
 	assign pc = pc_in;
-	assign instruction = instruction_in;
 	assign control_unit_mux_enable = (~condition_state) | freeze;
 	assign control_unit_mux_in = {SR_update, B, EX_command, mem_write, mem_read, WB_en};
 	assign {SR_update_out, B_out, EX_command_out, mem_write_out, mem_read_out, WB_en_out} = control_unit_mux_out;

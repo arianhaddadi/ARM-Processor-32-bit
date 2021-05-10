@@ -28,16 +28,15 @@ module ARM
   IF_Reg  IF_Reg_Inst (
    .clk(clk),
    .rst(rst),
-   .freeze(hazard_detected),
-   .flush(EXE_stage_B_out),
-   .pc_in(IF_stage_pc_out),
+   .Freeze(hazard_detected),
+   .Flush(EXE_stage_B_out),
+   .PC_in(IF_stage_pc_out),
    .instruction_in(IF_stage_instruction_out),
-   .pc(IF_reg_pc_out),
-   .instruction(IF_reg_instruction_out)
+   .PC_out(IF_reg_pc_out),
+   .instruction_out(IF_reg_instruction_out)
   );
 
   wire [`WORD_WIDTH-1:0]              ID_stage_pc_out;
-  wire [`WORD_WIDTH-1:0]              ID_stage_instruction_out;
 	wire [`REG_FILE_DEPTH-1:0] 				ID_stage_reg_file_dst;
   wire [`REG_FILE_DEPTH-1:0] 				ID_stage_reg_file_src1, ID_stage_reg_file_src2;
 	wire [`WORD_WIDTH-1:0] 						ID_stage_val_Rn, ID_stage_val_Rm;
@@ -69,7 +68,6 @@ module ARM
     .reg_file_src2(ID_stage_reg_file_src2),
     .status_register(status),
     .pc(ID_stage_pc_out),
-    .instruction(ID_stage_instruction_out),
 	  .reg_file_dst(ID_stage_reg_file_dst),
 	  .val_Rn(ID_stage_val_Rn), .val_Rm(ID_stage_val_Rm),
 	  .signed_immediate(ID_stage_signed_immediate),
@@ -84,47 +82,44 @@ module ARM
 		.has_src1(has_src1)
   );
 
+  wire ID_reg_mem_read_out, ID_reg_mem_write_out, ID_reg_WB_en_out, ID_reg_Imm_out, ID_reg_B_out, ID_reg_SR_update_out;
+  wire [3:0] ID_reg_SR_out, ID_reg_EX_command_out;
   wire [`WORD_WIDTH-1:0] ID_reg_pc_out;
-  wire [`WORD_WIDTH-1:0] ID_reg_instruction_out;
   wire [`REG_FILE_DEPTH-1:0] ID_reg_reg_file_dst_out;
   wire [`WORD_WIDTH-1:0] ID_reg_val_Rn_out, ID_reg_val_Rm_out;
   wire [`SIGNED_IMM_WIDTH-1:0] ID_reg_signed_immediate_out;
   wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_reg_shifter_operand_out;
-  wire [3:0] ID_reg_SR_out, ID_reg_EX_command_out;
-  wire ID_reg_mem_read_out, ID_reg_mem_write_out,
-    ID_reg_WB_en_out,
-    ID_reg_Imm_out,
-    ID_reg_B_out,
-    ID_reg_SR_update_out;
 
   ID_Reg ID_Reg_Inst(
     .clk(clk),
     .rst(rst),
     .flush(EXE_stage_B_out),
-    .pc_in(ID_stage_pc_out),
-    .instruction_in(ID_stage_instruction_out),
-    .reg_file_dst_in(ID_stage_reg_file_dst),
-	  .val_Rn_in(ID_stage_val_Rn), .val_Rm_in(ID_stage_val_Rm),
+    .PC_in(ID_stage_pc_out),
+    .Dest_in(ID_stage_reg_file_dst),
+	  .Val_Rn_in(ID_stage_val_Rn), 
+    .Val_Rm_in(ID_stage_val_Rm),
 	  .signed_immediate_in(ID_stage_signed_immediate),
 	  .shifter_operand_in(ID_stage_shifter_operand),
-    .EX_command_in(ID_stage_EX_command_out),
-	  .mem_read_in(ID_stage_mem_read_out), .mem_write_in(ID_stage_mem_write_out),
-		.WB_en_in(ID_stage_WB_en_out),
+    .EX_CMD_in(ID_stage_EX_command_out),
+	  .MEM_R_EN_in(ID_stage_mem_read_out), 
+    .MEM_W_EN_in(ID_stage_mem_write_out),
+		.WB_EN_in(ID_stage_WB_en_out),
 		.Imm_in(ID_stage_Imm_out),
 		.B_in(ID_stage_B_out),
-		.SR_update_in(ID_stage_SR_update_out),
+		.S_in(ID_stage_SR_update_out),
     .pc(ID_reg_pc_out),
-    .instruction(ID_reg_instruction_out),
-    .reg_file_dst_out(ID_reg_reg_file_dst_out),
-	  .val_Rn_out(ID_reg_val_Rn_out), .val_Rm_out(ID_reg_val_Rm_out),
+    .Dest_out(ID_reg_reg_file_dst_out),
+	  .Val_Rn_out(ID_reg_val_Rn_out), 
+    .Val_Rm_out(ID_reg_val_Rm_out),
 	  .signed_immediate_out(ID_reg_signed_immediate_out),
 	  .shifter_operand_out(ID_reg_shifter_operand_out),
     .EX_command_out(ID_reg_EX_command_out),
-	  .mem_read_out(ID_reg_mem_read_out), .mem_write_out(ID_reg_mem_write_out),
-		.WB_en_out(ID_reg_WB_en_out),
+	  .MEM_R_EN_out(ID_reg_mem_read_out), 
+    .MEM_W_EN_out(ID_reg_mem_write_out),
+		.WB_EN_out(ID_reg_WB_en_out),
 		.Imm_out(ID_reg_Imm_out),
 		.B_out(ID_reg_B_out),
-    .SR_update_out(ID_reg_SR_update_out),
+    .S_out(ID_reg_SR_update_out),
     .status_register_in(status),
     .status_register_out(ID_reg_SR_out)
   );
@@ -140,7 +135,6 @@ module ARM
     .clk(clk),
     .rst(rst),
     .pc_in(ID_reg_pc_out),
-    .instruction_in(ID_reg_instruction_out),
     .signed_immediate(ID_reg_signed_immediate_out),
     .EX_command(ID_reg_EX_command_out),
     .SR_in(ID_reg_SR_out),

@@ -15,7 +15,6 @@ entity EXE_Stage is
         shifter_operand : in     vl_logic_vector(11 downto 0);
         dst_in          : in     vl_logic_vector(3 downto 0);
         pc_in           : in     vl_logic_vector(31 downto 0);
-        instruction_in  : in     vl_logic_vector(31 downto 0);
         val_Rn_in       : in     vl_logic_vector(31 downto 0);
         val_Rm_in       : in     vl_logic_vector(31 downto 0);
         mem_read_out    : out    vl_logic;
