@@ -82,19 +82,12 @@ module Control_Unit
                         WB_en = 1;
                     end
 
-                    `OP_CMP: begin
-                        EX_command = `EX_CMP;
-                    end
-
-                    `OP_TST: begin
-                        EX_command = `EX_TST;
-                    end
+                    `OP_CMP: EX_command = `EX_CMP;
+                    `OP_TST: EX_command = `EX_TST;
                 endcase
             end
 
-            `MODE_BRANCH: begin
-                B = 1;
-            end
+            `MODE_BRANCH: B = 1;
         endcase
     end
 

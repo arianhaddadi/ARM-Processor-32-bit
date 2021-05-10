@@ -18,13 +18,11 @@ module Memory
 
 	integer i;
 
-	always @(posedge clk, posedge rst)
-	begin
-		if (rst)
-			begin
+	always @(posedge clk, posedge rst) begin
+		if (rst) begin
 				for (i=0; i < `MEMORY_SIZE; i = i+1)
 					mem_data [i] <= i;
-			end
+        end
 		else if (MEM_W_EN) begin	
                 mem_data[generatedAddr] <= Val_Rm[7:0];
                 mem_data[{generatedAddr[`WORD_WIDTH-1:1], 1'b1}] <= Val_Rm[15:8];

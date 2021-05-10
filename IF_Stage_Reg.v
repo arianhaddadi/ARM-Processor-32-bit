@@ -8,31 +8,31 @@ module IF_Stage_Reg
     input                        Flush,
     input      [`WORD_WIDTH-1:0] PC_in,
     input      [`WORD_WIDTH-1:0] instruction_in,
-    
-    output reg [`WORD_WIDTH-1:0] PC_out,
+
     output reg [`WORD_WIDTH-1:0] instruction_out
+    output reg [`WORD_WIDTH-1:0] PC_out,
 );
 
-always @(posedge clk, posedge rst) begin
+    always @(posedge clk, posedge rst) begin
 
-  if(rst) begin
-    instruction_out <= 0;
-    PC_out <= 0;
-  end
-  else if(Flush) begin
-    instruction_out <= 0;
-    PC_out <= 0;
-  end
-  else if(~Freeze) begin
-    instruction_out <= instruction_in;
-    PC_out <= PC_in;
-  end
-  else begin
-    instruction_out <= instruction_in;
-    PC_out <= PC_out;
-  end  
+        if(rst) begin
+            instruction_out <= 0;
+            PC_out <= 0;
+        end
+        else if(Flush) begin
+            instruction_out <= 0;
+            PC_out <= 0;
+        end
+        else if(~Freeze) begin
+            instruction_out <= instruction_in;
+            PC_out <= PC_in;
+        end
+        else begin
+            instruction_out <= instruction_in;
+            PC_out <= PC_out;
+        end  
 
-end
+    end
  
 
 endmodule

@@ -11,7 +11,8 @@ module ID_Stage
 	input  [`WORD_WIDTH-1:0]    		  PC_in,
 	input  [`WORD_WIDTH-1:0]    		  instruction_in,
 	input  [`WORD_WIDTH-1:0]   			  reg_file_wb_data,
-	output                                mem_read_out, mem_write_out,
+	output                                mem_read_out,
+	output                                mem_write_out,
 	output                                WB_EN_out,
 	output                                Imm_out,
 	output                                B_out,
@@ -25,19 +26,30 @@ module ID_Stage
 	output [`SIGNED_IMM_WIDTH-1:0]        signed_immediate,
 	output [`SHIFTER_OPERAND_WIDTH-1:0]   shifter_operand,
 	output [`WORD_WIDTH-1:0]   			  PC_out,
-	output [`WORD_WIDTH-1:0]			  val_Rn, val_Rm
+	output [`WORD_WIDTH-1:0]			  val_Rn,
+	output [`WORD_WIDTH-1:0]			  val_Rm
 );
 
 	wire [3:0] EX_command;
 	wire mem_read, mem_write, WB_en, Imm, B, SR_update;
-
 	wire [8:0] control_unit_mux_in, control_unit_mux_out;
 	wire condition_state;
 
+	assign PC_out = PC_in;
+	assign control_unit_mux_enable = (~condition_state) | Freeze;
+	assign control_unit_mux_in = {SR_update, B, EX_command, mem_write, mem_read, WB_en};
+	assign {S_out, B_out, EX_command_out, mem_write_out, mem_read_out, WB_EN_out} = control_unit_mux_out;
+	assign shifter_operand = instruction_in[11:0];
+	assign reg_file_dst = instruction_in[15:12];
+	assign reg_file_src1 = instruction_in[19:16];
+	assign signed_immediate = instruction_in[23:0];
+	assign Imm_out = instruction_in[25];
+	assign has_src2 = (~instruction_in[25]) | mem_write;
+
 	MUX_2_to_1 #(.WORD_WIDTH(4)) MUX_2_to_1_Reg_File (
-		.in1(instruction_in[3:0]), 
-		.in2(instruction_in[15:12]),
-		.sel(mem_write),
+		.select(mem_write),
+		.inp1(instruction_in[3:0]), 
+		.inp2(instruction_in[15:12]),
 		.out(reg_file_src2)
 	);
 
@@ -53,9 +65,9 @@ module ID_Stage
 	);
 
 	MUX_2_to_1 #(.WORD_WIDTH(9)) MUX_2_to_1_Control_Unit (
-		.in1(control_unit_mux_in), 
-		.in2(9'b0),
-		.sel(control_unit_mux_enable),
+		.select(control_unit_mux_enable),
+		.inp1(control_unit_mux_in), 
+		.inp2(9'b0),
 		.out(control_unit_mux_out)
 	);
 
@@ -77,16 +89,5 @@ module ID_Stage
 		.Status_Register(Status_Register),
 		.condition_state(condition_state)
 	);
-
-	assign PC_out = PC_in;
-	assign control_unit_mux_enable = (~condition_state) | Freeze;
-	assign control_unit_mux_in = {SR_update, B, EX_command, mem_write, mem_read, WB_en};
-	assign {S_out, B_out, EX_command_out, mem_write_out, mem_read_out, WB_EN_out} = control_unit_mux_out;
-	assign shifter_operand = instruction_in[11:0];
-	assign reg_file_dst = instruction_in[15:12];
-	assign reg_file_src1 = instruction_in[19:16];
-	assign signed_immediate = instruction_in[23:0];
-	assign Imm_out = instruction_in[25];
-	assign has_src2 = (~instruction_in[25]) | mem_write;
 
 endmodule

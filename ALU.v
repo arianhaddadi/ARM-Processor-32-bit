@@ -26,12 +26,8 @@ module ALU
         V1 = 1'b0;
         C1 = 1'b0;
         case (EXE_CMD)
-            `EX_MOV: begin
-                temp_result = val2;
-            end
-            `EX_MVN: begin
-                temp_result = ~val2;
-            end
+            `EX_MOV: temp_result = val2;
+            `EX_MVN: temp_result = ~val2;
             `EX_ADD: begin
                 temp_result = val1 + val2;
                 C1 = temp_result[`WORD_WIDTH];
@@ -46,38 +42,24 @@ module ALU
                 temp_result = {val1[`WORD_WIDTH-1], val1} - {val2[`WORD_WIDTH-1], val2};
                 C1 = temp_result[`WORD_WIDTH];
                 V1 = (val1[`WORD_WIDTH-1] ^ val2[`WORD_WIDTH-1]) & (temp_result[`WORD_WIDTH-1] ^ val1[`WORD_WIDTH-1]);
-
             end
             `EX_SBC: begin
                 temp_result = val1 - val2 - 2'b01;
                 C1 = temp_result[`WORD_WIDTH];
                 V1 = (val1[`WORD_WIDTH-1] ^ val2[`WORD_WIDTH-1]) & (temp_result[`WORD_WIDTH-1] ^ val1[`WORD_WIDTH-1]);
             end
-            `EX_AND: begin
-                temp_result = val1 & val2;
-            end
-            `EX_ORR: begin
-                temp_result = val1 | val2;
-            end
-            `EX_EOR: begin
-                temp_result = val1 ^ val2;
-            end
+            `EX_AND: temp_result = val1 & val2;
+            `EX_ORR: temp_result = val1 | val2;
+            `EX_EOR: temp_result = val1 ^ val2;
             `EX_CMP: begin
                 temp_result = {val1[`WORD_WIDTH-1], val1} - {val2[`WORD_WIDTH-1], val2};
                 C1 = temp_result[`WORD_WIDTH];
                 V1 = (val1[`WORD_WIDTH-1] ^ val2[`WORD_WIDTH-1]) & (temp_result[`WORD_WIDTH-1] ^ val1[`WORD_WIDTH-1]);
             end
-            `EX_TST: begin
-                temp_result = val1 & val2;
-            end
-            `EX_LDR: begin
-                temp_result = val1 + val2;
-            end
-            `EX_STR: begin
-                temp_result = val1 - val2;
-            end
-            default:
-                temp_result = 3'bx;
+            `EX_TST: temp_result = val1 & val2;
+            `EX_LDR: temp_result = val1 + val2;
+            `EX_STR: temp_result = val1 - val2;
+            default: temp_result = 3'bx;
 
         endcase
     end
