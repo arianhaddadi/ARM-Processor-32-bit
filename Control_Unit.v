@@ -97,8 +97,7 @@ module Control_Unit
         endcase
     end
 
+    assign has_src1 = (EX_command == `EX_MOV || EX_command == `EX_MOV || B) ? 1'b0 : 1'b1;
     assign SR_update = S;
-    assign has_src1 = (EX_command == `EX_MOV || 
-                       EX_command == `EX_MOV || B) ? 1'b0 : 1'b1;
 
 endmodule

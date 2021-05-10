@@ -3,7 +3,8 @@
 module MUX_2_to_1
 (
   sel,
-  in1, in2,
+  in1,
+  in2,
   out
 );
 

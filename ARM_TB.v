@@ -1,7 +1,6 @@
 `include "constants.h"
 
 module ARM_TB;
-  parameter clock_period = `CLOCK_PERIOD;
 
   reg clk;
   reg rst;
@@ -14,14 +13,14 @@ module ARM_TB;
 
   initial begin
     clk = 0;
-    forever clk = #clock_period ~clk;
+    forever clk = #`CLOCK_PERIOD ~clk;
   end
 
   initial begin
     rst = 1;
-    # (clock_period / 2);
+    # (`CLOCK_PERIOD / 2);
     rst = 0;
-    # (600*clock_period);
+    # (600*`CLOCK_PERIOD);
     $stop;
   end
 endmodule

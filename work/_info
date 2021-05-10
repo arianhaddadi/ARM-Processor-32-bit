@@ -8,7 +8,7 @@ Z1 !s100 cL68UeBCH73Jj9CgcE<o21
 Z2 IgM@nNaS?8h1dVmzH>3nBJ1
 Z3 VAM9z7>k_Ucnc?V4BMKFMD3
 Z4 dE:\University Stuff\CAL\Project
-Z5 w1619729794
+Z5 w1620658063
 Z6 8E:/University Stuff/CAL/Project/Adder.v
 Z7 FE:/University Stuff/CAL/Project/Adder.v
 L0 3
@@ -18,7 +18,7 @@ r1
 Z9 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Adder.v|
 Z10 o-work work -O0
 Z11 n@adder
-Z12 !s108 1620654709.182000
+Z12 !s108 1620658512.172000
 Z13 !s107 constants.h|E:/University Stuff/CAL/Project/Adder.v|
 !i10b 1
 !s85 0
@@ -28,518 +28,558 @@ Z14 !s100 Pj`5HHRZ<SF8ji^nX3E?[0
 Z15 Ine<@8gIBlCWj>_fCiCi583
 Z16 VX6<HHlGm3_k3INDo]O9c43
 R4
-R5
-Z17 8E:/University Stuff/CAL/Project/ALU.v
-Z18 FE:/University Stuff/CAL/Project/ALU.v
+Z17 w1619729794
+Z18 8E:/University Stuff/CAL/Project/ALU.v
+Z19 FE:/University Stuff/CAL/Project/ALU.v
 L0 3
 R8
 r1
 31
-Z19 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ALU.v|
+Z20 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ALU.v|
 R10
-Z20 n@a@l@u
-Z21 !s108 1620654709.233000
-Z22 !s107 constants.h|E:/University Stuff/CAL/Project/ALU.v|
+Z21 n@a@l@u
+Z22 !s108 1620658512.217000
+Z23 !s107 constants.h|E:/University Stuff/CAL/Project/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM
-Z23 Ih47D7zL:ZcQK;dA3NZ2N^2
-Z24 V?2[cB>lk90YLKN3jbUCQl1
+Z24 !s100 ePdWIePGc7jk>fJJ2Ca?c3
+Z25 I2X4O2Yf9mQCCC4hjh]KnI1
+Z26 V?2[cB>lk90YLKN3jbUCQl1
 R4
-Z25 w1620654681
-Z26 8E:/University Stuff/CAL/Project/ARM.v
-Z27 FE:/University Stuff/CAL/Project/ARM.v
+Z27 w1620657118
+Z28 8E:/University Stuff/CAL/Project/ARM.v
+Z29 FE:/University Stuff/CAL/Project/ARM.v
 L0 3
 R8
 r1
 31
-Z28 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM.v|
+Z30 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM.v|
 R10
-Z29 n@a@r@m
-Z30 !s100 ^ZoGD8;<lG]eQQN_7bKB33
-Z31 !s108 1620654709.281000
-Z32 !s107 constants.h|E:/University Stuff/CAL/Project/ARM.v|
+Z31 n@a@r@m
+Z32 !s108 1620658512.266000
+Z33 !s107 constants.h|E:/University Stuff/CAL/Project/ARM.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vARM_TB
-Z33 !s100 2VYkZj29^j5Bnk8nhfAhK1
-Z34 Ibfg53nP@QDMPUiFiealKM1
-Z35 VRP]Y8^SU39TjHSD:MM2ao2
+Z34 !s100 Vmn;FiNFj?EKVEhjgz8Sa1
+Z35 I`TgK3<93LTQic4gA;T[nB1
+Z36 VW1O7gz;3oHcUET<1lb:JA0
 R4
-R5
-Z36 8E:/University Stuff/CAL/Project/ARM_TB.v
-Z37 FE:/University Stuff/CAL/Project/ARM_TB.v
+Z37 w1620657510
+Z38 8E:/University Stuff/CAL/Project/ARM_TB.v
+Z39 FE:/University Stuff/CAL/Project/ARM_TB.v
 L0 3
 R8
 r1
 31
-Z38 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM_TB.v|
+Z40 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ARM_TB.v|
 R10
-Z39 n@a@r@m_@t@b
-Z40 !s108 1620654709.328000
-Z41 !s107 constants.h|E:/University Stuff/CAL/Project/ARM_TB.v|
+Z41 n@a@r@m_@t@b
+Z42 !s108 1620658512.313000
+Z43 !s107 constants.h|E:/University Stuff/CAL/Project/ARM_TB.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCondition_Check
-Z42 !s100 2Mj;L2Zo@nm<Jc9AMk5kl3
-Z43 IzV;fc90;dFdj58o=Ce@Ii1
-Z44 V=H6?afJ:To6;^N[zaCbi=1
+Z44 !s100 2Mj;L2Zo@nm<Jc9AMk5kl3
+Z45 IzV;fc90;dFdj58o=Ce@Ii1
+Z46 V=H6?afJ:To6;^N[zaCbi=1
 R4
-R5
-Z45 8E:/University Stuff/CAL/Project/Condition_Check.v
-Z46 FE:/University Stuff/CAL/Project/Condition_Check.v
+R17
+Z47 8E:/University Stuff/CAL/Project/Condition_Check.v
+Z48 FE:/University Stuff/CAL/Project/Condition_Check.v
 L0 3
 R8
 r1
 31
-Z47 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Condition_Check.v|
+Z49 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Condition_Check.v|
 R10
-Z48 n@condition_@check
-Z49 !s108 1620654709.380000
-Z50 !s107 constants.h|E:/University Stuff/CAL/Project/Condition_Check.v|
+Z50 n@condition_@check
+Z51 !s108 1620658512.357000
+Z52 !s107 constants.h|E:/University Stuff/CAL/Project/Condition_Check.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vControl_Unit
-Z51 !s100 fCfaQQlY?JLJAO=D`hkJE0
-Z52 IR:Sncf^Qokmo]C4Zc0I`g1
-Z53 VVzE1kYY7:9176PI7Td6LU3
+Z53 !s100 RGk:2HH=R02S20ZCj<2hF1
+Z54 I:kL54hdAEIjjKSGYOd^eY3
+Z55 VVzE1kYY7:9176PI7Td6LU3
 R4
-R5
-Z54 8E:/University Stuff/CAL/Project/Control_Unit.v
-Z55 FE:/University Stuff/CAL/Project/Control_Unit.v
+Z56 w1620657368
+Z57 8E:/University Stuff/CAL/Project/Control_Unit.v
+Z58 FE:/University Stuff/CAL/Project/Control_Unit.v
 L0 3
 R8
 r1
 31
-Z56 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Control_Unit.v|
+Z59 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Control_Unit.v|
 R10
-Z57 n@control_@unit
-Z58 !s108 1620654709.425000
-Z59 !s107 constants.h|E:/University Stuff/CAL/Project/Control_Unit.v|
+Z60 n@control_@unit
+Z61 !s108 1620658512.408000
+Z62 !s107 constants.h|E:/University Stuff/CAL/Project/Control_Unit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Reg
-Z60 !s100 cz<cEPDOQWRYI4C2_PiZ62
-Z61 IiYGnN?=Qoj4LMg2X;jfTJ2
-Z62 Vm94]mDd4CmlMzB[5UDAQk1
+Z63 !s100 cz<cEPDOQWRYI4C2_PiZ62
+Z64 IiYGnN?=Qoj4LMg2X;jfTJ2
+Z65 Vm94]mDd4CmlMzB[5UDAQk1
 R4
-R5
-Z63 8E:/University Stuff/CAL/Project/EXE_Reg.v
-Z64 FE:/University Stuff/CAL/Project/EXE_Reg.v
+R17
+Z66 8E:/University Stuff/CAL/Project/EXE_Reg.v
+Z67 FE:/University Stuff/CAL/Project/EXE_Reg.v
 L0 3
 R8
 r1
 31
-Z65 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Reg.v|
+Z68 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Reg.v|
 R10
-Z66 n@e@x@e_@reg
-Z67 !s108 1620651132.047000
-Z68 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Reg.v|
+Z69 n@e@x@e_@reg
+Z70 !s108 1620651132.047000
+Z71 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Stage
-Z69 !s100 DJPU7cIa3FhY;VSD06dm=0
-Z70 I`nJA_:]k]<VeS3aajS^@W1
-Z71 VoMzCK9C63aDo:37PHc0;I0
+Z72 !s100 LST7]F>o_XDh25]J7[XeG0
+Z73 IzohziEa>m^iU6Fi@D>mQI0
+Z74 VoMzCK9C63aDo:37PHc0;I0
 R4
-Z72 w1620648992
-Z73 8E:/University Stuff/CAL/Project/EXE_Stage.v
-Z74 FE:/University Stuff/CAL/Project/EXE_Stage.v
+Z75 w1620658078
+Z76 8E:/University Stuff/CAL/Project/EXE_Stage.v
+Z77 FE:/University Stuff/CAL/Project/EXE_Stage.v
 L0 3
 R8
 r1
 31
-Z75 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Stage.v|
+Z78 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Stage.v|
 R10
-Z76 n@e@x@e_@stage
-Z77 !s108 1620654709.470000
-Z78 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Stage.v|
+Z79 n@e@x@e_@stage
+Z80 !s108 1620658512.453000
+Z81 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEXE_Stage_Reg
-Z79 IWEHAN4^IG0@1Z2MT_c>?a0
-Z80 Vb:k_d?l0^YeSh4X3ClWNd2
+Z82 !s100 5AMaJ58W0PNf5fYd=[Y?L2
+Z83 IWEHAN4^IG0@1Z2MT_c>?a0
+Z84 Vb:k_d?l0^YeSh4X3ClWNd2
 R4
-Z81 w1620654526
-Z82 8E:/University Stuff/CAL/Project/EXE_Stage_Reg.v
-Z83 FE:/University Stuff/CAL/Project/EXE_Stage_Reg.v
+Z85 w1620654526
+Z86 8E:/University Stuff/CAL/Project/EXE_Stage_Reg.v
+Z87 FE:/University Stuff/CAL/Project/EXE_Stage_Reg.v
 L0 3
 R8
 r1
 31
-R10
-Z84 n@e@x@e_@stage_@reg
-Z85 !s100 5AMaJ58W0PNf5fYd=[Y?L2
-Z86 !s108 1620654709.514000
-Z87 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Stage_Reg.v|
 Z88 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/EXE_Stage_Reg.v|
+R10
+Z89 n@e@x@e_@stage_@reg
+Z90 !s108 1620658512.496000
+Z91 !s107 constants.h|E:/University Stuff/CAL/Project/EXE_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vHazard_Detection_Unit
-Z89 !s100 @JPe_a<]l34QVFWfN9L>72
-Z90 IPNDZACm6NQL=aWTIm0D[F2
-Z91 VZ<nzS9J?B:E?:UE5IMT`L1
+Z92 !s100 @JPe_a<]l34QVFWfN9L>72
+Z93 IPNDZACm6NQL=aWTIm0D[F2
+Z94 VZ<nzS9J?B:E?:UE5IMT`L1
 R4
-R5
-Z92 8E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
-Z93 FE:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
+R17
+Z95 8E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
+Z96 FE:/University Stuff/CAL/Project/Hazard_Detection_Unit.v
 L0 3
 R8
 r1
 31
-Z94 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
+Z97 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
 R10
-Z95 n@hazard_@detection_@unit
-Z96 !s108 1620654711.143000
-Z97 !s107 constants.h|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
+Z98 n@hazard_@detection_@unit
+Z99 !s108 1620658512.536000
+Z100 !s107 constants.h|E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Reg
-Z98 I081gz4ZiL53jlhnGnV0]b3
-Z99 V5a;>n2Y39C@i8HBhn3aih2
+Z101 I081gz4ZiL53jlhnGnV0]b3
+Z102 V5a;>n2Y39C@i8HBhn3aih2
 R4
-Z100 w1620651077
-Z101 8E:/University Stuff/CAL/Project/ID_Reg.v
-Z102 FE:/University Stuff/CAL/Project/ID_Reg.v
+Z103 w1620651077
+Z104 8E:/University Stuff/CAL/Project/ID_Reg.v
+Z105 FE:/University Stuff/CAL/Project/ID_Reg.v
 L0 3
 R8
 r1
 31
-Z103 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Reg.v|
+Z106 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Reg.v|
 R10
-Z104 n@i@d_@reg
-Z105 !s100 3n5Tj>EKTGPL^VALH^Z<n2
-Z106 !s108 1620651132.186000
-Z107 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Reg.v|
+Z107 n@i@d_@reg
+Z108 !s100 3n5Tj>EKTGPL^VALH^Z<n2
+Z109 !s108 1620651132.186000
+Z110 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Stage
-Z108 !s100 [oNEEgLMRdWAHW1eNDHlJ3
-Z109 I?bAFl7QPHIN0zhfLAFB;O1
-Z110 V2BnMh]RY[]Dhj@TAKR62C0
+Z111 !s100 nBR@@EgQd?Gc:5;TlJ1VE1
+Z112 I06MkBgAofMzMQX[g;Y96T2
+Z113 V2BnMh]RY[]Dhj@TAKR62C0
 R4
-Z111 w1620649123
-Z112 8E:/University Stuff/CAL/Project/ID_Stage.v
-Z113 FE:/University Stuff/CAL/Project/ID_Stage.v
+Z114 w1620657176
+Z115 8E:/University Stuff/CAL/Project/ID_Stage.v
+Z116 FE:/University Stuff/CAL/Project/ID_Stage.v
 L0 3
 R8
 r1
 31
-Z114 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Stage.v|
+Z117 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Stage.v|
 R10
-Z115 n@i@d_@stage
-Z116 !s108 1620654711.206000
-Z117 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Stage.v|
+Z118 n@i@d_@stage
+Z119 !s108 1620658512.580000
+Z120 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_Stage_Reg
-Z118 I3MhKlT36MIPkOhj:jd]O;1
-Z119 V6YI3zZ>jH`YC03]QdaFnO0
+Z121 !s100 Xhm=>EoZeK1U82UoS]OAO0
+Z122 I3MhKlT36MIPkOhj:jd]O;1
+Z123 V6YI3zZ>jH`YC03]QdaFnO0
 R4
-Z120 w1620654598
-Z121 8E:/University Stuff/CAL/Project/ID_Stage_Reg.v
-Z122 FE:/University Stuff/CAL/Project/ID_Stage_Reg.v
+Z124 w1620654598
+Z125 8E:/University Stuff/CAL/Project/ID_Stage_Reg.v
+Z126 FE:/University Stuff/CAL/Project/ID_Stage_Reg.v
 L0 3
 R8
 r1
 31
-R10
-Z123 n@i@d_@stage_@reg
-Z124 !s100 Xhm=>EoZeK1U82UoS]OAO0
-Z125 !s108 1620654711.247000
-Z126 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Stage_Reg.v|
 Z127 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/ID_Stage_Reg.v|
+R10
+Z128 n@i@d_@stage_@reg
+Z129 !s108 1620658512.622000
+Z130 !s107 constants.h|E:/University Stuff/CAL/Project/ID_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Reg
-Z128 !s100 E>dWRQaR3hf<M7m7<;zPo0
-Z129 I3g6?2QL0593_6K1g2o1V93
-Z130 VjPlJhPM1bVhzn3AVCcn871
+Z131 !s100 E>dWRQaR3hf<M7m7<;zPo0
+Z132 I3g6?2QL0593_6K1g2o1V93
+Z133 VjPlJhPM1bVhzn3AVCcn871
 R4
-Z131 w1620648828
-Z132 8E:/University Stuff/CAL/Project/IF_Reg.v
-Z133 FE:/University Stuff/CAL/Project/IF_Reg.v
+Z134 w1620648828
+Z135 8E:/University Stuff/CAL/Project/IF_Reg.v
+Z136 FE:/University Stuff/CAL/Project/IF_Reg.v
 L0 3
 R8
 r1
 31
-Z134 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Reg.v|
+Z137 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Reg.v|
 R10
-Z135 n@i@f_@reg
-Z136 !s108 1620651132.276000
-Z137 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Reg.v|
+Z138 n@i@f_@reg
+Z139 !s108 1620651132.276000
+Z140 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage
-Z138 !s100 c7aoL]1SWm^g5BDWP_K@91
-Z139 I<`ec`[3SPdVmI:zRdXK7D0
-Z140 VZnP`90J^^T^4kI[e8SCVm0
+Z141 !s100 d8gJ@]7dnK1OCTUN_5Xmb1
+Z142 I6@Dl99DZY4kK]`DSELilX2
+Z143 V<R6MK7naR?N`58jD]CKIK1
 R4
-R5
-Z141 8E:/University Stuff/CAL/Project/IF_Stage.v
-Z142 FE:/University Stuff/CAL/Project/IF_Stage.v
+Z144 w1620657907
+Z145 8E:/University Stuff/CAL/Project/IF_Stage.v
+Z146 FE:/University Stuff/CAL/Project/IF_Stage.v
 L0 3
 R8
 r1
 31
-Z143 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Stage.v|
+Z147 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Stage.v|
 R10
-Z144 n@i@f_@stage
-Z145 !s108 1620654711.289000
-Z146 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Stage.v|
+Z148 n@i@f_@stage
+Z149 !s108 1620658512.663000
+Z150 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_Stage_Reg
-Z147 Igjdb3_:j>=gl=<:DlNOGi1
-Z148 VWbd?8S:aX@S6EDF=E9MEV1
+Z151 !s100 9eS5CGB;nLm:J?bZ2mh[;1
+Z152 Igjdb3_:j>=gl=<:DlNOGi1
+Z153 VWbd?8S:aX@S6EDF=E9MEV1
 R4
-Z149 w1620654621
-Z150 8E:/University Stuff/CAL/Project/IF_Stage_Reg.v
-Z151 FE:/University Stuff/CAL/Project/IF_Stage_Reg.v
+Z154 w1620654621
+Z155 8E:/University Stuff/CAL/Project/IF_Stage_Reg.v
+Z156 FE:/University Stuff/CAL/Project/IF_Stage_Reg.v
 L0 3
 R8
 r1
 31
+Z157 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Stage_Reg.v|
 R10
-Z152 n@i@f_@stage_@reg
-Z153 !s100 9eS5CGB;nLm:J?bZ2mh[;1
-Z154 !s108 1620654711.331000
-Z155 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Stage_Reg.v|
-Z156 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/IF_Stage_Reg.v|
+Z158 n@i@f_@stage_@reg
+Z159 !s108 1620658512.705000
+Z160 !s107 constants.h|E:/University Stuff/CAL/Project/IF_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vInstruction_Mem
-Z157 !s100 K7D;DKSh[G[g7W5cb@2P=1
-Z158 IF]<k3ERN[CdW=;S<7J8_]1
-Z159 VUJT]BO:<4E=D^z?VD1]2M1
+Z161 !s100 K7D;DKSh[G[g7W5cb@2P=1
+Z162 IF]<k3ERN[CdW=;S<7J8_]1
+Z163 VUJT]BO:<4E=D^z?VD1]2M1
 R4
-R5
-Z160 8E:/University Stuff/CAL/Project/Instruction_Mem.v
-Z161 FE:/University Stuff/CAL/Project/Instruction_Mem.v
+R17
+Z164 8E:/University Stuff/CAL/Project/Instruction_Mem.v
+Z165 FE:/University Stuff/CAL/Project/Instruction_Mem.v
 L0 3
 R8
 r1
 31
-Z162 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Instruction_Mem.v|
+Z166 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Instruction_Mem.v|
 R10
-Z163 n@instruction_@mem
-Z164 !s108 1620654711.373000
-Z165 !s107 constants.h|E:/University Stuff/CAL/Project/Instruction_Mem.v|
+Z167 n@instruction_@mem
+Z168 !s108 1620654711.373000
+Z169 !s107 constants.h|E:/University Stuff/CAL/Project/Instruction_Mem.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInstruction_Memory
+Z170 !s100 RF2h5TP^7F:Qf?lhP8oEj1
+Z171 IF]N;XI_9f2jK]zhk71jf;3
+Z172 V8oC;MzX5H<IJ[TYzNP;B]0
+R4
+Z173 w1620656893
+R164
+R165
+L0 3
+R8
+r1
+31
+R166
+R10
+Z174 n@instruction_@memory
+Z175 !s108 1620658512.752000
+R169
 !i10b 1
 !s85 0
 !s101 -O0
 vMEM_Reg
-Z166 !s100 o@mS@O^ed563l7WWX7PA43
-Z167 Ij55=;Ho@l>E8ee0=zKeMS1
-Z168 VE06jC:I_2gbnNTb5QV5jV0
+Z176 !s100 o@mS@O^ed563l7WWX7PA43
+Z177 Ij55=;Ho@l>E8ee0=zKeMS1
+Z178 VE06jC:I_2gbnNTb5QV5jV0
 R4
-R5
-Z169 8E:/University Stuff/CAL/Project/MEM_Reg.v
-Z170 FE:/University Stuff/CAL/Project/MEM_Reg.v
+R17
+Z179 8E:/University Stuff/CAL/Project/MEM_Reg.v
+Z180 FE:/University Stuff/CAL/Project/MEM_Reg.v
 L0 3
 R8
 r1
 31
-Z171 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Reg.v|
+Z181 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Reg.v|
 R10
-Z172 n@m@e@m_@reg
-Z173 !s108 1620651132.414000
-Z174 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Reg.v|
+Z182 n@m@e@m_@reg
+Z183 !s108 1620651132.414000
+Z184 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMem_Stage
-Z175 !s100 OULaV_8fH8IY4BMS^JWPZ0
-Z176 IL2PCCkoE8aQ3b8KVlmPGc1
-Z177 V0jT4`4DFJXSdmcUX1996B3
+Z185 !s100 OULaV_8fH8IY4BMS^JWPZ0
+Z186 IL2PCCkoE8aQ3b8KVlmPGc1
+Z187 V0jT4`4DFJXSdmcUX1996B3
 R4
-R5
-Z178 8E:/University Stuff/CAL/Project/MEM_Stage.v
-Z179 FE:/University Stuff/CAL/Project/MEM_Stage.v
+R17
+Z188 8E:/University Stuff/CAL/Project/MEM_Stage.v
+Z189 FE:/University Stuff/CAL/Project/MEM_Stage.v
 L0 3
 R8
 r1
 31
-Z180 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Stage.v|
+Z190 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Stage.v|
 R10
-Z181 n@mem_@stage
-Z182 !s108 1620654711.415000
-Z183 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Stage.v|
+Z191 n@mem_@stage
+Z192 !s108 1620658512.794000
+Z193 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Stage.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMEM_Stage_Reg
-Z184 IECmFdGccd>1;^H;J[]bcf3
-Z185 V:>IhGPHR[LNX>@7B]Q]`W0
+Z194 !s100 j^NN61midSa`4MANCQk?@2
+Z195 IECmFdGccd>1;^H;J[]bcf3
+Z196 V:>IhGPHR[LNX>@7B]Q]`W0
 R4
-Z186 w1620654669
-Z187 8E:/University Stuff/CAL/Project/MEM_Stage_Reg.v
-Z188 FE:/University Stuff/CAL/Project/MEM_Stage_Reg.v
+Z197 w1620654669
+Z198 8E:/University Stuff/CAL/Project/MEM_Stage_Reg.v
+Z199 FE:/University Stuff/CAL/Project/MEM_Stage_Reg.v
 L0 3
 R8
 r1
 31
+Z200 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Stage_Reg.v|
 R10
-Z189 n@m@e@m_@stage_@reg
-Z190 !s100 j^NN61midSa`4MANCQk?@2
-Z191 !s108 1620654711.462000
-Z192 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Stage_Reg.v|
-Z193 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MEM_Stage_Reg.v|
+Z201 n@m@e@m_@stage_@reg
+Z202 !s108 1620658512.834000
+Z203 !s107 constants.h|E:/University Stuff/CAL/Project/MEM_Stage_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMemory
-Z194 !s100 b@RYh?Plg3ZI2BeMm_OMl1
-Z195 I>ohcz24GFjcLZn>RhPgID1
-Z196 V@5n3CG:1kYlCzEg8B=9Jc3
+Z204 !s100 b@RYh?Plg3ZI2BeMm_OMl1
+Z205 I>ohcz24GFjcLZn>RhPgID1
+Z206 V@5n3CG:1kYlCzEg8B=9Jc3
 R4
-R5
-Z197 8E:/University Stuff/CAL/Project/Memory.v
-Z198 FE:/University Stuff/CAL/Project/Memory.v
+R17
+Z207 8E:/University Stuff/CAL/Project/Memory.v
+Z208 FE:/University Stuff/CAL/Project/Memory.v
 L0 3
 R8
 r1
 31
-Z199 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Memory.v|
+Z209 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Memory.v|
 R10
-Z200 n@memory
-Z201 !s108 1620654711.505000
-Z202 !s107 constants.h|E:/University Stuff/CAL/Project/Memory.v|
+Z210 n@memory
+Z211 !s108 1620658512.875000
+Z212 !s107 constants.h|E:/University Stuff/CAL/Project/Memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX_2_to_1
-Z203 !s100 e:VZRW_3<5L5MK>RTMdb_2
-Z204 IA>=QD2nZm@O2;dfX`2A;93
-Z205 V6TbPM1N1lJ=j7f3BTAcNT3
+Z213 IV^JfggJffz?Si>PB<a4KV1
+Z214 V6TbPM1N1lJ=j7f3BTAcNT3
 R4
-R5
-Z206 8E:/University Stuff/CAL/Project/MUX_2_to_1.v
-Z207 FE:/University Stuff/CAL/Project/MUX_2_to_1.v
+Z215 w1620658371
+Z216 8E:/University Stuff/CAL/Project/MUX_2_to_1.v
+Z217 FE:/University Stuff/CAL/Project/MUX_2_to_1.v
 L0 3
 R8
 r1
 31
-Z208 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
+Z218 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
 R10
-Z209 n@m@u@x_2_to_1
-Z210 !s108 1620654711.546000
-Z211 !s107 constants.h|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
+Z219 n@m@u@x_2_to_1
+Z220 !s100 [<eELfU<bPYQVB9cQCXon1
+Z221 !s108 1620658512.918000
+Z222 !s107 constants.h|E:/University Stuff/CAL/Project/MUX_2_to_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vPC
-Z212 !s100 Ej2oafXeg_8hGlHzVflRh3
-Z213 IIe4;2`XnfLg=i<XkfDUih0
-Z214 VSI[D6ZmE_1RMO63aeL_L=0
+Z223 !s100 DnG^2icbT^WzC0SDK>?E12
+Z224 I29]hzcJI[@mSc1QAg1:`21
+Z225 VCkM0Q3?>B7OXXW3lOO8?X3
 R4
-R5
-Z215 8E:/University Stuff/CAL/Project/PC.v
-Z216 FE:/University Stuff/CAL/Project/PC.v
+Z226 w1620657732
+Z227 8E:/University Stuff/CAL/Project/PC.v
+Z228 FE:/University Stuff/CAL/Project/PC.v
 L0 3
 R8
 r1
 31
-Z217 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/PC.v|
+Z229 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/PC.v|
 R10
 n@p@c
-Z218 !s108 1620654711.590000
-Z219 !s107 constants.h|E:/University Stuff/CAL/Project/PC.v|
+Z230 !s108 1620658512.966000
+Z231 !s107 constants.h|E:/University Stuff/CAL/Project/PC.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vRegister_File
-Z220 !s100 >Lz2X@dEG8e9lPbCF@6290
-Z221 IbGUWWLi9S;eKNOka2@V[W3
-Z222 V5h3JkEhh:;onYJVbi4We51
+Z232 !s100 >Lz2X@dEG8e9lPbCF@6290
+Z233 IbGUWWLi9S;eKNOka2@V[W3
+Z234 V5h3JkEhh:;onYJVbi4We51
 R4
-R5
-Z223 8E:/University Stuff/CAL/Project/Register_File.v
-Z224 FE:/University Stuff/CAL/Project/Register_File.v
+R17
+Z235 8E:/University Stuff/CAL/Project/Register_File.v
+Z236 FE:/University Stuff/CAL/Project/Register_File.v
 L0 3
 R8
 r1
 31
-Z225 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Register_File.v|
+Z237 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Register_File.v|
 R10
-Z226 n@register_@file
-Z227 !s108 1620654711.637000
-Z228 !s107 constants.h|E:/University Stuff/CAL/Project/Register_File.v|
+Z238 n@register_@file
+Z239 !s108 1620658513.014000
+Z240 !s107 constants.h|E:/University Stuff/CAL/Project/Register_File.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vStatus_Reg
-Z229 !s100 ;SA;<IE8P?0Y8XK]K`Pc10
-Z230 II]_gHaB<=cJEfM;>@jKn^1
-Z231 VdVJOO]JgY@GTlHCQY5FS;0
+Z241 !s100 ;SA;<IE8P?0Y8XK]K`Pc10
+Z242 II]_gHaB<=cJEfM;>@jKn^1
+Z243 VdVJOO]JgY@GTlHCQY5FS;0
 R4
-R5
-Z232 8E:/University Stuff/CAL/Project/Status_Reg.v
-Z233 FE:/University Stuff/CAL/Project/Status_Reg.v
+R17
+Z244 8E:/University Stuff/CAL/Project/Status_Reg.v
+Z245 FE:/University Stuff/CAL/Project/Status_Reg.v
 L0 3
 R8
 r1
 31
-Z234 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Status_Reg.v|
+Z246 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Status_Reg.v|
 R10
-Z235 n@status_@reg
-Z236 !s108 1620654711.680000
-Z237 !s107 constants.h|E:/University Stuff/CAL/Project/Status_Reg.v|
+Z247 n@status_@reg
+Z248 !s108 1620658513.056000
+Z249 !s107 constants.h|E:/University Stuff/CAL/Project/Status_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vVal2_Generator
-Z238 !s100 O5QgK[aB;0g9TfE2JH@IL0
-Z239 I1i<zNe7nPQC`MM9ZC97=U3
-Z240 VHRTg3Io8OP@B<4A6]3a5S1
+vVal2_Generate
+!i10b 1
+Z250 !s100 Q;V:nEbnkJViIHSzmOZ:Q3
+Z251 I=<3@OiNWJT[Mz>^73HSYd2
+Z252 VZB0nHzVz3GaoKTJTz`L=D2
 R4
-R5
-Z241 8E:/University Stuff/CAL/Project/val2_generator.v
-Z242 FE:/University Stuff/CAL/Project/val2_generator.v
+Z253 w1620657288
+Z254 8E:/University Stuff/CAL/Project/Val2_Generate.v
+Z255 FE:/University Stuff/CAL/Project/Val2_Generate.v
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1620658513.152000
+!s107 constants.h|E:/University Stuff/CAL/Project/Val2_Generate.v|
+Z256 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/Val2_Generate.v|
+!s101 -O0
+R10
+Z257 n@val2_@generate
+vVal2_Generator
+Z258 !s100 O5QgK[aB;0g9TfE2JH@IL0
+Z259 I1i<zNe7nPQC`MM9ZC97=U3
+Z260 VHRTg3Io8OP@B<4A6]3a5S1
+R4
+R17
+Z261 8E:/University Stuff/CAL/Project/val2_generator.v
+Z262 FE:/University Stuff/CAL/Project/val2_generator.v
 L0 3
 R8
 r1
 31
-Z243 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/val2_generator.v|
+Z263 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/val2_generator.v|
 R10
-Z244 n@val2_@generator
+Z264 n@val2_@generator
+Z265 !s108 1620654711.724000
+Z266 !s107 constants.h|E:/University Stuff/CAL/Project/val2_generator.v|
 !i10b 1
 !s85 0
-Z245 !s108 1620654711.724000
-Z246 !s107 constants.h|E:/University Stuff/CAL/Project/val2_generator.v|
 !s101 -O0
 vWB_Stage
-!i10b 1
-Z247 !s100 SD<<I0XZAT?AA<V0P<C6P1
-Z248 IS>?1j1MM6?11Ch0EhzKe43
-Z249 VL^@OlO?bX@hWkXY[K8[aK1
+Z267 !s100 SD<<I0XZAT?AA<V0P<C6P1
+Z268 IS>?1j1MM6?11Ch0EhzKe43
+Z269 VL^@OlO?bX@hWkXY[K8[aK1
 R4
-R5
-Z250 8E:/University Stuff/CAL/Project/WB_Stage.v
-Z251 FE:/University Stuff/CAL/Project/WB_Stage.v
+R17
+Z270 8E:/University Stuff/CAL/Project/WB_Stage.v
+Z271 FE:/University Stuff/CAL/Project/WB_Stage.v
 L0 3
 R8
 r1
-!s85 0
 31
-!s108 1620654711.763000
-!s107 constants.h|E:/University Stuff/CAL/Project/WB_Stage.v|
-Z252 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/WB_Stage.v|
-!s101 -O0
+Z272 !s90 -reportprogress|300|-work|work|E:/University Stuff/CAL/Project/WB_Stage.v|
 R10
-Z253 n@w@b_@stage
+Z273 n@w@b_@stage
+!i10b 1
+!s85 0
+Z274 !s108 1620658513.108000
+Z275 !s107 constants.h|E:/University Stuff/CAL/Project/WB_Stage.v|
+!s101 -O0

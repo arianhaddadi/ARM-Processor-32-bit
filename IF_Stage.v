@@ -4,44 +4,43 @@ module IF_Stage
 (
     input                    clk,
     input                    rst,
-    input                    freeze,
-    input                    branch_taken,
-    output [`WORD_WIDTH-1:0] pc,
-    input  [`WORD_WIDTH-1:0] branch_addr,
+    input                    Freeze,
+    input                    Branch_Taken,
+    input  [`WORD_WIDTH-1:0] Branch_Address,
+    output [`WORD_WIDTH-1:0] PC_Stage_out,
     output [`WORD_WIDTH-1:0] instruction
 );
 
-  wire [`WORD_WIDTH-1:0] pc_out;
-  wire [`WORD_WIDTH-1:0] mux_out;
-  wire [`WORD_WIDTH-1:0] adder_out;
+  wire [`WORD_WIDTH-1:0] Adder_out;
+  wire [`WORD_WIDTH-1:0] PC_out;
+  wire [`WORD_WIDTH-1:0] MUX_out;
   
-  Instruction_Mem Instruction_Mem_Inst (
-   .addr(pc_out),
+  Instruction_Memory instruction_memory (
+   .address(PC_out),
    .instruction(instruction)
   );
   
-  MUX_2_to_1 MUX_2_to_1_Inst (
-   .sel(branch_taken),
-   .in1(adder_out),
-   .in2(branch_addr),
-   .out(mux_out)
+  MUX_2_to_1 mux_2_to_1 (
+   .sel(Branch_Taken),
+   .in1(Adder_out),
+   .in2(Branch_Address),
+   .out(MUX_out)
   );
 
-  PC PC_Inst (
+  PC pc (
    .clk(clk),
    .rst(rst),
-   .freeze(freeze),
-   .pc_in(mux_out),
-   .pc(pc_out)
+   .Freeze(Freeze),
+   .PC_in(MUX_out),
+   .PC_out(PC_out)
   );
 
-  Adder Adder_Inst (
-  //  .a(32'b0100),
+  Adder adder (
    .a(32'b01),
-   .b(pc_out),
-   .out(adder_out)
+   .b(PC_out),
+   .out(Adder_out)
   );
   
-  assign pc = mux_out;
+  assign PC_Stage_out = MUX_out;
   
 endmodule

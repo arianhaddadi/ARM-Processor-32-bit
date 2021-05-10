@@ -55,7 +55,7 @@ module ID_Stage
 		.out(control_unit_mux_out)
 	);
 
-	Control_Unit Control_Unit_Inst (
+	Control_Unit control_unit (
 		.S(instruction_in[20]),
 		.mode(instruction_in[27:26]), .op_code(instruction_in[24:21]),
 		.EX_command(EX_command),
@@ -65,7 +65,7 @@ module ID_Stage
 		.has_src1(has_src1)
 	);
 
-	Condition_Check Condition_Check_Inst (
+	Condition_Check condition_check (
 		.condition(instruction_in[31:28]),
 		.status_register(status_register),
 		.condition_state(condition_state)

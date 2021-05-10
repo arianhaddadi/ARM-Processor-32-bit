@@ -1,13 +1,13 @@
 `include "constants.h"
 
- module Instruction_Mem
+ module Instruction_Memory
 (
-  input      [`WORD_WIDTH-1:0] addr,
+  input      [`WORD_WIDTH-1:0] address,
   output reg [`WORD_WIDTH-1:0] instruction
 );
 
 always @*
-  case(addr)
+  case(address)
     32'd0: instruction = 32'b1110_00_1_1101_0_0000_0000_000000010100; //MOV    R0 ,#20     //R0 = 20
     32'd1: instruction = 32'b1110_00_1_1101_0_0000_0001_101000000001; //MOV    R1 ,#4096    //R1 = 4096
     32'd2: instruction = 32'b1110_00_1_1101_0_0000_0010_000100000011; //MOV    R2 ,#0xC0000000  //R2 = -1073741824

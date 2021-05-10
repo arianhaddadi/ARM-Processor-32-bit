@@ -23,13 +23,13 @@ module EXE_Stage
   wire [`WORD_WIDTH-1:0] val2;
   wire is_for_memory;
 
-  Adder Adder_Inst(
+  Adder adder(
     .a(pc_in),
     .b({{(8){signed_immediate[`SIGNED_IMM_WIDTH-1]}}, signed_immediate}),
     .out(branch_address)
   );
 
-  Val2_Generator Val2_Generator_Inst(
+  Val2_Generate val2_generate(
     .val_Rm(val_Rm_in),
     .shifter_operand(shifter_operand),
     .imm(imm),
@@ -37,7 +37,7 @@ module EXE_Stage
     .val2_out(val2)
 	);
 
-  ALU ALU_Inst(
+  ALU alu(
     .val1(val_Rn_in),
     .val2(val2),
     .EX_command(EX_command),

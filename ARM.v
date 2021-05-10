@@ -6,26 +6,26 @@ module ARM
   input rst
 );
 
+  wire EXE_stage_B_out;
+  wire hazard_detected;
   wire [`WORD_WIDTH-1:0] IF_stage_pc_out;
   wire [`WORD_WIDTH-1:0] IF_stage_instruction_out;
   wire [`WORD_WIDTH-1:0] branch_address;
-  wire EXE_stage_B_out;
-  wire hazard_detected;
 
-  IF_Stage  IF_Stage_Inst (
+  IF_Stage if_stage (
    .clk(clk),
    .rst(rst),
-   .freeze(hazard_detected),
-   .branch_taken(EXE_stage_B_out),
-   .branch_addr(branch_address),
-   .pc(IF_stage_pc_out),
+   .Freeze(hazard_detected),
+   .Branch_Taken(EXE_stage_B_out),
+   .Branch_Address(branch_address),
+   .PC_Stage_out(IF_stage_pc_out),
    .instruction(IF_stage_instruction_out)
   );
 
   wire [`WORD_WIDTH-1:0] IF_reg_pc_out;
   wire [`WORD_WIDTH-1:0] IF_reg_instruction_out;
 
-  IF_Stage_Reg  IF_Stage_Reg_Inst (
+  IF_Stage_Reg  if_state_reg (
    .clk(clk),
    .rst(rst),
    .Freeze(hazard_detected),
@@ -36,26 +36,22 @@ module ARM
    .instruction_out(IF_reg_instruction_out)
   );
 
-  wire [`WORD_WIDTH-1:0]              ID_stage_pc_out;
+  wire [`WORD_WIDTH-1:0]            ID_stage_pc_out;
 	wire [`REG_FILE_DEPTH-1:0] 				ID_stage_reg_file_dst;
   wire [`REG_FILE_DEPTH-1:0] 				ID_stage_reg_file_src1, ID_stage_reg_file_src2;
 	wire [`WORD_WIDTH-1:0] 						ID_stage_val_Rn, ID_stage_val_Rm;
 	wire [`SIGNED_IMM_WIDTH-1:0] 			ID_stage_signed_immediate;
 	wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_stage_shifter_operand;
 	wire [3:0] 												ID_stage_EX_command_out;
-	wire [3:0]              status;
-	wire ID_stage_mem_read_out, ID_stage_mem_write_out,
-		ID_stage_WB_en_out,
-		ID_stage_Imm_out,
-		ID_stage_B_out,
-		ID_stage_SR_update_out;
+	wire [3:0]                        status;
+	wire ID_stage_mem_read_out, ID_stage_mem_write_out, ID_stage_WB_en_out, ID_stage_Imm_out, ID_stage_B_out, ID_stage_SR_update_out;
 
   wire [`REG_FILE_DEPTH-1:0] WB_Stage_dst_out;
   wire [`WORD_WIDTH-1:0] WB_Value;
   wire WB_Stage_WB_en_out;
   wire has_src2;
 
-  ID_Stage ID_Stage_Inst(
+  ID_Stage id_stage(
     .clk(clk),
     .rst(rst),
     .freeze(hazard_detected),
@@ -90,7 +86,7 @@ module ARM
   wire [`SIGNED_IMM_WIDTH-1:0] ID_reg_signed_immediate_out;
   wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_reg_shifter_operand_out;
 
-  ID_Stage_Reg ID_Stage_Reg_Inst(
+  ID_Stage_Reg id_stage_reg(
     .clk(clk),
     .rst(rst),
     .flush(EXE_stage_B_out),
@@ -130,7 +126,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] ALU_res;
   wire EXE_stage_mem_read_out, EXE_stage_mem_write_out, EXE_stage_WB_en_out;
 
-  EXE_Stage EXE_Stage_Inst(
+  EXE_Stage exe_stage(
     .clk(clk),
     .rst(rst),
     .pc_in(ID_reg_pc_out),
@@ -162,7 +158,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] EXE_reg_val_Rm_out;
   wire EXE_reg_mem_read_out, EXE_reg_mem_write_out, EXE_reg_WB_en_out;
 
-  EXE_Stage_Reg EXE_Stage_Reg_Inst(
+  EXE_Stage_Reg exe_stage_reg(
     .clk(clk),
     .rst(rst),
     .Dest_in(EXE_stage_reg_file_dst_out),
@@ -184,7 +180,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] Mem_Stage_mem_out;
   wire Mem_Stage_read_out, Mem_Stage_WB_en_out;
 
-  MEM_Stage_Reg MEM_Stage_Reg_Inst(
+  MEM_Stage_Reg mem_stage_reg(
     .clk(clk),
     .rst(rst),
     .dst(EXE_reg_dst_out),
@@ -205,7 +201,7 @@ module ARM
   wire [`WORD_WIDTH-1:0] Mem_Reg_mem_out;
   wire Mem_Reg_read_out, Mem_Reg_WB_en_out;
 
-  MEM_Reg Mem_Reg_Inst(
+  MEM_Reg mem_reg(
     .clk(clk),
     .rst(rst),
     .Dest_in(Mem_Stage_dst_out),
@@ -221,7 +217,7 @@ module ARM
     .WB_EN_out(Mem_Reg_WB_en_out)
   );
 
-  WB_Stage WB_Stage_Inst(
+  WB_Stage wb_stage(
     .clk(clk),
     .rst(rst),
     .dst(Mem_Reg_dst_out),
@@ -234,7 +230,7 @@ module ARM
     .WB_Value(WB_Value)
   );
 
-  Status_Reg Status_Reg_Inst(
+  Status_Reg status_reg(
     .clk(clk),
     .rst(rst),
     .load(ID_reg_SR_update_out),
@@ -247,7 +243,7 @@ module ARM
   wire[`REG_FILE_DEPTH-1:0] EXE_dest = ID_reg_reg_file_dst_out;
   wire[`REG_FILE_DEPTH-1:0] MEM_dest = EXE_reg_dst_out;
 
-  Hazard_Detection_Unit Hazard_Detection_Unit_Inst(
+  Hazard_Detection_Unit hazard_detection_unit(
     .src1(ID_stage_reg_file_src1),
     .src2(ID_stage_reg_file_src2),
     .EXE_dest(EXE_dest),

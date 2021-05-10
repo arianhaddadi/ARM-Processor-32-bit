@@ -4,21 +4,15 @@ module PC
 (
     input                        clk,
     input                        rst,
-    input                        freeze,
-    input      [`WORD_WIDTH-1:0] pc_in,
-    output reg [`WORD_WIDTH-1:0] pc
+    input                        Freeze,
+    input      [`WORD_WIDTH-1:0] PC_in,
+    output reg [`WORD_WIDTH-1:0] PC_out
 );
 
 always @(posedge clk or posedge rst) begin
-  if(rst) begin
-    pc <= 0;
-  end  
-  else if(~freeze) begin
-    pc <= pc_in;
-  end
-  else begin
-    pc <= pc;
-  end    
- end
+  if(rst) PC_out <= 0;
+  else if(~Freeze) PC_out <= PC_in;
+  else PC_out <= PC_out;
+end
  
 endmodule
