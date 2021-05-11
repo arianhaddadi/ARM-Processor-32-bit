@@ -1,9 +1,7 @@
-`include "constants.h"
-
- module Instruction_Memory
+module Instruction_Memory
 (
-    input      [`WORD_WIDTH-1:0] address,
-    output reg [`WORD_WIDTH-1:0] instruction
+    input      [31:0] address,
+    output reg [31:0] instruction
 );
 
     always @(*) begin

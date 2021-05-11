@@ -1,5 +1,3 @@
-`include "constants.h"
-
 module ID_Stage_Reg
 (
     input                                   clk,
@@ -13,12 +11,12 @@ module ID_Stage_Reg
     input                                   S_in,
     input [3:0] 				            EX_CMD_in,
     input [3:0]                             Status_Register_in,
-    input [`REG_FILE_DEPTH-1:0] 		    Dest_in,
-    input [`SIGNED_IMM_WIDTH-1:0] 		    signed_immediate_in,
-    input [`SHIFTER_OPERAND_WIDTH-1:0]      shifter_operand_in,
-    input [`WORD_WIDTH-1:0]                 PC_in,
-    input [`WORD_WIDTH-1:0] 			    Val_Rn_in,
-    input [`WORD_WIDTH-1:0] 			    Val_Rm_in,
+    input [3:0]                  		    Dest_in,
+    input [11:0]                            shifter_operand_in,
+    input [23:0]                 		    signed_immediate_in,
+    input [31:0]                            PC_in,
+    input [31:0]             			    Val_Rn_in,
+    input [31:0]             			    Val_Rm_in,
 
     output reg                              MEM_R_EN_out, 
     output reg                              MEM_W_EN_out, 
@@ -28,12 +26,12 @@ module ID_Stage_Reg
     output reg                              S_out,
     output reg [3:0] 						EX_CMD_out,
     output reg [3:0]                        status_register_out,
-    output reg [`SIGNED_IMM_WIDTH-1:0] 		signed_immediate_out,
-    output reg [`SHIFTER_OPERAND_WIDTH-1:0] shifter_operand_out,
-    output reg [`REG_FILE_DEPTH-1:0] 		Dest_out,
-    output reg [`WORD_WIDTH-1:0]            PC_out,
-    output reg [`WORD_WIDTH-1:0] 			Val_Rn_out,
-    output reg [`WORD_WIDTH-1:0] 			Val_Rm_out
+    output reg [3:0]                     	Dest_out,
+    output reg [11:0]                       shifter_operand_out,
+    output reg [23:0]                		signed_immediate_out,
+    output reg [31:0]                       PC_out,
+    output reg [31:0]            			Val_Rn_out,
+    output reg [31:0]            			Val_Rm_out
 );
 
     always @(posedge clk, posedge rst) begin

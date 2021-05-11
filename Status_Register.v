@@ -1,5 +1,3 @@
-`include "constants.h"
-
 module Status_Register
 (
     input            clk,

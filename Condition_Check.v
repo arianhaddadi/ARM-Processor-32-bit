@@ -1,5 +1,3 @@
-`include "constants.h"
-
 module Condition_Check
 (
     input  [3:0] condition,

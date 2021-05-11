@@ -1,36 +1,34 @@
-`include "constants.h"
-
 module Memory
 (
     input                    clk,
     input                    rst,
     input                    MEM_W_EN,
     input                    MEM_R_EN,
-    input  [`WORD_WIDTH-1:0] ALU_res,
-    input  [`WORD_WIDTH-1:0] Val_Rm,
+    input  [31:0] ALU_res,
+    input  [31:0] Val_Rm,
     
-    output [`WORD_WIDTH-1:0] MEM_out
+    output [31:0] MEM_out
 );
 
-    wire [`WORD_WIDTH-1:0] generatedAddr = {ALU_res[`WORD_WIDTH-1:2], 2'b00} - `WORD_WIDTH'd1024;
+    wire [31:0] generatedAddr = {ALU_res[31:2], 2'b00} - 32'd1024;
 
-    reg [`MEMORY_DATA_LEN-1:0] mem_data [0:`MEMORY_SIZE-1];
+    reg [7:0] mem_data [0:2047];
 
 	integer i;
 
 	always @(posedge clk, posedge rst) begin
 		if (rst) begin
-				for (i=0; i < `MEMORY_SIZE; i = i+1)
+				for (i = 0; i < 2048; i = i + 1)
 					mem_data [i] <= i;
         end
 		else if (MEM_W_EN) begin	
                 mem_data[generatedAddr] <= Val_Rm[7:0];
-                mem_data[{generatedAddr[`WORD_WIDTH-1:1], 1'b1}] <= Val_Rm[15:8];
-                mem_data[{generatedAddr[`WORD_WIDTH-1:2], 2'b10}] <= Val_Rm[23:16];
-                mem_data[{generatedAddr[`WORD_WIDTH-1:2], 2'b11}] <= Val_Rm[31:24];
+                mem_data[{generatedAddr[31:1], 1'b1}] <= Val_Rm[15:8];
+                mem_data[{generatedAddr[31:2], 2'b10}] <= Val_Rm[23:16];
+                mem_data[{generatedAddr[31:2], 2'b11}] <= Val_Rm[31:24];
 		end
 	end
-    assign MEM_out = MEM_R_EN ? {mem_data[{generatedAddr[`WORD_WIDTH-1:2], 2'b11}], mem_data[{generatedAddr[`WORD_WIDTH-1:2], 2'b10}], 
-                                    mem_data[{generatedAddr[`WORD_WIDTH-1:1], 1'b1}], mem_data[{generatedAddr}]}: `WORD_WIDTH'b0;
+    assign MEM_out = MEM_R_EN ? {mem_data[{generatedAddr[31:2], 2'b11}], mem_data[{generatedAddr[31:2], 2'b10}], 
+                                    mem_data[{generatedAddr[31:1], 1'b1}], mem_data[{generatedAddr}]}: 32'b0;
 
 endmodule

@@ -1,16 +1,11 @@
-`include "constants.h"
-
 module ARM
 (
     input clk,
     input rst
 );
 
-    wire EXE_stage_B_out;
-    wire has_hazard;
-    wire [`WORD_WIDTH-1:0] IF_stage_pc_out;
-    wire [`WORD_WIDTH-1:0] IF_stage_instruction_out;
-    wire [`WORD_WIDTH-1:0] branch_address;
+    wire        EXE_stage_B_out, has_hazard;
+    wire [31:0] IF_stage_pc_out, IF_stage_instruction_out, branch_address;
 
     IF_Stage if_stage (
         .clk(clk),
@@ -22,8 +17,7 @@ module ARM
         .instruction(IF_stage_instruction_out)
     );
 
-    wire [`WORD_WIDTH-1:0] IF_reg_pc_out;
-    wire [`WORD_WIDTH-1:0] IF_reg_instruction_out;
+    wire [31:0] IF_reg_pc_out, IF_reg_instruction_out;
 
     IF_Stage_Reg  if_state_reg (
         .clk(clk),
@@ -36,19 +30,11 @@ module ARM
         .PC_out(IF_reg_pc_out)
     );
 
-    wire                              ID_stage_mem_read_out, ID_stage_mem_write_out, ID_stage_WB_en_out, ID_stage_Imm_out, ID_stage_B_out, ID_stage_SR_update_out;
-    wire                              WB_Stage_WB_en_out;
-    wire                              has_src2;
-    wire [3:0]                        ID_stage_EX_command_out;
-    wire [3:0]                        status;
-    wire [`REG_FILE_DEPTH-1:0] 		  ID_stage_reg_file_dst;
-    wire [`REG_FILE_DEPTH-1:0] 		  ID_stage_reg_file_src1, ID_stage_reg_file_src2;
-    wire [`SIGNED_IMM_WIDTH-1:0] 	  ID_stage_signed_immediate;
-    wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_stage_shifter_operand;
-    wire [`WORD_WIDTH-1:0] 			  ID_stage_val_Rn, ID_stage_val_Rm;
-    wire [`WORD_WIDTH-1:0]            ID_stage_pc_out;
-    wire [`REG_FILE_DEPTH-1:0]        WB_Stage_dst_out;
-    wire [`WORD_WIDTH-1:0]            WB_Value;
+    wire        ID_stage_mem_read_out, ID_stage_mem_write_out, ID_stage_WB_en_out, ID_stage_Imm_out, ID_stage_B_out, ID_stage_SR_update_out, WB_Stage_WB_en_out, has_src2;
+    wire [3:0]  ID_stage_EX_command_out, status, ID_stage_reg_file_dst, ID_stage_reg_file_src1, ID_stage_reg_file_src2, WB_Stage_dst_out;
+    wire [11:0] ID_stage_shifter_operand;
+    wire [23:0] ID_stage_signed_immediate;
+    wire [31:0] ID_stage_val_Rn, ID_stage_val_Rm, ID_stage_pc_out, WB_Value;
 
     ID_Stage id_stage(
         .clk(clk),
@@ -72,20 +58,18 @@ module ARM
         .Reg_src1(ID_stage_reg_file_src1),
         .Reg_src2(ID_stage_reg_file_src2),
         .Reg_Dest(ID_stage_reg_file_dst),
-        .signed_immediate(ID_stage_signed_immediate),
         .shifter_operand(ID_stage_shifter_operand),
+        .signed_immediate(ID_stage_signed_immediate),
         .PC_out(ID_stage_pc_out),
         .Val_Rn(ID_stage_val_Rn), 
         .Val_Rm(ID_stage_val_Rm)
     );
 
-    wire ID_reg_mem_read_out, ID_reg_mem_write_out, ID_reg_WB_en_out, ID_reg_Imm_out, ID_reg_B_out, ID_reg_SR_update_out;
-    wire [3:0] ID_reg_SR_out, ID_reg_EX_command_out;
-    wire [`WORD_WIDTH-1:0] ID_reg_pc_out;
-    wire [`REG_FILE_DEPTH-1:0] ID_reg_reg_file_dst_out;
-    wire [`WORD_WIDTH-1:0] ID_reg_val_Rn_out, ID_reg_val_Rm_out;
-    wire [`SIGNED_IMM_WIDTH-1:0] ID_reg_signed_immediate_out;
-    wire [`SHIFTER_OPERAND_WIDTH-1:0] ID_reg_shifter_operand_out;
+    wire        ID_reg_mem_read_out, ID_reg_mem_write_out, ID_reg_WB_en_out, ID_reg_Imm_out, ID_reg_B_out, ID_reg_SR_update_out;
+    wire [3:0]  ID_reg_SR_out, ID_reg_EX_command_out, ID_reg_reg_file_dst_out;
+    wire [11:0] ID_reg_shifter_operand_out;
+    wire [23:0] ID_reg_signed_immediate_out;
+    wire [31:0] ID_reg_val_Rn_out, ID_reg_val_Rm_out, ID_reg_pc_out;
 
     ID_Stage_Reg id_stage_reg(
         .clk(clk),
@@ -100,8 +84,8 @@ module ARM
         .EX_CMD_in(ID_stage_EX_command_out),
         .status_register_in(status),
         .Dest_in(ID_stage_reg_file_dst),
-        .signed_immediate_in(ID_stage_signed_immediate),
         .shifter_operand_in(ID_stage_shifter_operand),
+        .signed_immediate_in(ID_stage_signed_immediate),
         .PC_in(ID_stage_pc_out),
         .Val_Rn_in(ID_stage_val_Rn), 
         .Val_Rm_in(ID_stage_val_Rm),
@@ -113,19 +97,17 @@ module ARM
         .S_out(ID_reg_SR_update_out),
         .EX_CMD_out(ID_reg_EX_command_out),
         .status_register_out(ID_reg_SR_out),
-        .signed_immediate_out(ID_reg_signed_immediate_out),
-        .shifter_operand_out(ID_reg_shifter_operand_out),
         .Dest_out(ID_reg_reg_file_dst_out),
+        .shifter_operand_out(ID_reg_shifter_operand_out),
+        .signed_immediate_out(ID_reg_signed_immediate_out),
         .PC_out(ID_reg_pc_out),
         .Val_Rn_out(ID_reg_val_Rn_out), 
         .Val_Rm_out(ID_reg_val_Rm_out)
     );
 
-    wire [`REG_FILE_DEPTH-1:0] EXE_stage_reg_file_dst_out;
-    wire [`WORD_WIDTH-1:0] EXE_stage_val_Rm_out;
-    wire [3:0] EXE_stage_SR_out;
-    wire [`WORD_WIDTH-1:0] ALU_res;
-    wire EXE_stage_mem_read_out, EXE_stage_mem_write_out, EXE_stage_WB_en_out;
+    wire        EXE_stage_mem_read_out, EXE_stage_mem_write_out, EXE_stage_WB_en_out;
+    wire [3:0]  EXE_stage_reg_file_dst_out, EXE_stage_SR_out;
+    wire [31:0] EXE_stage_val_Rm_out, ALU_res;
 
     EXE_Stage exe_stage(
         .clk(clk),
@@ -137,9 +119,9 @@ module ARM
         .B_in(ID_reg_B_out),
         .EXE_CMD(ID_reg_EX_command_out),
         .Status_Register_in(ID_reg_SR_out),
-        .signed_immediate(ID_reg_signed_immediate_out),
-        .shifter_operand(ID_reg_shifter_operand_out),
         .Dest_in(ID_reg_reg_file_dst_out),
+        .shifter_operand(ID_reg_shifter_operand_out),
+        .signed_immediate(ID_reg_signed_immediate_out),
         .PC_in(ID_reg_pc_out),
         .Val_Rn_in(ID_reg_val_Rn_out), 
         .Val_Rm_in(ID_reg_val_Rm_out),
@@ -154,10 +136,9 @@ module ARM
         .Branch_Address(branch_address)
     );
 
-    wire [`REG_FILE_DEPTH-1:0] EXE_reg_dst_out;
-    wire [`WORD_WIDTH-1:0] EXE_reg_ALU_res_out;
-    wire [`WORD_WIDTH-1:0] EXE_reg_val_Rm_out;
-    wire EXE_reg_mem_read_out, EXE_reg_mem_write_out, EXE_reg_WB_en_out;
+    wire        EXE_reg_mem_read_out, EXE_reg_mem_write_out, EXE_reg_WB_en_out;
+    wire [3:0]  EXE_reg_dst_out;
+    wire [31:0] EXE_reg_ALU_res_out, EXE_reg_val_Rm_out;
 
     EXE_Stage_Reg exe_stage_reg(
         .clk(clk),
@@ -176,10 +157,9 @@ module ARM
         .Val_Rm_out(EXE_reg_val_Rm_out)
     );
 
-    wire [`REG_FILE_DEPTH-1:0] Mem_Stage_dst_out;
-    wire [`WORD_WIDTH-1:0] Mem_Stage_ALU_res_out;
-    wire [`WORD_WIDTH-1:0] Mem_Stage_mem_out;
-    wire Mem_Stage_read_out, Mem_Stage_WB_en_out;
+    wire        Mem_Stage_read_out, Mem_Stage_WB_en_out;
+    wire [3:0]  Mem_Stage_dst_out;
+    wire [31:0] Mem_Stage_ALU_res_out,  Mem_Stage_mem_out;
 
     Mem_Stage mem_stage(
         .clk(clk),
@@ -197,10 +177,9 @@ module ARM
         .MEM_out(Mem_Stage_mem_out)
     );
 
-    wire [`REG_FILE_DEPTH-1:0] Mem_Reg_dst_out;
-    wire [`WORD_WIDTH-1:0] Mem_Reg_ALU_res_out;
-    wire [`WORD_WIDTH-1:0] Mem_Reg_mem_out;
-    wire Mem_Reg_read_out, Mem_Reg_WB_en_out;
+    wire        Mem_Reg_read_out, Mem_Reg_WB_en_out;
+    wire [3:0]  Mem_Reg_dst_out;
+    wire [31:0] Mem_Reg_ALU_res_out, Mem_Reg_mem_out;
 
     MEM_Stage_Reg mem_stage_reg(
         .clk(clk),
@@ -238,10 +217,8 @@ module ARM
         .status_out(status)
     );
 
-    wire EXE_WB_en = ID_reg_WB_en_out;
-    wire MEM_WB_en = EXE_reg_WB_en_out;
-    wire[`REG_FILE_DEPTH-1:0] EXE_dest = ID_reg_reg_file_dst_out;
-    wire[`REG_FILE_DEPTH-1:0] MEM_dest = EXE_reg_dst_out;
+    wire      EXE_WB_en = ID_reg_WB_en_out, MEM_WB_en = EXE_reg_WB_en_out;
+    wire[3:0] EXE_dest = ID_reg_reg_file_dst_out, MEM_dest = EXE_reg_dst_out;
 
     Hazard_Detection_Unit hazard_detection_unit(
         .EXE_WB_EN(EXE_WB_en),

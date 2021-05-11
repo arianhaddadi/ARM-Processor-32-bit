@@ -1,5 +1,3 @@
-`include "constants.h"
-
 module MEM_Stage
 (
     input                        clk, 
@@ -7,15 +5,15 @@ module MEM_Stage
     input                        MEM_R_EN_in,
     input                        MEM_W_EN_in,
     input                        WB_EN,
-    input [`REG_FILE_DEPTH-1:0]  Dest_in,
-    input [`WORD_WIDTH-1:0]      Val_Rm,
-    input [`WORD_WIDTH-1:0]      ALU_res,
+    input [3:0]                  Dest_in,
+    input [31:0]                 Val_Rm,
+    input [31:0]                 ALU_res,
 
     output                       MEM_R_EN_out,
     output                       WB_EN_out,
-    output [`REG_FILE_DEPTH-1:0] Dest_out,
-    output [`WORD_WIDTH-1:0]     ALU_res_out,
-    output [`WORD_WIDTH-1:0]     MEM_out
+    output [3:0]                 Dest_out,
+    output [31:0]                ALU_res_out,
+    output [31:0]                MEM_out
 );
 
     assign MEM_R_EN_out = MEM_R_EN_in;

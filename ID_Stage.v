@@ -1,5 +1,3 @@
-`include "constants.h"
-
 module ID_Stage
 (
 	input                     			  clk,
@@ -7,10 +5,10 @@ module ID_Stage
 	input 								  Freeze,
 	input 								  WB_EN,
 	input  [3:0]                          Status_Register,
-	input  [`REG_FILE_DEPTH-1:0]	      WB_Dest,
-	input  [`WORD_WIDTH-1:0]    		  PC_in,
-	input  [`WORD_WIDTH-1:0]    		  instruction_in,
-	input  [`WORD_WIDTH-1:0]   			  WB_Value,
+	input  [3:0]					      WB_Dest,
+	input  [31:0]			    		  PC_in,
+	input  [31:0]			    		  instruction_in,
+	input  [31:0]			   			  WB_Value,
 	
 	output                                MEM_R_EN_out,
 	output                                MEM_W_EN_out,
@@ -21,14 +19,14 @@ module ID_Stage
 	output                                with_src2,
 	output                                with_src1,
 	output [3:0]						  EX_CMD_out,
-	output [`REG_FILE_DEPTH-1:0] 		  Reg_src1,
-	output [`REG_FILE_DEPTH-1:0] 		  Reg_src2,
-	output [`REG_FILE_DEPTH-1:0] 		  Reg_Dest,
-	output [`SIGNED_IMM_WIDTH-1:0]        signed_immediate,
-	output [`SHIFTER_OPERAND_WIDTH-1:0]   shifter_operand,
-	output [`WORD_WIDTH-1:0]   			  PC_out,
-	output [`WORD_WIDTH-1:0]			  Val_Rn,
-	output [`WORD_WIDTH-1:0]			  Val_Rm
+	output [3:0]				 		  Reg_src1,
+	output [3:0]				 		  Reg_src2,
+	output [3:0]				 		  Reg_Dest,
+	output [11:0]						  shifter_operand,
+	output [23:0]					      signed_immediate,
+	output [31:0]			   			  PC_out,
+	output [31:0]						  Val_Rn,
+	output [31:0]						  Val_Rm
 );
 
 	wire MEM_R, MEM_W, WB_EN_CU, Imm, SR_update, B, COND_State;
@@ -84,12 +82,12 @@ module ID_Stage
 		.mode(instruction_in[27:26]), 
 		.OP(instruction_in[24:21]),
 		.SR_update(SR_update),
-		.with_src1(with_src1)
+		.with_src1(with_src1),
 		.MEM_R(MEM_R), 
 		.MEM_W(MEM_W),
 		.WB_EN(WB_EN_CU), 
 		.B(B),
-		.EX_CMD(EX_CMD),
+		.EX_CMD(EX_CMD)
 	);
 
 

@@ -1,20 +1,16 @@
-`include "constants.h"
-
 module IF_Stage
 (
     input                    clk,
     input                    rst,
     input                    Freeze,
     input                    Branch_Taken,
-    input  [`WORD_WIDTH-1:0] Branch_Address,
+    input  [31:0]            Branch_Address,
     
-    output [`WORD_WIDTH-1:0] PC_Stage_out,
-    output [`WORD_WIDTH-1:0] instruction
+    output [31:0]            PC_Stage_out,
+    output [31:0]            instruction
 );
 
-    wire [`WORD_WIDTH-1:0] Adder_out;
-    wire [`WORD_WIDTH-1:0] PC_out;
-    wire [`WORD_WIDTH-1:0] MUX_out;
+    wire [31:0] Adder_out, PC_out, MUX_out;
 
     assign PC_Stage_out = MUX_out;
 

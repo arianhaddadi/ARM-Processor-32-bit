@@ -1,14 +1,12 @@
-`include "constants.h"
-
 module Hazard_Detection_Unit (
     input                        EXE_WB_EN,
     input                        MEM_WB_EN,
     input                        with_src1,
     input                        with_src2,
-    input  [`REG_FILE_DEPTH-1:0] src1,
-    input  [`REG_FILE_DEPTH-1:0] src2,
-    input  [`REG_FILE_DEPTH-1:0] EXE_Dest,
-    input  [`REG_FILE_DEPTH-1:0] MEM_Dest,
+    input  [3:0]                 src1,
+    input  [3:0]                 src2,
+    input  [3:0]                 EXE_Dest,
+    input  [3:0]                 MEM_Dest,
 
     output reg                   has_hazard
 );

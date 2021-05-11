@@ -1,13 +1,11 @@
-`include "constants.h"
-
 module PC
 (
     input                        clk,
     input                        rst,
     input                        Freeze,
-    input      [`WORD_WIDTH-1:0] PC_in,
+    input      [31:0]            PC_in,
 
-    output reg [`WORD_WIDTH-1:0] PC_out
+    output reg [31:0]            PC_out
 );
 
     always @(posedge clk, posedge rst) begin

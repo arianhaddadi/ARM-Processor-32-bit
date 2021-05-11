@@ -1,20 +1,18 @@
-`include "constants.h"
-
 module MEM_Stage_Reg
 (
     input                            clk,
     input                            rst,
     input                            MEM_R_EN_in,
     input                            WB_EN_in,
-    input [`REG_FILE_DEPTH-1:0]      Dest_in,
-    input [`WORD_WIDTH-1:0]          ALU_Res_in,
-    input [`WORD_WIDTH-1:0]          MEM_in,
+    input [3:0]                      Dest_in,
+    input [31:0]                     ALU_Res_in,
+    input [31:0]                     MEM_in,
 
     output reg                       MEM_R_EN_out,
     output reg                       WB_EN_out,
-    output reg [`REG_FILE_DEPTH-1:0] Dest_out,
-    output reg [`WORD_WIDTH-1:0]     ALU_Res_out,
-    output reg [`WORD_WIDTH-1:0]     MEM_out
+    output reg [3:0]                 Dest_out,
+    output reg [31:0]                ALU_Res_out,
+    output reg [31:0]                MEM_out
 );
 
     always @(posedge clk, posedge rst) begin

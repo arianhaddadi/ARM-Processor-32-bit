@@ -1,4 +1,4 @@
-`include "constants.h"
+`timescale 1ns/1ns
 
 module ARM_TB;
 
@@ -7,20 +7,20 @@ module ARM_TB;
 
 
     ARM CPU(
-    .clk(clk),
-    .rst(rst)
+        .clk(clk),
+        .rst(rst)
     );
 
     initial begin
         clk = 0;
-        forever clk = #`CLOCK_PERIOD ~clk;
+        forever clk = #20 ~clk;
     end
 
     initial begin
         rst = 1;
-        # (`CLOCK_PERIOD / 2);
+        # (20 / 2);
         rst = 0;
-        # (600*`CLOCK_PERIOD);
+        # (600*20);
         $stop;
     end
 endmodule

@@ -1,16 +1,14 @@
-`include "constants.h"
-
 module Val2_Generate
 (
-    input                                    imm,
-    input                                    for_mem,
-    input      [`SHIFTER_OPERAND_WIDTH-1:0]  shifter_operand,
-    input      [`WORD_WIDTH-1:0]             Val_Rm,
+    input                   imm,
+    input                   for_mem,
+    input      [11:0]       shifter_operand,
+    input      [31:0]       Val_Rm,
     
-    output reg [`WORD_WIDTH-1:0]             Val2_out
+    output reg [31:0]       Val2_out
 );
 
-    reg [`WORD_WIDTH-1:0]  immd_temp;
+    reg [31:0]  immd_temp;
 
     integer i;
     always @(*) begin
@@ -19,7 +17,7 @@ module Val2_Generate
             immd_temp = {24'b0, shifter_operand[7:0]};
 
             for (i = 0; i < {shifter_operand[11:8], 1'b0}; i = i + 1) begin
-                immd_temp = {immd_temp[0], immd_temp[`WORD_WIDTH-1:1]};
+                immd_temp = {immd_temp[0], immd_temp[31:1]};
             end
             Val2_out = immd_temp;
         end
@@ -32,7 +30,7 @@ module Val2_Generate
                 11: begin
                     Val2_out = Val_Rm;
                     for (i = 0; i < {shifter_operand[11:7]}; i = i + 1) begin
-                        Val2_out = {Val2_out[0], Val2_out[`WORD_WIDTH-1:1]};
+                        Val2_out = {Val2_out[0], Val2_out[31:1]};
                     end
                 end
                 default: Val2_out = Val_Rm << shifter_operand[11:7];
