@@ -4,11 +4,11 @@ module Register_File
 (
     input                        clk,
     input                        rst,
-    input                        WB_en,
-    input  [`REG_FILE_DEPTH-1:0] WB_dest,
+    input                        WB_EN,
+    input  [`REG_FILE_DEPTH-1:0] WB_Dest,
     input  [`REG_FILE_DEPTH-1:0] src1,
     input  [`REG_FILE_DEPTH-1:0] src2,
-    input  [`WORD_WIDTH-1:0]     WB_result,
+    input  [`WORD_WIDTH-1:0]     WB_Res,
     
 	output [`WORD_WIDTH-1:0]     reg1,
     output [`WORD_WIDTH-1:0]     reg2
@@ -25,7 +25,7 @@ module Register_File
 					registers[i] <= i;
 		end
 		else begin
-				if (WB_en) registers[WB_dest] <= WB_result;
+				if (WB_EN) registers[WB_Dest] <= WB_Res;
 		end
 	end
 

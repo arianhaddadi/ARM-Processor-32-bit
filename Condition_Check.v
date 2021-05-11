@@ -5,7 +5,7 @@ module Condition_Check
     input  [3:0] condition,
     input  [3:0] Status_Register,
 
-    output reg   condition_state
+    output reg   state
 );
 
     wire Z = Status_Register[3];
@@ -19,21 +19,21 @@ module Condition_Check
 
     always @(*) begin
         case(condition)
-        EQ:    condition_state = Z;
-        NE:    condition_state = ~Z;
-        CS_HS: condition_state = C;
-        CC_LO: condition_state = ~C;
-        MI:    condition_state = N;
-        PL:    condition_state = ~N;
-        VS:    condition_state = V;
-        VC:    condition_state = ~V;
-        HI:    condition_state = C & ~Z;
-        LS:    condition_state = ~C & Z;
-        GE:    condition_state = (N & V) | (~N & ~V);
-        LT:    condition_state = (N & ~V) | (~N & V);
-        GT:    condition_state = ~Z & ((N & V) | (~N & ~V));
-        LE:    condition_state = Z & ((N & ~V) | (~N & V));
-        AL:    condition_state = 1'b1;
+        EQ:    state = Z;
+        NE:    state = ~Z;
+        CS_HS: state = C;
+        CC_LO: state = ~C;
+        MI:    state = N;
+        PL:    state = ~N;
+        VS:    state = V;
+        VC:    state = ~V;
+        HI:    state = C & ~Z;
+        LS:    state = ~C & Z;
+        GE:    state = (N & V) | (~N & ~V);
+        LT:    state = (N & ~V) | (~N & V);
+        GT:    state = ~Z & ((N & V) | (~N & ~V));
+        LE:    state = Z & ((N & ~V) | (~N & V));
+        AL:    state = 1'b1;
         endcase
     end
 
