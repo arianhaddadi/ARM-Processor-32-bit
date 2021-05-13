@@ -24,59 +24,59 @@ module ALU
     output [31:0]  result
 );
 
-    reg V1, C1;
-    reg [32:0] temp_result;
+    reg V, C;
+    reg [32:0] temp;
     
-    wire N1, Z1;
+    wire N, Z;
 
-    assign result = temp_result[31:0];
-    assign SR = {Z1, C1, N1, V1};
+    assign result = temp[31:0];
+    assign SR = {Z, C, N, V};
 
-    assign N1 = result[31];
-    assign Z1 = |result ? 0:1;
+    assign N = result[31];
+    assign Z = |result ? 0 : 1;
 
     always @(*) begin
-        V1 = 1'b0;
-        C1 = 1'b0;
-        temp_result = 33'b0;
+        V = 1'b0;
+        C = 1'b0;
+        temp = 33'b0;
         case (EXE_CMD)
-            `EXE_MOV: temp_result = val2;
-            `EXE_MVN: temp_result = ~val2;
+            `EXE_MOV: temp = val2;
+            `EXE_MVN: temp = ~val2;
             `EXE_ADD: begin
-                temp_result = val1 + val2;
-                C1 = temp_result[32];
-                V1 = (val1[31] ~^ val2[31]) & (temp_result[31] ^ val1[31]);
+                temp = val1 + val2;
+                V = (val1[31] ~^ val2[31]) & (temp[31] ^ val1[31]);
+                C = temp[32];
             end
             `EXE_ADC: begin
-                temp_result = val1 + val2 + carry;
-                C1 = temp_result[32];
-                V1 = (val1[31] ~^ val2[31]) & (temp_result[31] ^ val1[31]);
+                temp = val1 + val2 + carry;
+                V = (val1[31] ~^ val2[31]) & (temp[31] ^ val1[31]);
+                C = temp[32];
             end
             `EXE_SUB: begin
-                temp_result = val1 - val2;
-                C1 = temp_result[32];
-                V1 = (val1[31] ^ val2[31]) & (temp_result[31] ^ val1[31]);
+                temp = {val1[31], val1} - {val2[31], val2};
+                V = (val1[31] ^ val2[31]) & (temp[31] ^ val1[31]);
+                C = temp[32];
             end
             `EXE_SBC: begin
-                temp_result = val1 - val2 - {32{~carry}};
-                C1 = temp_result[32];
-                V1 = (val1[31] ^ val2[31]) & (temp_result[31] ^ val1[31]);
+                temp = val1 - val2 - {32{~carry}};
+                V = (val1[31] ^ val2[31]) & (temp[31] ^ val1[31]);
+                C = temp[32];
             end
-            `EXE_AND: temp_result = val1 & val2;
-            `EXE_ORR: temp_result = val1 | val2;
-            `EXE_EOR: temp_result = val1 ^ val2;
+            `EXE_AND: temp = val1 & val2;
+            `EXE_ORR: temp = val1 | val2;
+            `EXE_EOR: temp = val1 ^ val2;
             `EXE_CMP: begin
-                temp_result = val1 - val2;
-                C1 = temp_result[32];
-                V1 = (val1[31] ^ val2[31]) & (temp_result[31] ^ val1[31]);
+                temp = {val1[31], val1} - {val2[31], val2};
+                V = (val1[31] ^ val2[31]) & (temp[31] ^ val1[31]);
+                C = temp[32];
             end
-            `EXE_TST: temp_result = val1 & val2;
-            `EXE_LDR: temp_result = val1 + val2;
-            `EXE_STR: temp_result = val1 - val2;
+            `EXE_TST: temp = val1 & val2;
+            `EXE_LDR: temp = val1 + val2;
+            `EXE_STR: temp = val1 - val2;
             default: begin
-              temp_result = 33'b0;
-              V1 = 1'b0;
-              C1 = 1'b0;
+              temp = 33'b0;
+              V = 1'b0;
+              C = 1'b0;
             end
 
         endcase

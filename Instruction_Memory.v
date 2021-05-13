@@ -56,7 +56,7 @@ module Instruction_Memory
             32'd45: instruction = 32'b1110_01_0_0100_1_0000_0110_000000010100; //STR R6 ,[R0],#20
             32'd46: instruction = 32'b1110_10_1_0_111111111111111111111111 ; //B #-1
 
-            default: instruction = 32'b000000_00000_00000_00000_00000000000;
+            default: instruction = 32'b1110_00_1_0100_0_0001_0001_000000000000;
         endcase
     end
 

@@ -33,7 +33,7 @@ module ALU
     assign SR = {Z, C, N, V};
 
     assign N = result[31];
-    assign Z = result == 0;
+    assign Z = result==0;
 
     always @(*) begin
         V = 1'b0;

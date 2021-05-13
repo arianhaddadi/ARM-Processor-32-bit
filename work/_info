@@ -1,0 +1,465 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\modelsim_ase\win32aloem
+vAdder
+Z1 !s100 Doec2ZL;FJ74AEMTX>_L40
+Z2 IAhkB6WT`?KeXi?>[<`NPi0
+Z3 VAM9z7>k_Ucnc?V4BMKFMD3
+Z4 dC:\Users\amirp\Desktop\ARM-Processor-32-bit
+Z5 w1620930685
+Z6 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v
+Z7 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v|
+Z10 o-work work -O0
+Z11 n@adder
+Z12 !s108 1620932472.996000
+Z13 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALU
+Z14 IkeAWF^_OEMI6mHAz2@dEJ2
+Z15 V;eS]OQcKdVo>5Fi3jO7Je2
+R4
+Z16 w1620932431
+Z17 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v
+Z18 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v
+L0 16
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v|
+R10
+Z20 n@a@l@u
+Z21 !s100 3EH:gS>UUi;=eicURiLbz3
+Z22 !s108 1620932473.122000
+Z23 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vARM
+Z24 !s100 >0aiAPAh<>L@nR>3AX9>z1
+Z25 IN]dQ8eJGJFP]8@gTHN9e]0
+Z26 V?2[cB>lk90YLKN3jbUCQl1
+R4
+R5
+Z27 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v
+Z28 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v
+L0 1
+R8
+r1
+31
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v|
+R10
+Z30 n@a@r@m
+Z31 !s108 1620932473.263000
+Z32 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vARM_TB
+Z33 !s100 g8EABg]=]MZ2KcDjB8NgE0
+Z34 IhzOD>[EchcUC7BOGM8bG@2
+Z35 VW1O7gz;3oHcUET<1lb:JA0
+R4
+R5
+Z36 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v
+Z37 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v
+L0 3
+R8
+r1
+31
+Z38 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v|
+R10
+Z39 n@a@r@m_@t@b
+Z40 !s108 1620932473.376000
+Z41 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCondition_Check
+Z42 !s100 NdhY;EMZ27`Sn1Phk=K223
+Z43 ISUon@aKcc4GVX[ZVoLEPX3
+Z44 V<51R8HKi3TO]k1S^V3m2d0
+R4
+R5
+Z45 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v
+Z46 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v
+L0 1
+R8
+r1
+31
+Z47 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v|
+R10
+Z48 n@condition_@check
+Z49 !s108 1620932473.510000
+Z50 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vControl_Unit
+Z51 !s100 8jPZR^G2[@]fAC]COkKhA0
+Z52 II_dBD:SF:188IcZ[IN]N10
+Z53 V:2MMj^>MN3WIOADFKK^?B1
+R4
+R5
+Z54 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v
+Z55 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v
+L0 31
+R8
+r1
+31
+Z56 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v|
+R10
+Z57 n@control_@unit
+Z58 !s108 1620932473.619000
+Z59 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEXE_Stage
+Z60 !s100 an55V^_>dT?G[A3V?<CN[2
+Z61 I2iAJmjzUPn5SlZHl_e_6H3
+Z62 VUZJ`[[ccW`>XYBPID`Q7o3
+R4
+R5
+Z63 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v
+Z64 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v
+L0 1
+R8
+r1
+31
+Z65 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v|
+R10
+Z66 n@e@x@e_@stage
+Z67 !s108 1620932473.709000
+Z68 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vEXE_Stage_Reg
+Z69 !s100 ?J4A<;<cV?KzO10Wgi=d=2
+Z70 I`H;CVDYfJM8]WHegYC7:>3
+Z71 Vb:k_d?l0^YeSh4X3ClWNd2
+R4
+R5
+Z72 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v
+Z73 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z74 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v|
+R10
+Z75 n@e@x@e_@stage_@reg
+Z76 !s108 1620932473.799000
+Z77 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vHazard_Detection_Unit
+Z78 !s100 <G@:oMVcNlTI;HOPSam:T3
+Z79 I0oR_AK<oGA=P5k60cY9@o3
+Z80 Vj9E2n^A8dGRjH7Q]I7gLe0
+R4
+R5
+Z81 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v
+Z82 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v
+L0 1
+R8
+r1
+31
+Z83 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v|
+R10
+Z84 n@hazard_@detection_@unit
+Z85 !s108 1620932473.879000
+Z86 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_Stage
+Z87 !s100 ATI`kz8>IaoY4mGPWM^f22
+Z88 Io1NU;7UakZICD55d<a<ni1
+Z89 VlaiLZMz<Jn>2bHlFePH921
+R4
+R5
+Z90 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v
+Z91 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v
+L0 4
+R8
+r1
+31
+Z92 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v|
+R10
+Z93 n@i@d_@stage
+Z94 !s108 1620932473.963000
+Z95 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vID_Stage_Reg
+Z96 !s100 KV>3Z<R?V<lnQ`I8VJ1^C2
+Z97 IHidEOYJngGWPo^^_E8j`J2
+Z98 V@IgeLTkN0eH0;R_9P0eQn0
+R4
+R5
+Z99 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v
+Z100 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z101 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v|
+R10
+Z102 n@i@d_@stage_@reg
+Z103 !s108 1620932474.086000
+Z104 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_Stage
+Z105 !s100 @FccMMNg^XeInnEcb2a3n3
+Z106 IX81QTdjCbXcHij>F5@S@m0
+Z107 V2D6egHYS@`GIK7OlbSlKR2
+R4
+R5
+Z108 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v
+Z109 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v
+L0 1
+R8
+r1
+31
+Z110 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v|
+R10
+Z111 n@i@f_@stage
+Z112 !s108 1620932474.193000
+Z113 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vIF_Stage_Reg
+Z114 !s100 MXe4P;WQ^@d5cNg7chP`K2
+Z115 Ij0S]f7aO6hWkUW9E_TQzm2
+Z116 VQcgd`Wgf3Mm>2XJTWT]P>3
+R4
+R5
+Z117 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v
+Z118 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z119 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v|
+R10
+Z120 n@i@f_@stage_@reg
+Z121 !s108 1620932474.301000
+Z122 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInstruction_Memory
+Z123 !s100 4O>9XKk6cFYIKN2X7zD]A1
+Z124 I:N:gU]68J^KAE[hKMXj:00
+Z125 VUU0=PL0j4lWInAVUbX>>R3
+R4
+Z126 w1620932179
+Z127 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v
+Z128 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v
+L0 1
+R8
+r1
+31
+Z129 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v|
+R10
+Z130 n@instruction_@memory
+Z131 !s108 1620932474.432000
+Z132 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMEM_Stage
+Z133 !s100 R2kPGh644]IdEGDgRiiYd0
+Z134 I1BU1UGSh>K@6<3gW`RQ=32
+Z135 V3^Q7l_nLg70iMZ2L=kV761
+R4
+R5
+Z136 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v
+Z137 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v
+L0 1
+R8
+r1
+31
+Z138 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v|
+R10
+Z139 n@m@e@m_@stage
+Z140 !s108 1620932474.564000
+Z141 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMEM_Stage_Reg
+Z142 !s100 78M^;G0:]eHDhl0eo:8[g3
+Z143 IiSfU:@8lA4AA35669fKNo0
+Z144 V:>IhGPHR[LNX>@7B]Q]`W0
+R4
+R5
+Z145 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v
+Z146 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v
+L0 1
+R8
+r1
+31
+Z147 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v|
+R10
+Z148 n@m@e@m_@stage_@reg
+Z149 !s108 1620932474.666000
+Z150 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMemory
+Z151 !s100 OizdQVI?KMjcQ9FKbS2>61
+Z152 IdjaM;dchF2OQVb@Fel2H`3
+Z153 VfGAA7BO5@R?NS=zho]C772
+R4
+R5
+Z154 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v
+Z155 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v
+L0 1
+R8
+r1
+31
+Z156 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v|
+R10
+Z157 n@memory
+Z158 !s108 1620932474.752000
+Z159 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX_2_to_1
+Z160 !s100 FCUh7RYji8B?@]dY[H`R90
+Z161 IM1_kEez1ao7KCj6@YS3^52
+Z162 VVL3Jo<PX^9ZaAE:CNM=h<3
+R4
+R5
+Z163 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v
+Z164 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v
+L0 1
+R8
+r1
+31
+Z165 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v|
+R10
+Z166 n@m@u@x_2_to_1
+Z167 !s108 1620932474.831000
+Z168 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vPC
+Z169 !s100 AJNUP_k4BFdUjK;;EZZ;]2
+Z170 IgOAcdBgMJO8d`cNY``OdK0
+Z171 VCkM0Q3?>B7OXXW3lOO8?X3
+R4
+R5
+Z172 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v
+Z173 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v
+L0 1
+R8
+r1
+31
+Z174 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v|
+R10
+n@p@c
+Z175 !s108 1620932474.915000
+Z176 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegister_File
+Z177 !s100 6EK^`AkkYYHQFGCG8i[C72
+Z178 IZc`BTJM];bi=4laW2A1391
+Z179 V@P7aW2Dl@NQbQUj0Of]i<3
+R4
+R5
+Z180 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v
+Z181 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v
+L0 1
+R8
+r1
+31
+Z182 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v|
+R10
+Z183 n@register_@file
+Z184 !s108 1620932475.007000
+Z185 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vStatus_Register
+Z186 !s100 iofKzDZlDIX>RF3mQ]RiE0
+Z187 IT?1NFEEm86NbWTTFOTg`G3
+Z188 VJg@aHz29@2g@OGVB<zVOQ1
+R4
+R5
+Z189 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v
+Z190 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v
+L0 1
+R8
+r1
+31
+Z191 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v|
+R10
+Z192 n@status_@register
+Z193 !s108 1620932475.107000
+Z194 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vVal2_Generate
+Z195 !s100 SPEhFXE2bHb6T7fZ@jAH>2
+Z196 Ij3TGLTf4VbVO3L^KXXLf90
+Z197 VEISoR<CZFd;9znNalG9@J1
+R4
+R5
+Z198 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v
+Z199 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v
+L0 1
+R8
+r1
+31
+Z200 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v|
+R10
+Z201 n@val2_@generate
+!i10b 1
+!s85 0
+Z202 !s108 1620932475.204000
+Z203 !s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v|
+!s101 -O0
+vWB_Stage
+!i10b 1
+Z204 !s100 <b>l<P:X:UVYSX6M8zPBl3
+Z205 Id5g;2[=Y49X9DSP3JXa4i2
+Z206 V[[[lFK2i2PB^jDfO4<97Z0
+R4
+R5
+Z207 8C:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v
+Z208 FC:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1620932475.295000
+!s107 C:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v|
+Z209 !s90 -reportprogress|300|-work|work|C:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v|
+!s101 -O0
+R10
+Z210 n@w@b_@stage
