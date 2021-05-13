@@ -13,8 +13,8 @@ module Register_File
 );
 
   	reg [31:0] registers [0:14];
-	assign reg1 = src1==4'b1111 ? 0 : registers[src1];
-	assign reg2 = src2==4'b1111 ? 0 : registers[src2];
+	assign reg1 = registers[src1];
+	assign reg2 = registers[src2];
 	
 	integer i;
 	always @(negedge clk, posedge rst) begin

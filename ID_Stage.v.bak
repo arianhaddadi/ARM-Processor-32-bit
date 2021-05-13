@@ -2,7 +2,7 @@ module ID_Stage
 (
 	input                     			  clk,
 	input                				  rst,
-	input 								  hazard,
+	input 								  Freeze,
 	input 								  WB_EN,
 	input  [3:0]                          Status_Register,
 	input  [3:0]					      WB_Dest,
@@ -39,7 +39,7 @@ module ID_Stage
 	assign signed_immediate = instruction_in[23:0];
 	assign shifter_operand = instruction_in[11:0];
 	assign PC_out = PC_in;
-	assign MUX_CU_EN = (~COND_State) | hazard;
+	assign MUX_CU_EN = (~COND_State) | Freeze;
 	assign MUX_CU_in = {SR_update, B, EX_CMD, MEM_W, MEM_R, WB_EN_CU};
 	assign Reg_Dest = instruction_in[15:12];
 	assign Reg_src1 = instruction_in[19:16];

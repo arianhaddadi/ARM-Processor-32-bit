@@ -39,7 +39,7 @@ module ARM
     ID_Stage id_stage(
         .clk(clk),
         .rst(rst),
-        .hazard(has_hazard),
+        .Freeze(has_hazard),
         .WB_EN(WB_Stage_WB_en_out),
         .Status_Register(status),
         .WB_Dest(WB_Stage_dst_out),

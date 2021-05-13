@@ -26,7 +26,7 @@ module IF_Stage_Reg
             PC_out <= PC_in;
         end
         else begin
-            instruction_out <= instruction_out;
+            instruction_out <= instruction_in;
             PC_out <= PC_out;
         end  
 

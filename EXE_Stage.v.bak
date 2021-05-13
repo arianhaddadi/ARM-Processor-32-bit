@@ -57,7 +57,7 @@ module EXE_Stage
         .val2(val2),
         .EXE_CMD(EXE_CMD),
         .carry(Status_Register_in[2]),
-        .result(ALU_Res),
+        .res(ALU_Res),
         .SR(Status_Register_out)
     );
 

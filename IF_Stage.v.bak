@@ -20,7 +20,7 @@ module IF_Stage
     );
 
     Adder adder (
-        .a(32'd1),
+        .a(32'b01),
         .b(PC_out),
         .out(Adder_out)
     );

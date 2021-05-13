@@ -8,8 +8,8 @@ module MUX_2_to_1
 
     parameter                    WORD_WIDTH = 32;
     input                        select;
-    input      [WORD_WIDTH-1:0]            inp1, inp2;
-    output reg [WORD_WIDTH-1:0]            out;
+    input      [31:0]            inp1, inp2;
+    output reg [31:0]            out;
 
     always @(select, inp1, inp2) begin
         out = 0;

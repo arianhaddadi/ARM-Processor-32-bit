@@ -53,7 +53,7 @@ module ALU
                 V1 = (val1[31] ~^ val2[31]) & (temp_result[31] ^ val1[31]);
             end
             `EXE_SUB: begin
-                temp_result = {val1[31], val1} - {val2[31], val2};
+                temp_result = val1 - val2;
                 C1 = temp_result[32];
                 V1 = (val1[31] ^ val2[31]) & (temp_result[31] ^ val1[31]);
             end
@@ -66,7 +66,7 @@ module ALU
             `EXE_ORR: temp_result = val1 | val2;
             `EXE_EOR: temp_result = val1 ^ val2;
             `EXE_CMP: begin
-                temp_result = {val1[31], val1} - {val2[31], val2};
+                temp_result = val1 - val2;
                 C1 = temp_result[32];
                 V1 = (val1[31] ^ val2[31]) & (temp_result[31] ^ val1[31]);
             end
