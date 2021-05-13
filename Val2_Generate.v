@@ -1,6 +1,6 @@
 module Val2_Generate
 (
-    input                   imm,
+    input                   I,
     input                   for_mem,
     input      [11:0]       shifter_operand,
     input      [31:0]       Val_Rm,
@@ -13,7 +13,7 @@ module Val2_Generate
     integer i;
     always @(*) begin
         if(for_mem) Val2_out = {20'b0, shifter_operand};
-        else if(imm) begin
+        else if(I) begin
             immd_temp = {24'b0, shifter_operand[7:0]};
 
             for (i = 0; i < {shifter_operand[11:8], 1'b0}; i = i + 1) begin

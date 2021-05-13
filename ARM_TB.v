@@ -2,25 +2,22 @@
 
 module ARM_TB;
 
-    reg clk;
+    reg clk = 0;
     reg rst;
-
 
     ARM CPU(
         .clk(clk),
         .rst(rst)
     );
 
-    initial begin
-        clk = 0;
-        forever clk = #20 ~clk;
-    end
+    always #10 clk = ~clk;
 
     initial begin
         rst = 1;
-        # (20 / 2);
+        # (5);
         rst = 0;
-        # (600*20);
-        $stop;
+        # (7000);
+    $stop;
     end
+    
 endmodule

@@ -2,7 +2,7 @@ module EXE_Stage
 (
     input                               clk,
     input                               rst,
-    input                               imm,
+    input                               I,
     input                               MEM_R_EN_in,
     input                               MEM_W_EN_in,
     input                               WB_EN_in,
@@ -39,7 +39,7 @@ module EXE_Stage
     assign for_mem = MEM_R_EN_in | MEM_W_EN_in;
 
     Val2_Generate val2_generate(
-        .imm(imm),
+        .I(I),
         .for_mem(for_mem),
         .shifter_operand(shifter_operand),
         .Val_Rm(Val_Rm_in),

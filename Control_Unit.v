@@ -1,20 +1,17 @@
-`define MODE_ARITHMETIC 2'b00
-`define MODE_MEM 2'b01
-`define MODE_BRANCH 2'b10
 
-`define EX_MOV 4'b0001
-`define EX_MVN 4'b1001
-`define EX_ADD 4'b0010
-`define EX_ADC 4'b0011
-`define EX_SUB 4'b0100
-`define EX_SBC 4'b0101
-`define EX_AND 4'b0110
-`define EX_ORR 4'b0111
-`define EX_EOR 4'b1000
-`define EX_CMP 4'b0100
-`define EX_TST 4'b0110
-`define EX_LDR 4'b0010
-`define EX_STR 4'b0010
+`define EXE_MOV 4'b0001
+`define EXE_MVN 4'b1001
+`define EXE_ADD 4'b0010
+`define EXE_ADC 4'b0011
+`define EXE_SUB 4'b0100
+`define EXE_SBC 4'b0101
+`define EXE_AND 4'b0110
+`define EXE_ORR 4'b0111
+`define EXE_EOR 4'b1000
+`define EXE_CMP 4'b0100
+`define EXE_TST 4'b0110
+`define EXE_LDR 4'b0010
+`define EXE_STR 4'b0010
 
 `define OP_MOV 4'b1101
 `define OP_MVN 4'b1111
@@ -37,13 +34,12 @@ module Control_Unit
     input      [1:0] mode,
     input      [3:0] OP,
     
-    output           SR_update,
-    output           with_src1,
+    output           S_out,
     output reg       MEM_R,
     output reg       MEM_W,
     output reg       WB_EN,
     output reg       B,
-    output reg [3:0] EX_CMD
+    output reg [3:0] EXE_CMD
 );
 
     always @(*) begin
@@ -52,77 +48,76 @@ module Control_Unit
         WB_EN = 0;
         B = 0;
         case (mode)
-            `MODE_MEM: begin
+            2'b01: begin // memory mode
                 case (S)
                     0: begin
-                        EX_CMD = `EX_STR;
+                        EXE_CMD = `EXE_STR;
                         MEM_W = 1;
                     end
 
                     1: begin
-                        EX_CMD = `EX_LDR;
+                        EXE_CMD = `EXE_LDR;
                         MEM_R = 1;
                         WB_EN = 1;
                     end
                 endcase
             end
 
-            `MODE_ARITHMETIC: begin
+            2'b00: begin // arithmetic mode
                 case (OP)
                     `OP_MOV: begin
-                        EX_CMD = `EX_MOV;
+                        EXE_CMD = `EXE_MOV;
                         WB_EN = 1;
                     end
 
                     `OP_MVN: begin
-                        EX_CMD = `EX_MVN;
+                        EXE_CMD = `EXE_MVN;
                         WB_EN = 1;
                     end
 
                     `OP_ADD: begin
-                        EX_CMD = `EX_ADD;
+                        EXE_CMD = `EXE_ADD;
                         WB_EN = 1;
                     end
 
                     `OP_ADC: begin
-                        EX_CMD = `EX_ADC;
+                        EXE_CMD = `EXE_ADC;
                         WB_EN = 1;
                     end
 
                     `OP_SUB: begin
-                        EX_CMD = `EX_SUB;
+                        EXE_CMD = `EXE_SUB;
                         WB_EN = 1;
                     end
 
                     `OP_SBC: begin
-                        EX_CMD = `EX_SBC;
+                        EXE_CMD = `EXE_SBC;
                         WB_EN = 1;
                     end
                     `OP_AND: begin
-                        EX_CMD = `EX_AND;
+                        EXE_CMD = `EXE_AND;
                         WB_EN = 1;
                     end
 
                     `OP_ORR: begin
-                        EX_CMD = `EX_ORR;
+                        EXE_CMD = `EXE_ORR;
                         WB_EN = 1;
                     end
 
                     `OP_EOR: begin
-                        EX_CMD = `EX_EOR;
+                        EXE_CMD = `EXE_EOR;
                         WB_EN = 1;
                     end
 
-                    `OP_CMP: EX_CMD = `EX_CMP;
-                    `OP_TST: EX_CMD = `EX_TST;
+                    `OP_CMP: EXE_CMD = `EXE_CMP;
+                    `OP_TST: EXE_CMD = `EXE_TST;
                 endcase
             end
 
-            `MODE_BRANCH: B = 1;
+            2'b10: B = 1; // branch mode
         endcase
     end
 
-    assign with_src1 = (EX_CMD == `EX_MOV || EX_CMD == `EX_MVN || B) ? 1'b0 : 1'b1;
-    assign SR_update = S;
+    assign S_out = S;
 
 endmodule

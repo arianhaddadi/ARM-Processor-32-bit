@@ -29,6 +29,6 @@ module Memory
 		end
 	end
     assign MEM_out = MEM_R_EN ? {mem_data[{generatedAddr[31:2], 2'b11}], mem_data[{generatedAddr[31:2], 2'b10}], 
-                                    mem_data[{generatedAddr[31:2], 2'b01}], mem_data[{generatedAddr}]}: 32'b0;
+                                 mem_data[{generatedAddr[31:2], 2'b01}], mem_data[{generatedAddr}]}: 32'b0;
 
 endmodule

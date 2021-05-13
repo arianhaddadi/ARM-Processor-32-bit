@@ -21,14 +21,14 @@ module IF_Stage_Reg
             instruction_out <= 0;
             PC_out <= 0;
         end
-        else if(~Freeze) begin
-            instruction_out <= instruction_in;
-            PC_out <= PC_in;
-        end
-        else begin
+        else if(Freeze) begin
             instruction_out <= instruction_out;
             PC_out <= PC_out;
         end  
+        else begin
+            instruction_out <= instruction_in;
+            PC_out <= PC_in;
+        end
 
     end
  

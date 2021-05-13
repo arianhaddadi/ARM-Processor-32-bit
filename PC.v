@@ -10,8 +10,8 @@ module PC
 
     always @(posedge clk, posedge rst) begin
         if(rst) PC_out <= 0;
-        else if(~Freeze) PC_out <= PC_in;
-        else PC_out <= PC_out;
+        else if(Freeze) PC_out <= PC_out;
+        else PC_out <= PC_in;
     end
  
 endmodule

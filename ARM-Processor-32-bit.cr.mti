@@ -1,162 +1,139 @@
-C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_2_to_1.v
+{E:/University Stuff/CAL/Project/Status_Register.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Status_Register.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MUX_2_to_1
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	MUX_2_to_1
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/ID_Stage.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ID_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Val2_Generate
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Val2_Generate
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Control_Unit.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Control_Unit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	ARM
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ALU.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Adder.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Adder.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	ALU
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage_Reg.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Memory.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Memory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Stage_Reg
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	EXE_Stage_Reg
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/PC.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/MEM_Stage.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module PC
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	PC
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Register_File.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Instruction_Memory.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Instruction_Memory.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Register_File
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Register_File
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/WB_Stage.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/IF_Stage.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/IF_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module WB_Stage
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	WB_Stage
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Condition_Check.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/MUX_2_to_1.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/MUX_2_to_1.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Condition_Check
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Condition_Check
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Val2_Generate.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Val2_Generate.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module EXE_Stage
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	EXE_Stage
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/ARM.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ARM.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM_TB
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	ARM_TB
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/EXE_Stage_Reg.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ID_Stage_Reg
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	ID_Stage_Reg
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage_Reg.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/ALU.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ALU.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Stage_Reg
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	IF_Stage_Reg
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/PC.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/PC.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MEM_Stage_Reg
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	MEM_Stage_Reg
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/WB_Stage.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/WB_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Hazard_Detection_Unit
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Hazard_Detection_Unit
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Register_File.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Register_File.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Control_Unit
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Control_Unit
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Condition_Check.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Condition_Check.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ID_Stage
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	ID_Stage
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/ID_Stage_Reg.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ID_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Status_Register
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Status_Register
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Adder.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/EXE_Stage.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/EXE_Stage.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Adder
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Adder
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/ARM_TB.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/ARM_TB.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Memory
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Memory
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/MEM_Stage_Reg.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/MEM_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Instruction_Memory
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	Instruction_Memory
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/IF_Stage_Reg.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/IF_Stage_Reg.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module MEM_Stage
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	MEM_Stage
+No such file or directory. (errno = ENOENT)
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/IF_Stage.v
+} {3.0 4.0} {}} {E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v} {0 {vlog -work work {E:/University Stuff/CAL/Project/Hazard_Detection_Unit.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module IF_Stage
+** Error: (vlog-19) Failed to access library 'work' at "work".
 
-Top level modules:
-	IF_Stage
+No such file or directory. (errno = ENOENT)
 
-} {} {}}
+} {3.0 4.0} {}}

@@ -1,3 +1,6 @@
+`define EXE_MOV 4'b0001
+`define EXE_MVN 4'b1001
+
 module ID_Stage
 (
 	input                     			  clk,
@@ -35,7 +38,8 @@ module ID_Stage
 
 	assign {S_out, B_out, EX_CMD_out, MEM_W_EN_out, MEM_R_EN_out, WB_EN_out} = MUX_CU_out;
 	assign Imm_out = instruction_in[25];
-	assign with_src2 = (~instruction_in[25]) | MEM_W;
+    assign with_src1 = (EX_CMD_out == `EXE_MOV || EX_CMD_out == `EXE_MVN || B) ? 1'b0 : 1'b1;
+	assign with_src2 = MEM_W | (~instruction_in[25]);
 	assign signed_immediate = instruction_in[23:0];
 	assign shifter_operand = instruction_in[11:0];
 	assign PC_out = PC_in;
@@ -43,6 +47,7 @@ module ID_Stage
 	assign MUX_CU_in = {SR_update, B, EX_CMD, MEM_W, MEM_R, WB_EN_CU};
 	assign Reg_Dest = instruction_in[15:12];
 	assign Reg_src1 = instruction_in[19:16];
+
 
 	MUX_2_to_1 #(.WORD_WIDTH(4)) mux_2_to_1_Reg (
 		.select(MEM_W),
@@ -81,13 +86,12 @@ module ID_Stage
 		.S(instruction_in[20]),
 		.mode(instruction_in[27:26]), 
 		.OP(instruction_in[24:21]),
-		.SR_update(SR_update),
-		.with_src1(with_src1),
+		.S_out(SR_update),
 		.MEM_R(MEM_R), 
 		.MEM_W(MEM_W),
 		.WB_EN(WB_EN_CU), 
 		.B(B),
-		.EX_CMD(EX_CMD)
+		.EXE_CMD(EX_CMD)
 	);
 
 
