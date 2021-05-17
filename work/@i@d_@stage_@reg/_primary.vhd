@@ -14,6 +14,8 @@ entity ID_Stage_Reg is
         EX_CMD_in       : in     vl_logic_vector(3 downto 0);
         Status_Register_in: in     vl_logic_vector(3 downto 0);
         Dest_in         : in     vl_logic_vector(3 downto 0);
+        ID_Stage_Reg_src1: in     vl_logic_vector(3 downto 0);
+        ID_Stage_Reg_src2: in     vl_logic_vector(3 downto 0);
         shifter_operand_in: in     vl_logic_vector(11 downto 0);
         signed_immediate_in: in     vl_logic_vector(23 downto 0);
         PC_in           : in     vl_logic_vector(31 downto 0);
@@ -28,6 +30,8 @@ entity ID_Stage_Reg is
         EX_CMD_out      : out    vl_logic_vector(3 downto 0);
         status_register_out: out    vl_logic_vector(3 downto 0);
         Dest_out        : out    vl_logic_vector(3 downto 0);
+        ID_Stage_Reg_src1_out: out    vl_logic_vector(3 downto 0);
+        ID_Stage_Reg_src2_out: out    vl_logic_vector(3 downto 0);
         shifter_operand_out: out    vl_logic_vector(11 downto 0);
         signed_immediate_out: out    vl_logic_vector(23 downto 0);
         PC_out          : out    vl_logic_vector(31 downto 0);

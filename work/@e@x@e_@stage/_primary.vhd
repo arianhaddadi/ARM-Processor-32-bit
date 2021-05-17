@@ -9,6 +9,8 @@ entity EXE_Stage is
         MEM_W_EN_in     : in     vl_logic;
         WB_EN_in        : in     vl_logic;
         B_in            : in     vl_logic;
+        Forwarding_Sel1 : in     vl_logic_vector(1 downto 0);
+        Forwarding_Sel2 : in     vl_logic_vector(1 downto 0);
         EXE_CMD         : in     vl_logic_vector(3 downto 0);
         Status_Register_in: in     vl_logic_vector(3 downto 0);
         Dest_in         : in     vl_logic_vector(3 downto 0);
@@ -17,6 +19,8 @@ entity EXE_Stage is
         PC_in           : in     vl_logic_vector(31 downto 0);
         Val_Rn_in       : in     vl_logic_vector(31 downto 0);
         Val_Rm_in       : in     vl_logic_vector(31 downto 0);
+        MEM_ALU_RES     : in     vl_logic_vector(31 downto 0);
+        WB_ALU_RES      : in     vl_logic_vector(31 downto 0);
         MEM_R_EN_out    : out    vl_logic;
         MEM_W_EN_out    : out    vl_logic;
         WB_EN_out       : out    vl_logic;

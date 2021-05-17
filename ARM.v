@@ -1,10 +1,16 @@
 module ARM
 (
     input clk,
-    input rst
+    input rst,
+    input isForwardingActive
 );
 
+    
     wire        EXE_stage_B_out, has_hazard;
+    wire [1:0] Forwarding_Sel1, Forwarding_Sel2;
+    wire [31:0] Mem_Stage_ALU_res_out,  Mem_Stage_mem_out;
+    wire [31:0] EXE_reg_ALU_res_out, EXE_reg_Val_Rm_out;
+    wire [31:0] Mem_Reg_ALU_res_out, Mem_Reg_mem_out;
     wire [31:0] IF_stage_pc_out, IF_stage_instruction_out, branch_address;
 
     IF_Stage if_stage (
@@ -66,7 +72,7 @@ module ARM
     );
 
     wire        ID_reg_MEM_R_EN_out, ID_reg_MEM_W_EN_out, ID_reg_WB_EN_out, ID_reg_Imm_out, ID_reg_B_out, ID_reg_S_out;
-    wire [3:0]  ID_reg_SR_out, ID_reg_EXE_CMD_out, ID_reg_REGFILE_Dest_out;
+    wire [3:0]  ID_reg_SR_out, ID_reg_EXE_CMD_out, ID_reg_REGFILE_Dest_out, ID_Stage_Reg_src1_out, ID_Stage_Reg_src2_out;
     wire [11:0] ID_reg_shifter_operand_out;
     wire [23:0] ID_reg_signed_immediate_out;
     wire [31:0] ID_reg_Val_Rn_out, ID_reg_Val_Rm_out, ID_reg_PC_out;
@@ -84,6 +90,8 @@ module ARM
         .EX_CMD_in(ID_Stage_EXE_CMD_out),
         .Status_Register_in(status),
         .Dest_in(ID_stage_Reg_Dest),
+        .ID_Stage_Reg_src1(ID_Stage_Reg_src1),
+        .ID_Stage_Reg_src2(ID_Stage_Reg_src2),
         .shifter_operand_in(ID_stage_shifter_operand),
         .signed_immediate_in(ID_stage_signed_immediate),
         .PC_in(ID_Stage_PC_out),
@@ -98,6 +106,8 @@ module ARM
         .EX_CMD_out(ID_reg_EXE_CMD_out),
         .status_register_out(ID_reg_SR_out),
         .Dest_out(ID_reg_REGFILE_Dest_out),
+        .ID_Stage_Reg_src1_out(ID_Stage_Reg_src1_out),
+        .ID_Stage_Reg_src2_out(ID_Stage_Reg_src2_out),
         .shifter_operand_out(ID_reg_shifter_operand_out),
         .signed_immediate_out(ID_reg_signed_immediate_out),
         .PC_out(ID_reg_PC_out),
@@ -117,6 +127,8 @@ module ARM
         .MEM_W_EN_in(ID_reg_MEM_W_EN_out),
         .WB_EN_in(ID_reg_WB_EN_out),
         .B_in(ID_reg_B_out),
+        .Forwarding_Sel1(Forwarding_Sel1),
+        .Forwarding_Sel2(Forwarding_Sel2),
         .EXE_CMD(ID_reg_EXE_CMD_out),
         .Status_Register_in(ID_reg_SR_out),
         .Dest_in(ID_reg_REGFILE_Dest_out),
@@ -125,6 +137,8 @@ module ARM
         .PC_in(ID_reg_PC_out),
         .Val_Rn_in(ID_reg_Val_Rn_out), 
         .Val_Rm_in(ID_reg_Val_Rm_out),
+        .MEM_ALU_RES(Mem_Stage_ALU_res_out),
+        .WB_ALU_RES(WB_Value),
         .MEM_R_EN_out(EXE_Stage_MEM_R_EN_out), 
         .MEM_W_EN_out(EXE_Stage_MEM_W_out),
         .WB_EN_out(EXE_Stage_WB_EN_out),
@@ -138,7 +152,7 @@ module ARM
 
     wire        EXE_reg_MEM_R_EN_out, EXE_reg_MEM_W_EN_out, EXE_reg_WB_EN_out;
     wire [3:0]  EXE_reg_Dest_out;
-    wire [31:0] EXE_reg_ALU_res_out, EXE_reg_Val_Rm_out;
+    
 
     EXE_Stage_Reg exe_stage_reg(
         .clk(clk),
@@ -159,7 +173,7 @@ module ARM
 
     wire        Mem_Stage_R_EN_out, Mem_Stage_WB_EN_out;
     wire [3:0]  Mem_Stage_Dest_out;
-    wire [31:0] Mem_Stage_ALU_res_out,  Mem_Stage_mem_out;
+    
 
     MEM_Stage mem_stage(
         .clk(clk),
@@ -179,7 +193,7 @@ module ARM
 
     wire        Mem_Reg_read_out, Mem_Reg_WB_en_out;
     wire [3:0]  Mem_Reg_dst_out;
-    wire [31:0] Mem_Reg_ALU_res_out, Mem_Reg_mem_out;
+    
 
     MEM_Stage_Reg mem_stage_reg(
         .clk(clk),
@@ -225,12 +239,28 @@ module ARM
         .MEM_WB_EN(MEM_WB_en),
         .with_src1(has_src1),
         .with_src2(with_src2),
+        .isForwardingActive(isForwardingActive),
+        .EXE_MEM_R_EN(EXE_Stage_MEM_R_EN_out),
         .src1(ID_Stage_Reg_src1),
         .src2(ID_Stage_Reg_src2),
         .EXE_Dest(EXE_dest),
         .MEM_Dest(MEM_dest),
         .has_hazard(has_hazard)
     );
+    
+    
+    
+    Forwarding_Unit forwarding_unit(
+        .isForwardingActive(isForwardingActive),
+        .src1(ID_Stage_Reg_src1_out),
+        .src2(ID_Stage_Reg_src2_out),
+        .MEM_Dest(MEM_dest),
+        .WB_Dest(WB_Stage_Dest_out),
+        .MEM_WB_EN(MEM_WB_en),
+        .WB_WB_EN(WB_Stage_WB_EN_out),
+        .Alu_Src1_Sel(Forwarding_Sel1),
+        .Alu_Src2_Sel(Forwarding_Sel2)
+);
 
 endmodule
 

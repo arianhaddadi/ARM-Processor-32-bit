@@ -118,6 +118,6 @@ module Control_Unit
         endcase
     end
 
-    assign S_out = S;
+    assign S_out = (B == 1) ? 0 : S;
 
 endmodule

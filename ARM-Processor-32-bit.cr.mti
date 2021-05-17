@@ -5,6 +5,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	MUX_2_to_1
 
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_4_to_1.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MUX_4_to_1.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MUX_4_to_1
+
+Top level modules:
+	MUX_4_to_1
+
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Val2_Generate.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Val2_Generate
@@ -61,13 +68,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Condition_Check
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ARM_TB
-
-Top level modules:
-	ARM_TB
-
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/EXE_Stage.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module EXE_Stage
@@ -75,12 +75,26 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	EXE_Stage
 
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ARM_TB.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ARM_TB
+
+Top level modules:
+	ARM_TB
+
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage_Reg.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ID_Stage_Reg
 
 Top level modules:
 	ID_Stage_Reg
+
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
 
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage_Reg.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -96,13 +110,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	IF_Stage_Reg
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Hazard_Detection_Unit.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Hazard_Detection_Unit
-
-Top level modules:
-	Hazard_Detection_Unit
-
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Status_Register.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Status_Register
@@ -117,13 +124,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Adder
 
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Control_Unit
-
-Top level modules:
-	Control_Unit
-
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ID_Stage.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ID_Stage
@@ -131,19 +131,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	ID_Stage
 
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Control_Unit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Control_Unit
+
+Top level modules:
+	Control_Unit
+
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Memory.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Memory
 
 Top level modules:
 	Memory
-
-} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Instruction_Memory
-
-Top level modules:
-	Instruction_Memory
 
 } {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/MEM_Stage.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -158,5 +158,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	IF_Stage
+
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/Instruction_Memory.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Instruction_Memory
+
+Top level modules:
+	Instruction_Memory
+
+} {} {}} C:/Users/amirp/Desktop/ARM-Processor-32-bit/ForwardingUnit.v {1 {vlog -work work C:/Users/amirp/Desktop/ARM-Processor-32-bit/ForwardingUnit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Forwarding_Unit
+
+Top level modules:
+	Forwarding_Unit
 
 } {} {}}

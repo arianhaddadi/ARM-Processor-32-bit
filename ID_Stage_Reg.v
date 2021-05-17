@@ -12,6 +12,8 @@ module ID_Stage_Reg
     input [3:0] 				            EX_CMD_in,
     input [3:0]                             Status_Register_in,
     input [3:0]                  		    Dest_in,
+    input [3:0]                  		    ID_Stage_Reg_src1,
+    input [3:0]                  		    ID_Stage_Reg_src2,
     input [11:0]                            shifter_operand_in,
     input [23:0]                 		    signed_immediate_in,
     input [31:0]                            PC_in,
@@ -27,6 +29,8 @@ module ID_Stage_Reg
     output reg [3:0] 						EX_CMD_out,
     output reg [3:0]                        status_register_out,
     output reg [3:0]                     	Dest_out,
+    output reg [3:0]                  		    ID_Stage_Reg_src1_out,
+    output reg [3:0]                  		    ID_Stage_Reg_src2_out,
     output reg [11:0]                       shifter_operand_out,
     output reg [23:0]                		signed_immediate_out,
     output reg [31:0]                       PC_out,
@@ -50,6 +54,8 @@ module ID_Stage_Reg
             PC_out <= 0;
             Val_Rn_out <= 0;
             Val_Rm_out <=0;
+            ID_Stage_Reg_src1_out <= 0;
+            ID_Stage_Reg_src1_out <=0;
         end
         else begin
             MEM_R_EN_out <= MEM_R_EN_in;
@@ -66,6 +72,8 @@ module ID_Stage_Reg
             PC_out <= PC_in;
             Val_Rn_out <= Val_Rn_in;
             Val_Rm_out <= Val_Rm_in;
+            ID_Stage_Reg_src1_out <= ID_Stage_Reg_src1;
+            ID_Stage_Reg_src2_out <= ID_Stage_Reg_src2;
         end
     end
 

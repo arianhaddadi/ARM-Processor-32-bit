@@ -7,6 +7,8 @@ module EXE_Stage
     input                               MEM_W_EN_in,
     input                               WB_EN_in,
     input                               B_in,
+    input  [1:0]                        Forwarding_Sel1,
+    input  [1:0]                        Forwarding_Sel2,     
     input  [3:0]                        EXE_CMD,
     input  [3:0]                        Status_Register_in,
     input  [3:0]                        Dest_in,
@@ -15,6 +17,8 @@ module EXE_Stage
     input  [31:0]                       PC_in,
     input  [31:0]                       Val_Rn_in,
     input  [31:0]                       Val_Rm_in,
+    input  [31:0]                       MEM_ALU_RES,
+    input  [31:0]                       WB_ALU_RES,
 
     output                              MEM_R_EN_out,
     output                              MEM_W_EN_out,
@@ -28,7 +32,7 @@ module EXE_Stage
 );
 
     wire for_mem;
-    wire [31:0] val2;
+    wire [31:0] val2, mux_4_to_1_src1_out, mux_4_to_1_src2_out;
 
     assign MEM_R_EN_out = MEM_R_EN_in;
     assign MEM_W_EN_out = MEM_W_EN_in;
@@ -37,12 +41,30 @@ module EXE_Stage
     assign Dest_out = Dest_in;
     assign Val_Rm_out = Val_Rm_in;
     assign for_mem = MEM_R_EN_in | MEM_W_EN_in;
+    
+    MUX_4_to_1 #(.WORD_WIDTH(32)) mux_4_to_1_src1 (
+		  .select(Forwarding_Sel1),
+		  .inp1(Val_Rn_in), 
+		  .inp2(MEM_ALU_RES),
+		  .inp3(WB_ALU_RES),
+		  .inp4(32'b0),
+		  .out(mux_4_to_1_src1_out)
+	  );
+	
+    MUX_4_to_1 #(.WORD_WIDTH(32)) mux_4_to_1_src2 (
+		  .select(Forwarding_Sel2),
+		  .inp1(Val_Rm_in), 
+		  .inp2(MEM_ALU_RES),
+		  .inp3(WB_ALU_RES),
+		  .inp4(32'b0),
+		  .out(mux_4_to_1_src2_out)
+	  );
 
     Val2_Generate val2_generate(
         .I(I),
         .for_mem(for_mem),
         .shifter_operand(shifter_operand),
-        .Val_Rm(Val_Rm_in),
+        .Val_Rm(mux_4_to_1_src2_out),
         .Val2_out(val2)
     );
 
@@ -53,7 +75,7 @@ module EXE_Stage
     );
 
     ALU alu(
-        .val1(Val_Rn_in),
+        .val1(mux_4_to_1_src1_out),
         .val2(val2),
         .EXE_CMD(EXE_CMD),
         .carry(Status_Register_in[2]),
