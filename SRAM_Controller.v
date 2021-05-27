@@ -25,7 +25,7 @@ module SRAM_Controller (
     
     wire [31:0] generatedAddr = {address[31:2], 2'b00} - 32'd1024;
 
-    assign {SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N} = 4'b1111;
+    assign {SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N} = 4'b0000;
     assign readData = sram_read_data;
     assign SRAM_ADDR = generatedAddr[18:2];
     assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5) ? 1'b1 : 1'b0;

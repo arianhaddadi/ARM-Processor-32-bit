@@ -13,7 +13,13 @@ module SRAM (
 
     assign #30 SRAM_DQ = SRAM_WE_N ? memory[SRAM_ADDR]: 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz;
 
+    integer i;
+    
     always @(posedge clk) begin
+        if (rst) begin
+				  for (i = 0; i < 512; i = i + 1)
+					   memory [i] <= 32'b0;
+        end
         if (~SRAM_WE_N) begin
             memory[SRAM_ADDR] <= SRAM_DQ;
         end

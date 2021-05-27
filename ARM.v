@@ -1,19 +1,20 @@
 module ARM
 (
     input clk,
-    input sram_clk,
     input rst,
-    input isForwardingActive
+    input isForwardingActive,
+    output             SRAM_WE_N,
+    output    [16:0]   SRAM_ADDR, 
+    inout    [31:0]   SRAM_DQ 
 );
 
     
     
     wire        EXE_stage_B_out, has_hazard, MEM_Stage_ready_out;
     wire [1:0]  Forwarding_Sel1, Forwarding_Sel2;
-    wire [16:0] SRAM_ADDR;
     wire [31:0] Mem_Stage_ALU_res_out,  Mem_Stage_mem_out;
     wire [31:0] EXE_Reg_ALU_res_out, EXE_Reg_Val_Rm_out;
-    wire [31:0] Mem_Reg_ALU_res_out, Mem_Reg_mem_out, SRAM_DQ;
+    wire [31:0] Mem_Reg_ALU_res_out, Mem_Reg_mem_out;
     wire [31:0] IF_stage_pc_out, IF_stage_instruction_out, branch_address;
 
     IF_Stage if_stage (
@@ -176,9 +177,8 @@ module ARM
         .Val_Rm_out(EXE_Reg_Val_Rm_out)
     );
 
-    wire        MEM_Stage_R_EN_out, MEM_Stage_WB_EN_out, MEM_Stage_SRAM_ADDR_out;
+    wire        MEM_Stage_R_EN_out, MEM_Stage_WB_EN_out;
     wire [3:0]  MEM_Stage_Dest_out;
-    wire [4:0]  MEM_SRAM_Control_Signals_out;
     
 
     MEM_Stage mem_stage(
@@ -194,8 +194,8 @@ module ARM
         .MEM_R_EN_out(MEM_Stage_R_EN_out),
         .WB_EN_out(MEM_Stage_WB_EN_out),
         .Dest_out(MEM_Stage_Dest_out),
-        .SRAM_Control_Signals(MEM_SRAM_Control_Signals_out),
-        .SRAM_ADDR(MEM_Stage_SRAM_ADDR_out),
+        .SRAM_WE_N(SRAM_WE_N),
+        .SRAM_ADDR(SRAM_ADDR),
         .ALU_res_out(Mem_Stage_ALU_res_out),
         .MEM_out(Mem_Stage_mem_out),
         .SRAM_DQ(SRAM_DQ)
@@ -270,14 +270,6 @@ module ARM
         .WB_WB_EN(WB_Stage_WB_EN_out),
         .Alu_Src1_Sel(Forwarding_Sel1),
         .Alu_Src2_Sel(Forwarding_Sel2)
-    );
-
-    SRAM sram (
-        .clk(sram_clk),
-        .rst(rst),
-        .SRAM_WE_N(MEM_SRAM_Control_Signals_out[2]),
-        .SRAM_ADDR(SRAM_ADDR),
-        .SRAM_DQ(SRAM_DQ)
     );
 
 

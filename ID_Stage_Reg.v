@@ -40,7 +40,7 @@ module ID_Stage_Reg
 );
 
     always @(posedge clk, posedge rst) begin
-        if (rst | Flush) begin
+        if (rst) begin
             MEM_R_EN_out <= 0;
             MEM_W_EN_out <= 0;
             WB_EN_out <= 0;
@@ -75,6 +75,24 @@ module ID_Stage_Reg
             Val_Rm_out <= Val_Rm_out;
             ID_Stage_Reg_src1_out <= ID_Stage_Reg_src1_out;
             ID_Stage_Reg_src2_out <= ID_Stage_Reg_src2_out;
+        end
+       	else if (Flush) begin
+            MEM_R_EN_out <= 0;
+            MEM_W_EN_out <= 0;
+            WB_EN_out <= 0;
+            Imm_out <= 0;
+            B_out <= 0;
+            S_out <= 0;
+            EX_CMD_out <= 0;
+            status_register_out <= 0;
+            signed_immediate_out <= 0;
+            shifter_operand_out <= 0;
+            Dest_out <= 0;
+            PC_out <= 0;
+            Val_Rn_out <= 0;
+            Val_Rm_out <=0;
+            ID_Stage_Reg_src1_out <= 0;
+            ID_Stage_Reg_src2_out <= 0;
         end
         else begin
             MEM_R_EN_out <= MEM_R_EN_in;

@@ -12,8 +12,8 @@ module MEM_Stage
     output                       ready,
     output                       MEM_R_EN_out,
     output                       WB_EN_out,
-    output [3:0]                 Dest_out,
-    output [4:0]                 SRAM_Control_Signals,
+    output                       SRAM_WE_N,
+    output [3:0]                 Dest_out, 
     output [16:0]                SRAM_ADDR,
     output [31:0]                ALU_res_out,
     output [31:0]                MEM_out,
@@ -36,6 +36,8 @@ module MEM_Stage
     //     .MEM_out(MEM_out)
     // );
 
+    wire [3:0] SRAM_Control_Signals;
+
     SRAM_Controller sram_controller (
         .clk(clk),
         .rst(rst),
@@ -46,9 +48,9 @@ module MEM_Stage
         .ready(ready),
         .SRAM_UB_N(SRAM_Control_Signals[0]),
         .SRAM_LB_N(SRAM_Control_Signals[1]),
-        .SRAM_WE_N(SRAM_Control_Signals[2]),
-        .SRAM_CE_N(SRAM_Control_Signals[3]),
-        .SRAM_OE_N(SRAM_Control_Signals[4]),
+        .SRAM_WE_N(SRAM_WE_N),
+        .SRAM_CE_N(SRAM_Control_Signals[2]),
+        .SRAM_OE_N(SRAM_Control_Signals[3]),
         .SRAM_ADDR(SRAM_ADDR), 
         .readData(MEM_out),
         .SRAM_DQ(SRAM_DQ)

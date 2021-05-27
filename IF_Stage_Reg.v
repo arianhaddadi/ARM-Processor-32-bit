@@ -12,15 +12,18 @@ module IF_Stage_Reg
 );
 
     always @(posedge clk, posedge rst) begin
-
-        if(rst | Flush) begin
+        if(rst) begin
             instruction_out <= 0;
             PC_out <= 0;
         end
         else if(Freeze) begin
             instruction_out <= instruction_out;
             PC_out <= PC_out;
-        end  
+        end
+        else if(Flush) begin
+            instruction_out <= 0;
+            PC_out <= 0;
+        end
         else begin
             instruction_out <= instruction_in;
             PC_out <= PC_in;
