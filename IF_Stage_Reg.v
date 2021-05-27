@@ -13,11 +13,7 @@ module IF_Stage_Reg
 
     always @(posedge clk, posedge rst) begin
 
-        if(rst) begin
-            instruction_out <= 0;
-            PC_out <= 0;
-        end
-        else if(Flush) begin
+        if(rst | Flush) begin
             instruction_out <= 0;
             PC_out <= 0;
         end

@@ -3,6 +3,7 @@ module ID_Stage_Reg
     input                                   clk,
     input                                   rst,
     input                                   Flush,
+    input                                   Freeze,
     input                                   MEM_R_EN_in, 
     input                                   MEM_W_EN_in, 
     input                                   WB_EN_in, 
@@ -29,8 +30,8 @@ module ID_Stage_Reg
     output reg [3:0] 						EX_CMD_out,
     output reg [3:0]                        status_register_out,
     output reg [3:0]                     	Dest_out,
-    output reg [3:0]                  		    ID_Stage_Reg_src1_out,
-    output reg [3:0]                  		    ID_Stage_Reg_src2_out,
+    output reg [3:0]                  		ID_Stage_Reg_src1_out,
+    output reg [3:0]                  		ID_Stage_Reg_src2_out,
     output reg [11:0]                       shifter_operand_out,
     output reg [23:0]                		signed_immediate_out,
     output reg [31:0]                       PC_out,
@@ -39,7 +40,7 @@ module ID_Stage_Reg
 );
 
     always @(posedge clk, posedge rst) begin
-        if (rst || Flush) begin
+        if (rst | Flush) begin
             MEM_R_EN_out <= 0;
             MEM_W_EN_out <= 0;
             WB_EN_out <= 0;
@@ -55,7 +56,25 @@ module ID_Stage_Reg
             Val_Rn_out <= 0;
             Val_Rm_out <=0;
             ID_Stage_Reg_src1_out <= 0;
-            ID_Stage_Reg_src1_out <=0;
+            ID_Stage_Reg_src2_out <= 0;
+        end
+        else if (Freeze) begin
+            MEM_R_EN_out <= MEM_R_EN_out;
+            MEM_W_EN_out <= MEM_W_EN_out;
+            WB_EN_out <= WB_EN_out;
+            Imm_out <= Imm_out;
+            B_out <= B_out;
+            S_out <= S_out;
+            EX_CMD_out <= EX_CMD_out;
+            status_register_out <= status_register_out;
+            signed_immediate_out <= signed_immediate_out;
+            shifter_operand_out <= shifter_operand_out;
+            Dest_out <= Dest_out;
+            PC_out <= PC_out;
+            Val_Rn_out <= Val_Rn_out;
+            Val_Rm_out <= Val_Rm_out;
+            ID_Stage_Reg_src1_out <= ID_Stage_Reg_src1_out;
+            ID_Stage_Reg_src2_out <= ID_Stage_Reg_src2_out;
         end
         else begin
             MEM_R_EN_out <= MEM_R_EN_in;

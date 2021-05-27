@@ -2,6 +2,7 @@ module MEM_Stage_Reg
 (
     input                            clk,
     input                            rst,
+    input                            Freeze,
     input                            MEM_R_EN_in,
     input                            WB_EN_in,
     input [3:0]                      Dest_in,
@@ -22,6 +23,13 @@ module MEM_Stage_Reg
             Dest_out <= 0;
             ALU_Res_out <= 0;
             MEM_out <= 0;
+        end
+        else if(Freeze) begin
+            MEM_R_EN_out <= MEM_R_EN_out;
+            WB_EN_out <= WB_EN_out;
+            Dest_out <= Dest_out;
+            ALU_Res_out <= ALU_Res_out;
+            MEM_out <= MEM_out;
         end
         else begin
             MEM_R_EN_out <= MEM_R_EN_in;

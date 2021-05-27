@@ -4,10 +4,10 @@ module Memory
     input                    rst,
     input                    MEM_W_EN,
     input                    MEM_R_EN,
-    input  [31:0] ALU_res,
-    input  [31:0] Val_Rm,
+    input  [31:0]            ALU_res,
+    input  [31:0]            Val_Rm,
     
-    output [31:0] MEM_out
+    output [31:0]            MEM_out
 );
 
     wire [31:0] generatedAddr = {ALU_res[31:2], 2'b00} - 32'd1024;
