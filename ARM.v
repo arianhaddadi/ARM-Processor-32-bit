@@ -195,7 +195,7 @@ module ARM
         .WB_EN_out(MEM_Stage_WB_EN_out),
         .Dest_out(MEM_Stage_Dest_out),
         .SRAM_WE_N(SRAM_WE_N),
-        .SRAM_ADDR(SRAM_ADDR),
+        .SRAM_ADDR_Out(SRAM_ADDR),
         .ALU_res_out(Mem_Stage_ALU_res_out),
         .MEM_out(Mem_Stage_mem_out),
         .SRAM_DQ(SRAM_DQ)

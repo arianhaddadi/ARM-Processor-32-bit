@@ -28,11 +28,11 @@ module SRAM_Controller (
     assign {SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N} = 4'b0000;
     assign readData = sram_read_data;
     assign SRAM_ADDR = generatedAddr[18:2];
-    assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5) ? 1'b1 : 1'b0;
-    assign SRAM_DQ = MEM_W_EN ? writeData : 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz;
-    assign SRAM_WE_N = (MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2))) ? 1'b0 : 1'b1;
+    assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5);
+    assign SRAM_DQ = (MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2))) ? writeData : 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz;
+    assign SRAM_WE_N = ~(MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2)));
     
-    always @(posedge clk) begin
+    always @(posedge clk, posedge rst) begin
         if(rst) begin
           sram_read_data <= 32'b0;
           counter <= 3'b0;

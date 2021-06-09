@@ -7,7 +7,6 @@ module ARM_TB;
     reg rst;
     reg sram_rst;
     reg isForwardingActive;
-    
     wire SRAM_WE_N;
     wire [16:0] SRAM_ADDR;
     wire [31:0] SRAM_DQ;
@@ -40,11 +39,11 @@ module ARM_TB;
         rst = 0;
         sram_rst = 0;
         # (15000);
-        // rst = 1;
-        // isForwardingActive = 0;
-        // # (5);
-        // rst = 0;
-        // # (7000);
+        //rst = 1;
+        //isForwardingActive = 0;
+        //# (30);
+        //rst = 0;
+        //# (15000);
     $stop;
     end
     
