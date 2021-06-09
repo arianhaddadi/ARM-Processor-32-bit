@@ -9,7 +9,7 @@ module ARM_TB;
     reg isForwardingActive;
     wire SRAM_WE_N;
     wire [16:0] SRAM_ADDR;
-    wire [31:0] SRAM_DQ;
+    wire [63:0] SRAM_DQ;
 
     ARM CPU(
         .clk(clk),

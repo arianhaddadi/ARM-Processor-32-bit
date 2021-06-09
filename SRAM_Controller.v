@@ -15,13 +15,13 @@ module SRAM_Controller (
     output             SRAM_CE_N,
     output             SRAM_OE_N,    
     output   [16:0]    SRAM_ADDR, 
-    output   [31:0]    readData,
+    output   [63:0]    readData,
     
-    inout    [31:0]    SRAM_DQ
+    inout    [63:0]    SRAM_DQ
 );
 
     reg [2:0] counter;
-    reg [31:0] sram_read_data;
+    reg [64:0] sram_read_data;
     
     wire [31:0] generatedAddr = {address[31:2], 2'b00} - 32'd1024;
 
@@ -29,12 +29,12 @@ module SRAM_Controller (
     assign readData = sram_read_data;
     assign SRAM_ADDR = generatedAddr[18:2];
     assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5);
-    assign SRAM_DQ = (MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2))) ? writeData : 32'bzzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz_zzzz;
+    assign SRAM_DQ = (MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2))) ? {32'b0, writeData} : 64'bz;
     assign SRAM_WE_N = ~(MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2)));
     
     always @(posedge clk, posedge rst) begin
         if(rst) begin
-          sram_read_data <= 32'b0;
+          sram_read_data <= 64'b0;
           counter <= 3'b0;
         end
 

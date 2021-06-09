@@ -5,7 +5,7 @@ module ARM
     input isForwardingActive,
     output             SRAM_WE_N,
     output    [16:0]   SRAM_ADDR, 
-    inout    [31:0]   SRAM_DQ 
+    inout    [63:0]   SRAM_DQ 
 );
 
     

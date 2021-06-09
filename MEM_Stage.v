@@ -20,14 +20,14 @@ module MEM_Stage
     output [31:0]                ALU_res_out,
     output [31:0]                MEM_out,
 
-    inout [31:0]                 SRAM_DQ
+    inout [63:0]                 SRAM_DQ
 );
 
     wire SRAM_Controller_WE, SRAM_Controller_RE, SRAM_Ready, Cache_Hit, Cache_WE, Cache_RE;
     wire [3:0] SRAM_Control_Signals;
     wire [16:0] CacheAddress;
-    wire [31:0] SRAM_Adress, SRAM_Write_Data, SRAM_Read_Data, CacheReadData;
-    wire [63:0] CacheWriteData;
+    wire [31:0] SRAM_Adress, SRAM_Write_Data, CacheReadData;
+    wire [63:0] CacheWriteData, SRAM_Read_Data;
     
     assign MEM_R_EN_out = MEM_R_EN_in;
     assign WB_EN_out = WB_EN;
@@ -105,9 +105,10 @@ module MEM_Stage
           .SRAM_CE_N(SRAM_Control_Signals[2]),
           .SRAM_OE_N(SRAM_Control_Signals[3]),
           .SRAM_ADDR(SRAM_ADDR_Out), 
-          .readData(MEM_out),
+          .readData(SRAM_Read_Data),
           .SRAM_DQ(SRAM_DQ)
         );
+        assign MEM_out = ALU_res[3] ? SRAM_Read_Data[63:32] : SRAM_Read_Data[31:0]; 
       end
     endgenerate
 
