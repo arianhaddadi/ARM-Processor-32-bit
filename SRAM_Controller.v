@@ -30,7 +30,7 @@ module SRAM_Controller (
     assign readData = sram_read_data;
     assign SRAM_ADDR = generatedAddr[18:2];
     assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5);
-    assign isInSramWrite = MEM_W_EN && (counter < 3'd3);
+    assign isInSramWrite = MEM_W_EN && (counter < 3'd4);
     assign SRAM_DQ = isInSramWrite ? {32'b0, writeData} : 64'bz;
     assign SRAM_WE_N = ~isInSramWrite;
     
@@ -43,7 +43,7 @@ module SRAM_Controller (
         if((MEM_W_EN || MEM_R_EN) && (counter != 3'd5)) counter <= counter + 3'd1;
         else counter <= 3'b0;
         
-        if (MEM_R_EN && (counter == 3'd3)) begin
+        if (MEM_R_EN && (counter == 3'd2)) begin
             sram_read_data <= SRAM_DQ;
         end
     end

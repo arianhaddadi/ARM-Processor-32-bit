@@ -5,7 +5,7 @@ module Cache (
     input             rst,
     input             Cache_WE,
     input             Cache_RE,
-    input             SRAM_WE,
+    input             checkInvalidation,
     input    [16:0]   CacheAddress,
     input    [63:0]   CacheWriteData,
     output            hit,
@@ -34,19 +34,7 @@ module Cache (
     assign hit = set1_hit || set2_hit;
     assign readData = set1_hit ? set1_data[index][offset] : (
                       set2_hit ? set2_data[index][offset] : 32'b0);
-
-    always @(*) begin
-      if(SRAM_WE) begin
-        if(set1_hit) begin
-          set1_valid[index] = 1'b0;
-          cache_lru[index] = 1'b1;
-        end
-        else if(set2_hit) begin
-          set2_valid[index] = 1'b0;
-          cache_lru[index] = 1'b0;
-        end
-      end
-    end
+                      
 
     integer i;
     always @(posedge clk, posedge rst) begin
@@ -81,6 +69,16 @@ module Cache (
             set2_valid[index] <= 1'b1;
           end
         end
+        if(checkInvalidation) begin
+          if(set1_hit) begin
+            set1_valid[index] = 1'b0;
+            cache_lru[index] = 1'b1;
+          end
+        else if(set2_hit) begin
+          set2_valid[index] = 1'b0;
+          cache_lru[index] = 1'b0;
+        end
+      end
     end
 
 endmodule

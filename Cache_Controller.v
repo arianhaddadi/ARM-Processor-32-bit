@@ -17,6 +17,7 @@ module Cache_Controller (
     output             Cache_RE,
     output             SRAM_WE,  
     output             SRAM_RE,
+    output             checkInvalidation,
     output   [16:0]    CacheAddress, 
     output   [31:0]    SRAM_Adress, 
     output   [31:0]    SRAM_Write_Data,
@@ -40,7 +41,8 @@ module Cache_Controller (
     assign Cache_RE = (PS == IdleOrCacheRead) && MEM_R_EN;
     assign Cache_WE = isMissOperationDone;
     assign CacheWriteData = isMissOperationDone ? SRAM_Read_Data : 64'b0;
-    assign SRAM_WE = ((PS == IdleOrCacheRead) && MEM_W_EN) || (PS == SramWrite);
+    assign SRAM_WE = PS == SramWrite;
+    assign checkInvalidation = (PS == IdleOrCacheRead) && MEM_W_EN;
     assign SRAM_RE = isInSramRead;
     assign SRAM_Adress = address;
     assign ready = (~MEM_W_EN && ~MEM_R_EN) || isMissOperationDone || isCacheReadSuccessful || isSramWriteDone;

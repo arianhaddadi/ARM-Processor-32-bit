@@ -23,7 +23,7 @@ module MEM_Stage
     inout [63:0]                 SRAM_DQ
 );
 
-    wire SRAM_Controller_WE, SRAM_Controller_RE, SRAM_Ready, Cache_Hit, Cache_WE, Cache_RE;
+    wire SRAM_Controller_WE, SRAM_Controller_RE, SRAM_Ready, Cache_Hit, Cache_WE, Cache_RE, checkInvalidation;
     wire [3:0] SRAM_Control_Signals;
     wire [16:0] CacheAddress;
     wire [31:0] SRAM_Adress, SRAM_Write_Data, CacheReadData;
@@ -59,7 +59,7 @@ module MEM_Stage
           .rst(rst),
           .Cache_WE(Cache_WE),
           .Cache_RE(Cache_RE),
-          .SRAM_WE(SRAM_Controller_WE),
+          .checkInvalidation(checkInvalidation),
           .CacheAddress(CacheAddress),
           .CacheWriteData(CacheWriteData),
           .hit(Cache_Hit),
@@ -82,6 +82,7 @@ module MEM_Stage
           .Cache_RE(Cache_RE),
           .SRAM_WE(SRAM_Controller_WE),
           .SRAM_RE(SRAM_Controller_RE),
+          .checkInvalidation(checkInvalidation),
           .CacheAddress(CacheAddress),
           .SRAM_Adress(SRAM_Adress),
           .SRAM_Write_Data(SRAM_Write_Data),
