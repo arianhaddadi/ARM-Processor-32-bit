@@ -11,7 +11,7 @@ module SRAM (
 
     reg [31:0] memory[0:511]; //65535
 
-    assign #5 SRAM_DQ = SRAM_WE_N ? {memory[{SRAM_ADDR[16:1], 1'b1}], memory[{SRAM_ADDR[16:1], 1'b0}]} : 64'bz;
+    assign #30 SRAM_DQ = SRAM_WE_N ? {memory[{SRAM_ADDR[16:1], 1'b1}], memory[{SRAM_ADDR[16:1], 1'b0}]} : 64'bz;
 
     integer i;
     

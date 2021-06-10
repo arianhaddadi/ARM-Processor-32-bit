@@ -23,14 +23,16 @@ module SRAM_Controller (
     reg [2:0] counter;
     reg [64:0] sram_read_data;
     
+    wire isInSramWrite;
     wire [31:0] generatedAddr = {address[31:2], 2'b00} - 32'd1024;
 
     assign {SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N} = 4'b0000;
     assign readData = sram_read_data;
     assign SRAM_ADDR = generatedAddr[18:2];
     assign ready = (~MEM_W_EN && ~MEM_R_EN) || (counter == 3'd5);
-    assign SRAM_DQ = (MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2))) ? {32'b0, writeData} : 64'bz;
-    assign SRAM_WE_N = ~(MEM_W_EN && ((counter == 3'd1) || (counter == 3'd2)));
+    assign isInSramWrite = MEM_W_EN && (counter < 3'd3);
+    assign SRAM_DQ = isInSramWrite ? {32'b0, writeData} : 64'bz;
+    assign SRAM_WE_N = ~isInSramWrite;
     
     always @(posedge clk, posedge rst) begin
         if(rst) begin
