@@ -72,7 +72,7 @@ module ALU
             end
             `EXE_TST: temp = val1 & val2;
             `EXE_LDR: temp = val1 + val2;
-            `EXE_STR: temp = val1 - val2;
+            `EXE_STR: temp = val1 + val2;
             default: begin
               temp = 33'b0;
               V = 1'b0;
