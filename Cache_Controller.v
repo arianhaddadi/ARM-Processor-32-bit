@@ -26,9 +26,8 @@ module Cache_Controller (
 );
 
    	wire isCacheReadSuccessful, isMissOperationDone, isInSramRead, isSramWriteDone;
-    wire [31:0] generatedAddr, cacheWiteDataSecondHalf;
+    wire [31:0] generatedAddr;
     reg [1:0] PS, NS;
-    reg [31:0] cacheWiteDataFirstHalf;
     parameter IdleOrCacheRead=2'b00, SramReadAndCacheWrite=2'b01, SramWrite=2'b10;
 
     assign generatedAddr = {address[31:2], 2'b00} - 32'd1024;
@@ -36,7 +35,7 @@ module Cache_Controller (
     assign isCacheReadSuccessful = (PS == IdleOrCacheRead) && MEM_R_EN && Cache_Hit;
     assign isMissOperationDone = (PS == SramReadAndCacheWrite) && SRAM_Ready;
     assign isSramWriteDone = (PS == SramWrite) && SRAM_Ready;
-    assign isInSramRead = ((PS == IdleOrCacheRead) && MEM_R_EN && ~Cache_Hit) || (PS == SramReadAndCacheWrite);
+    assign isInSramRead = PS == SramReadAndCacheWrite;
     assign SRAM_Write_Data = SRAM_WE ? writeData : 32'b0;
     assign Cache_RE = (PS == IdleOrCacheRead) && MEM_R_EN;
     assign Cache_WE = isMissOperationDone;

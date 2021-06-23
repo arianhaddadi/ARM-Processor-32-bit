@@ -109,7 +109,7 @@ module MEM_Stage
           .readData(SRAM_Read_Data),
           .SRAM_DQ(SRAM_DQ)
         );
-        assign MEM_out = ALU_res[3] ? SRAM_Read_Data[63:32] : SRAM_Read_Data[31:0]; 
+        assign MEM_out = ALU_res[2] ? SRAM_Read_Data[63:32] : SRAM_Read_Data[31:0]; 
       end
     endgenerate
 

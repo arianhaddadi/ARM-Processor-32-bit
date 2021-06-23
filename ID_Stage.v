@@ -38,7 +38,7 @@ module ID_Stage
 
 	assign {S_out, B_out, EX_CMD_out, MEM_W_EN_out, MEM_R_EN_out, WB_EN_out} = MUX_CU_out;
 	assign Imm_out = instruction_in[25];
-    assign with_src1 = (EX_CMD_out == `EXE_MOV || EX_CMD_out == `EXE_MVN || B) ? 1'b0 : 1'b1;
+  assign with_src1 = (EX_CMD_out == `EXE_MOV || EX_CMD_out == `EXE_MVN || B) ? 1'b0 : 1'b1;
 	assign with_src2 = MEM_W | (~instruction_in[25]);
 	assign signed_immediate = instruction_in[23:0];
 	assign shifter_operand = instruction_in[11:0];
